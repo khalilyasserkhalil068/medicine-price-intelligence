@@ -1,0 +1,2044 @@
+indication id,indication name
+1999,AIDS-related Kaposi's sarcoma
+2000,Abdominal pain
+2001,Abortion
+2002,Abrasion
+2003,Abscesses
+2004,Absence seizures
+2005,Achalasia
+2006,Acid regurgitation
+2007,Acid-related dyspepsia
+2008,Acidosis
+2009,Acne vulgaris
+2010,Acquired immunodeficiency syndrome (AIDS)
+2011,Acrocyanosis
+2012,Acromegaly
+2013,Actinic keratosis
+2014,Active immunisation against tetanus
+2015,Acute & chronic conjunctivitis
+2016,Acute Exacerbations of Chronic bronchitis
+2017,Acute Lymphocytic Leukemia
+2018,Acute Ml
+2019,Acute agitation
+2020,Acute asthma
+2021,Acute bacterial ear infections
+2022,Acute bacterial sinusitis
+2023,Acute gonorrheal urethritis
+2024,Acute gout
+2025,Acute graft rejection in renal transplantation
+2026,Acute heart failure
+2027,Acute lupus erythematosus
+2028,Acute migraine attacks
+2029,Acute myeloid leukaemia
+2030,Acute necrotising ulcerative gingivitis
+2031,Acute nonspecific gastroenteritis
+2032,Acute otitis media
+2033,Acute promyelocytic leukaemia
+2034,Acute psychosis
+2035,Acute pulmonary oedema
+2036,Acute renal failure
+2037,Acute rheumatic carditis
+2038,Acute salmonellosis
+2039,Acute solar dermatitis
+2040,Acute sore throat
+2041,Acute trauma
+2042,Acute uncomplicated malaria
+2043,Adjunct to IVF procedures and other assisted conception techniques
+2044,Adrenocortical insufficiency
+2045,Adult Respiratory Distress Syndrome
+2046,Adult enuresis
+2047,Age-related macular degeneration (AMD)
+2048,Aggression
+2049,Agitation
+2050,Agoraphobia
+2051,Aid controlled ventilation
+2053,Aid in dispersal of extravasated fluids or blood
+2054,Albinism
+2055,Alcohol dependence
+2056,Alcohol withdrawal syndrome
+2057,Alcoholism & drug induced hepatotoxicity
+2058,Alkalinizing agent
+2059,Allergic anaphylactic shock
+2060,Allergic and inflammatory conditions of the ear
+2061,Allergic and inflammatory conditions of the eye
+2062,Allergic and inflammatory disorders
+2063,Allergic blepharitis
+2064,Allergic conditions
+2065,Allergic conjunctivitis
+2066,Allergic dermatitis
+2067,Allergic rhinitis
+2068,Allergic rhinitis accompanied by nasal congestion
+2069,Allergic skin conditions
+2070,Allergies
+2071,Allogeneic bone marrow transplantation
+2072,Androgenic alopecia
+2073,Alopecia areata
+2074,Altitude sickness
+2075,Aluminum overload
+2076,Alzheimer’s disease
+2077,Amenorrhea- galactorrhea syndrome
+2079,Amoebiasis
+2080,Anaemia
+2081,Anaemia due to inflammatory bowel disease
+2082,Anaemia in chemotherapy patients
+2083,Anaemia in zidovudine-treated HIV-infected patients
+2084,Anaemia of chronic renal failure
+2085,Anaemia of prematurity
+2086,Anaerobic bacterial infections
+2087,Anaesthesia
+2088,Anal fissure
+2089,Anal or vulvar pruritus
+2090,Anal pruritus
+2091,Analgesia
+2092,Analgesia during labour
+2093,Anaphylactic shock
+2094,Ancylostomiasis
+2095,Anesthesia adjunct
+2098,Angioplasty
+2099,Angular cheilitis
+2100,Ankylosing spondylitis
+2101,Anogenital pruritus
+2102,Anogenital warts
+2103,Anorexia and cachexia
+2104,Anorexia nervosa
+2105,Anovulatory infertility
+2106,Anthrax
+2107,Antibiotic-associated colitis
+2108,Anxiety
+2109,Apathy
+2110,Apnoea
+2111,Apthous ulcer
+2112,Arrhythmias
+2114,Artherosclerotic vascular disease
+2115,Arthritis
+2116,Artificial sweetener
+2117,Artificially ventilated patients
+2118,Ascariasis
+2119,Ascites
+2120,Aspergillosis
+2121,Aspiration pneumonia
+2122,Assisted reproductive technologies
+2123,Asthma
+2124,Asthma prophylaxis
+2125,Astrocytoma
+2126,Atelectasis
+2127,Atherosclerosis
+2128,Athlete’s foot
+2129,Atopic dermatitis
+2130,Atopic eczema
+2131,Atopic or contact dermatoses
+2132,Atrial fibrillation
+2133,Atrial fibrillation and atrial flutter
+2134,Atrial flutter
+2135,Attention deficit hyperactivity disorder (ADHD)
+2136,Atypical pneumonia
+2137,Auditory vestibular and visual disorder
+2138,Aural infections
+2139,Auto-immune diseases
+2140,B-vitamins and Zinc deficiencies
+2141,Babesiosis
+2142,Back pain
+2143,Backache
+2144,Bacteraemia
+2145,Bacteraemia and meningitis
+2146,Bacteraemic pneumonia
+2147,Bacterial Conjunctivitis
+2148,Bacterial Meningitis caused by Staphylococcus
+2149,Bacterial Pneumonia caused by Staphylococcus
+2150,Bacterial and trichomonal vaginitis
+2151,Bacterial corneal ulcer
+2152,Bacterial ear infections
+2153,Bacterial endocarditis
+2154,Bacterial eye infections
+2155,Bacterial infections
+2156,Bacterial meningitis
+2157,Bacterial ocular infections
+2158,Bacterial or fungal vaginal infection
+2159,Bacterial prostatis
+2160,Bacterial septicemia
+2161,Bacterial skin infections
+2162,Bacterial vaginosis
+2163,Bad breath
+2164,Balanced anaesthesia
+2165,Balantidiasis
+2166,Bed sore
+2167,Behavioral disturbances
+2168,Behcet’s syndrome
+2169,Bell’s palsy
+2170,Benign breast disorders
+2171,Benign prostatic hyperplasia (BPH)
+2172,Benzodiazepine overdose
+2173,Benzodiazepine-induced sedation
+2174,Beriberi and Wernick’s encephalopathy
+2175,Biliary colic
+2176,Biliary dyskinesia
+2177,Biliary-tract infections
+2178,Binge eating disorder
+2179,Bipolar disorder
+2180,Bipolar mania
+2181,Bites
+2182,Bladder carcinoma
+2183,Bladder spasms
+2185,Bleeding or blood clotting problems
+2186,Blepharitis
+2187,Blepharospasm
+2188,Blisters
+2190,Body dysmorphic disorder
+2191,Bodyache
+2192,Boils
+2193,Bone and Joint Infections
+2194,Bone malignancies
+2195,Bone marrow stimulation
+2196,Bone marrow transplantation
+2197,Botulism
+2198,Bowel evacuation
+2200,Bradycardia
+2201,Brain abscesses
+2202,Brain tumours
+2203,Breakthrough pain
+2204,Breast cancer and bone metastases
+2205,Breast cancer in postmenopausal women
+2206,Breast cancers and glioblastoma multiforme of the brain
+2207,Breast pain
+2208,Bronchiectasis
+2209,Bronchitis
+2210,Bronchopneumonia
+2211,Brucellosis
+2212,Bulimia nervosa
+2213,Bullous dermatitis herpetiformis
+2214,Burning and irritation of the eye
+2215,"Burning, pain and skin inflammations"
+2216,Burning sansation
+2217,Burns
+2219,Bursitis
+2221,CAPD associated peritonitis
+2222,CMV infections
+2223,COPD
+2224,CVD
+2225,Calcium and magnesium deficiencies
+2226,Calcium and vitamin C deficiency
+2227,Calcium and vitamin D deficiency
+2228,Calcium deficiency
+2229,Callus
+2230,Caloric feeding
+2231,Cancer Prevention
+2232,Cancer pain
+2233,Cancer therapy-induced hyperuricaemia
+2234,Candida albicans
+2235,Candida nappy rash
+2236,Candidal balanitis
+2237,Candidal cystitis
+2238,Candidemia
+2239,Candidiasis
+2240,Capillary bleeding
+2241,Carbohydrate nutrient in diabetic patients
+2242,Carbon monoxide poisoning
+2243,Carbuncles
+2244,Carcinoma
+2246,Carcinoma of the colon or rectum
+2247,Cardiac arrest
+2248,Cardiac arrhythmias
+2249,Cardiac stress test
+2250,Cardiomyopathy
+2251,Cardiopulmonary Bypass Surgery
+2252,Cardiovascular disease
+2253,Cardiovascular event prevention
+2254,Carditis
+2255,Cat scratch disease
+2257,Cataplexy
+2258,Cataract & glaucoma operations
+2259,Cataract surgery
+2260,Catarrh
+2261,Cavities
+2262,Cellulitis
+2263,Central respiratory depression
+2264,Central retinal vein occlusion
+2265,Cerebral oedema
+2266,Cerebral palsy
+2267,Cerebral or pulmonary edema
+2268,Cerebrovascular disease
+2269,Cerebrovascular insufficiency
+2270,Cervical cancer
+2271,Cervical intraepithelial neoplasia
+2272,Cervical priming
+2273,Cervical softening and dilatation
+2274,Cervicitis
+2275,Cervicitis and proctitis
+2276,Cervicitis and salpingitis
+2277,Chancroid
+2278,Chapped roughened hands
+2279,Chemotherapy induced-neutropenia
+2280,Chemotherapy induced nausea and vomiting
+2281,Chickenpox
+2282,Children’s growth disorders
+2283,Chlamydial cervicitis
+2284,Chlamydial infections
+2285,Chlamydial urethritis
+2286,Chloasma
+2287,Chloroquine-resistant falciparum malaria
+2289,Cholecystitis
+2291,Cholera
+2292,Chorea
+2293,Chronic Fatigue Syndrome
+2294,Chronic anal fissure
+2295,Chronic anterior uveitis and corneal injury
+2296,Chronic asthma
+2297,Chronic atopic dermatitis
+2298,Chronic bacterial prostatitis
+2299,Chronic bronchitis
+2300,Chronic cholelithiasis
+2301,Chronic conjunctivitis
+2302,Chronic emphysema
+2303,Chronic gastritis
+2304,Chronic hepatitis B
+2305,Chronic hepatitis C
+2306,Chronic idiopathic constipation
+2307,Chronic idiopathic urticaria (hives)
+2308,Chronic iron overload
+2309,Chronic low back pain
+2310,Chronic lymphocytic leukaemia
+2311,Chronic muscle spasticity
+2312,Chronic myelogenous leukaemia
+2313,Chronic myeloid leukaemia
+2314,Chronic obstructive pulmonary disease (COPD)
+2315,Chronic open angle glaucoma
+2316,Chronic or recurrent bacteriuria
+2317,Chronic renal failure
+2318,Chronic stable angina
+2319,Chronic urticaria
+2320,Chronic venous disease
+2321,Cirrhosis
+2322,Cleansing and irrigating the skin or dirty wounds
+2323,Cleansing of the colon
+2325,Cluster headache
+2326,Coccidioidomycosis
+2327,Cognitive enhancer
+2328,Cold
+2329,Cold sores
+2330,Colic
+2331,Colitis
+2332,Colonopathies
+2333,Colonoscopy
+2334,Colonoscopy preparation
+2335,Colorectal cancer
+2337,Common cold
+2338,Community-acquired pneumonia
+2339,Complicated UTI
+2340,Complicated and recurrent urinary tract infections
+2342,Condylomata acuminata
+2343,Congenital adrenal hyperplasia
+2344,Congenital icthyosis
+2345,Congestion
+2346,Congestive heart failure
+2347,Conjunctival decongestant
+2348,Conjunctivitis
+2349,Constipation
+2350,Constipation and bowel irregularity
+2351,Contact dermatitis
+2352,Contraception
+2353,Cornea transplant surgery
+2354,Corneal anesthesia
+2355,Corneal protection
+2356,Corneal ulcer
+2357,Corns
+2358,Corns and calluses
+2359,Cortical myoclonus
+2360,Corticosteriod-responsive dermatoses
+2361,Corticosteriod responsive dermatoses with secondary infection
+2362,Cough and runny nose
+2363,Cough and common cold
+2364,Cracked and itchy skin
+2365,Cracked feet
+2366,Crohn’s disease
+2367,Crural ulcer
+2369,Cryptococcal meningitis
+2370,Cryptococcosis
+2371,Cryptosporidiosis
+2372,Cushing's disease
+2373,Cutaneous T-cell lymphoma
+2374,Cutaneous albinism
+2375,Cutaneous candidiasis
+2376,Cutaneous candidiasis and pityriasis versicolor
+2377,Cuts
+2378,Cyanide poisoning
+2379,Cyanosis
+2380,Cyclitis
+2381,Cycloplegia
+2382,Cystic fibrosis
+2383,Cystitis
+2384,Cystoid macular oedema
+2385,Dandruff
+2386,Darier's disease
+2387,Decubitus or stasis ulcers
+2388,Deep tissue candida infections
+2389,Deep vein thrombosis
+2390,Degenerative diseases
+2391,Degenerative joint disease
+2392,Dehydration
+2393,Delayed puberty
+2394,Delirium
+2395,Dementia
+2396,Dental abscess
+2397,Dental bleeding
+2398,Dental caries
+2399,Dental pain
+2400,Dental surgery
+2401,Denture sores
+2402,Denture stomatitis
+2403,Depression
+2404,Dermatitis
+2405,Dermatitis herpetiformis
+2406,Dermatofibro sarcoma protuberans
+2407,Dermatomycoses
+2408,Dermatomyositis
+2409,Dermatophytosis
+2410,Diabetes insipidus
+2411,Diabetes mellitus
+2412,Diabetic angiopathy
+2413,Diabetic coma
+2414,Diabetic foot ulcer
+2415,Diabetic gastric stasis
+2416,Diabetic ketoacidosis
+2417,Diabetic macular edema
+2418,Diabetic nephropathy
+2419,Diabetic neuropathy
+2420,Diabetic ulcers
+2421,Diagnostic ophthalmic procedures
+2422,Diagnostic procedures
+2423,Dialysis
+2424,Diaper rash
+2425,Diarrhoea
+2426,Dietary supplement for infants
+2427,Dietary supplements
+2428,Dietary supplements (Vitamin deficiencies)
+2429,Diffuse scleroderma
+2430,Dilatation of pupil
+2431,Diluting or dissolving drugs
+2432,Diphtheria
+2433,Discomfort of the eye
+2434,Disinfection
+2435,Disinfection of the skin and hand
+2437,Disseminated candidiasis
+2438,Dissolution of cholesterol rich gallstones
+2439,Disturbed biorhythms
+2440,Diverticular diseases
+2441,Dizziness
+2442,Down Syndrome
+2443,Dracunculiasis
+2444,Drug hypersensitivity reactions
+2445,Drug overdose
+2446,Drug induced extrapyramidal syndrome
+2447,Drug induced photosensitivity
+2448,Dry Irritated eyes
+2449,Dry cough
+2450,Dry eye
+2451,Dry mouth
+2452,Dry skin
+2453,Duodenal ulcer
+2454,Duodenitis
+2456,Dyeing hair
+2457,Dysentery
+2458,Dyskeratosis
+2459,Dyslipidemia
+2460,Dysmenorrhoea
+2461,Dyspareunia
+2462,Dyspepsia
+2463,Dysphoria
+2464,Dysuria
+2465,Echinococcosis
+2466,Eclampsia
+2467,Eczema
+2468,Eczematoid dermatitis
+2469,Electrolyte replenisher
+2470,Emergency contraception
+2471,Emotional disturbance
+2472,Emphysema
+2473,Empyema
+2474,Encephalomyelitis
+2475,End-stage renal failure
+2476,Endocarditis
+2477,Endometrial carcinoma
+2478,Endometriosis
+2479,Endometritis
+2480,Endometrium cancer
+2481,Endophthalmitis
+2482,Endotracheal intubation
+2483,Energy malnutrition
+2484,Enoxaparin or dalteparin overdosage
+2485,Enteric fever
+2486,Enteritis
+2487,Enterobiasis
+2488,Enterocolitis
+2489,Enuresis
+2490,Epidural
+2491,Epidural anaesthesia
+2492,Epidural analgesia
+2493,Epilepsy
+2494,Episcleritis
+2495,Erectile dysfunction
+2496,Erosive oesophagitis
+2497,Erysipelas
+2498,Erysipeloid
+2499,Erythema multiforme
+2500,Erythema nodosum leprosum (Type 2)
+2501,Essential thrombocythemia
+2502,Essential tremor
+2503,Excessive sweating
+2504,Extrapyramidal symptoms
+2505,Eye allergy
+2506,Eye infections
+2507,Eye irritation
+2508,Eye refraction
+2509,Facilitate lactation
+2510,Falciparum malaria
+2511,Familial mediterranean fever
+2512,Familial adenomatous polyposis
+2513,Familial hypercholesterolemia
+2514,Familial hypophosphatemia
+2515,Fatigue
+2516,Fatty liver
+2517,Febrile neutropenia
+2518,Female infertility
+2519,Fertility
+2520,Fever
+2521,Fever blisters
+2522,Fibromyalgia
+2523,Filariasis
+2524,Fitting of hard contact lenses
+2525,Flaking scalps
+2526,Flatulence
+2527,Flu
+2528,Fluid and electrolyte imbalance
+2529,Fluid replacement
+2530,Folic acid & zinc Deficiency
+2531,Folic acid deficiency
+2532,Follicular lymphoma
+2533,Folliculitis
+2534,Following pancreatic surgery
+2535,Food supplement
+2537,Fracture and joint manipulation
+2538,Freckles
+2539,Functional diarrhea
+2540,Functional dyspepsia
+2541,Functional rehabilitation after cerebrovascular accidents
+2542,Funduscopy
+2543,Fungal UTIs
+2544,Fungal corneal ulcers
+2545,Fungal eye infections
+2546,Fungal infections
+2547,Fungal infections of the mouth Throat and gut
+2548,Fungal keratitis
+2549,Fungal otitis externa
+2550,Fungal skin infections
+2552,Furuncles
+2553,Furunculosis
+2554,Fusobacterium infections
+2555,Gastrointestinal haemorrhage
+2556,Gastrointestinal haemorrhage from stress ulceration
+2557,Gangrene
+2559,Gas gangrene
+2560,Gastric Hyperacidity
+2561,Gastric and duodenal ulceration
+2562,Gastric bypass surgery
+2563,Gastric cancer
+2564,Gastric problems
+2565,Gastric ulcer
+2566,Gastritis
+2567,Gastro-enteritis with dehydration
+2568,Gastroesophageal reflux disease (GERD)
+2569,Gastroenteritis
+2570,Gastrointestinal disorders
+2571,Gastrointestinal hyperacidity
+2572,Gastrointestinal stromal tumor
+2573,Gastrointestinal tract infections
+2574,Gastrointestinal tract spasm
+2575,Gastroparesis
+2576,General anaesthesia
+2577,General weakness
+2578,Generalized tonic-clonic seizures
+2579,Generalized anxiety disorder
+2580,Genital herpes
+2581,Genital warts
+2582,Genitourinary spasm
+2583,Genitourinary tract infections
+2584,Germ cell tumors
+2585,Giardiasis
+2586,Gingivitis
+2587,Glaucoma
+2588,Glaucoma surgery
+2589,Glioblastoma multiforme
+2590,Gluten enteropathy or sprue
+2591,Gnathostomiasis
+2592,Gonococcal urethritis
+2593,Gonorrhoea
+2594,Gout
+2595,Gouty arthritis
+2596,Gram-positive infection
+2597,Granuloma inguinale
+2598,Graves’ disease
+2599,Group A Streptococcus infections
+2600,Growth hormone deficiency
+2601,Gum disease
+2602,Gum sore
+2603,Gynaecomastia
+2604,Gynecological infections
+2605,H. pylori infection
+2606,HIV infection
+2607,HIV-associated diarrhoea
+2608,HIV-associated wasting or cachexia
+2609,Haematuria
+2610,Haemodialysis
+2611,Haemophilus influenzae type b infection
+2612,Haemoptysis
+2613,Haemorrhage
+2614,Haemorrhagic cystitis and haematuria
+2615,Haemorrhoids (Piles)
+2616,Hair loss
+2617,Hairy cell leukaemia
+2618,Hay fever
+2619,Head & neck cancer
+2620,Head injury
+2621,Head lice
+2622,Headache
+2623,Heart disease
+2624,Heart failure
+2625,Heartburn
+2626,Heartburn & gastritis
+2627,Helminthiasis
+2628,Hemicrania continua
+2629,Hemofiltration
+2630,Hemolytic disease of the newborn
+2631,Hemophilia
+2632,Hemophilia A
+2634,Heparin overdosage
+2635,Hepatic amoebiasis
+2636,Hepatic cirrhosis with ascites and oedema
+2637,Hepatic encephalopathy
+2638,Hepatic transplant rejection
+2639,Hepatitis A virus
+2640,Hepatitis B virus
+2641,Hereditary angioedema
+2642,Hereditary hemorrhagic telangiectasia
+2643,Herpes labialis
+2644,Herpes simplex
+2645,Herpes simplex keratitis
+2646,Herpes virus infections
+2647,Herpes zoster (shingles)
+2648,Herpes zoster ophthalmicus
+2649,Hiccups
+2650,High triglyceride
+2651,Hirsutism
+2652,Histoplasmosis
+2653,Hives
+2654,Hodgkin’s disease
+2655,Hodgkin’s lymphoma
+2656,Homozygous familial hypercholesterolemia
+2657,Hookworm infections
+2658,Hormone replacement therapy
+2659,Hot flushes
+2660,Human Papillomavirus infection
+2661,Hydration
+2662,Hyperacidity
+2663,Hyperactivity
+2664,Hyperactivity disorders
+2665,Hyperaldosteronism
+2666,Hypercalcaemia
+2667,Hypercalcaemia of malignancy
+2668,Hyperchlorhydria
+2669,Hypercholesterolaemia
+2670,Hyperekplexia
+2671,Hypereosinophilic syndrome
+2672,Hyperhidrosis
+2673,Hyperhomocysteinemia
+2674,Hyperkalaemia
+2675,Hyperkeratosis
+2676,Hyperkeratotic
+2677,Hyperkeratotic and scaling skin conditions
+2678,Hyperlipidaemia
+2679,Hyperparathyroidism
+2680,Hyperphosphataemia
+2681,Hyperpigmentation
+2682,Hyperprolactinemia
+2683,Hypersecretory conditions
+2684,Hypersensitivity reactions
+2685,Hypertension
+2686,Hypertensive crisis
+2687,Hyperthyroidism
+2688,Hypertriglyceridaemia
+2689,Hypertrophic cardiomyopathy
+2690,Hyperuricaemia
+2691,Hypnotic
+2692,Hypoalbuminemia
+2693,Hypocalcaemia
+2694,Hypocalcemic tetany
+2695,Hypodermoclysis
+2696,Hypoglycemia
+2697,Hypogonadism
+2698,Hypogonadotrophic hypogonadism
+2699,Hypokalaemia
+2700,Hypomagnesemia
+2701,Hyponatraemia
+2702,Hypoparathyroidism
+2703,Hypophosphataemia
+2704,Hypoproteinaemia
+2705,Hypoprothrombinemia
+2706,Hypotension
+2707,Hypotensive anaesthesia
+2708,Hypothyroidism
+2709,Hypovolaemia and shock
+2710,Hypovolaemic shock
+2711,Hypovolemia
+2713,Ichthyosis
+2714,Ichthyosis and dry skin conditions
+2715,Idiopathic intracranial hypertension
+2716,Idiopathic parkinsonism
+2717,Idiopathic thrombocytopenic purpura
+2718,Imaging of the Gl tract
+2719,Immunodeficiency
+2720,Impetigo
+2721,Impetigo and infected dermatitis
+2722,Improve skin tone and texture
+2723,Improving recovery after stroke
+2725,In vitro fertilization
+2727,Increased demand for Calcium and Vitamin C
+2728,Indigestion
+2729,Induction and augmentation of labor
+2730,Induction of anesthesia
+2731,Infantile colic
+2732,Infantile eczema
+2733,Infantile spasms
+2734,Infected acne
+2735,Infected burns
+2736,Infected eczema
+2737,Infected wounds & ulcers
+2738,Infections
+2739,Infections caused by Staphylococcus
+2740,Infections of the lower respiratory tract
+2742,Infectious disease
+2743,Infective endocarditis
+2744,Infertility
+2745,Infiltration anesthesia
+2746,Inflammation
+2747,Inflammation of the cornea
+2748,Inflammation of the external ear
+2749,Inflammatory bowel disease
+2750,Inflammatory conditions of the palpebral and bulbar conjunctiva
+2751,Inflammatory eye disorders
+2752,Inflammatory joint disease
+2753,Inflammatory skin disorders
+2754,Influenza
+2755,Influenza A and B
+2756,Influenza virus vaccine
+2757,Injuries (traumatic shock)
+2758,Injury of the pyramidal tract
+2759,Inoperable metastatic breast cancer
+2760,Insect bites
+2761,Insect stings
+2762,Insomnia and sleep disturbances
+2763,Intermittent angioneurotic dysbasia
+2764,Intermittent claudication
+2765,Intestinal amoebiasis
+2767,Intestinal candidiasis
+2768,Intestinal hypermotility
+2769,Intestinal or oropharyngeal candidiasis
+2770,Intra-abdominal infections
+2772,Intrapartum prophylaxis against group B streptococcal infections
+2773,Intrauterine growth retardation
+2775,Invasive aspergillosis
+2776,Iodine deficiency
+2777,Iodine deficiency disorders
+2778,Iridocyclitis
+2779,Iritis
+2780,Iritis and iridocyclitis
+2781,"Iron, Folic Acid and zinc deficiency during pregnancy and lactation"
+2782,Iron and folic acid deficiency in pregnancy
+2783,Iron deficiency
+2784,Iron deficiency anemia
+2785,Iron deficiency during pregnancy and lactation
+2786,Iron overload
+2787,Iron poisoning
+2788,Iron supplement
+2789,Irrigation of the tear ducts
+2790,Irrigation solution
+2791,Irritability in autism
+2792,Irritable bowel syndrome (IBS)
+2793,Irritable bowel syndrome and constipation
+2794,Irritable or spastic colon
+2795,Irritation and discomfort of the eye
+2796,Ischaemic events
+2797,Ischaemic heart disease
+2798,Ischemic stroke
+2799,Itching
+2800,Itchy or watery eyes
+2801,Jaundice
+2802,Jock itch
+2803,Joint and muscular pains
+2804,Joint inflammations
+2805,Joint pain
+2806,Joint stiffness
+2807,Juvenile idiopathic arthritis
+2808,Juvenile rheumatoid arthritis
+2809,Kaposi's sarcoma
+2810,Kawasaki disease and dermatomyositis sarcoidosis
+2811,Keratitis
+2812,Keratitis disciformis
+2813,Keratoconjunctivitis
+2814,Keratoconjunctivitis and recurrent epithelial keratitis due to herpes simplex viruses
+2815,Keratoconjunctivitis sicca
+2816,Keratosis
+2817,Keratosis pilaris
+2818,Kidney cancer
+2819,Kidney disease
+2820,Labour induction
+2821,Lacerations
+2822,Lacrimation
+2823,Lactation
+2824,Lactation suppression
+2825,Latent tetany
+2826,Left ventricular dysfunction
+2827,Leg cramps
+2828,Leg ulcers and pressure sores
+2829,Legionnaire’s disease
+2830,Leishmaniasis
+2831,Lens opacification
+2832,Leprosy
+2833,Leukemia
+2834,Libido
+2835,Lichen planus
+2836,Lichen sclerosus
+2837,Lichen simplex
+2838,Listeriosis
+2839,Liver cirrhosis
+2840,Liver transplant
+2841,Local anaesthesia
+2842,Local occular anaesthesia
+2843,Local or regional anesthesia
+2844,Local pain relief
+2845,Loeffler's syndrome
+2846,Loiasis
+2847,Low back pain
+2848,Lower respiratory tract infections
+2849,Lower urinary tract infections
+2850,Lubrication
+2851,Lung abscess
+2852,Lung cancer
+2853,Lyme disease
+2854,Lymphatic filariasis
+2855,Lymphocytic leukemia
+2856,Lymphogranuloma venereum
+2857,Lymphoma
+2858,Ml
+2859,Macrocytic anaemia
+2860,Macular Degeneration
+2861,Magnesium sulfate overdose
+2862,Major depression
+2863,Major trauma
+2864,Malaria
+2865,Malaria prophylaxis
+2866,Male hypogonadism
+2867,Male infertility
+2868,Male pattern baldness
+2869,Malignancy
+2870,Malignant effusions
+2871,Malignant gastrointestinal stromal tumours
+2872,Malignant gliomas
+2873,Malignant melanoma
+2874,Malignant pleural mesothelioma
+2875,Mania
+2876,Mastitis
+2877,Mastocytosis
+2878,Measles
+2879,Megaloblastic anaemia
+2880,Melanoma
+2881,Melasma
+2882,Melioidosis
+2883,Meniere’s disease
+2884,Meningioma
+2885,Meningitis
+2886,Meningitis and brain abscesses
+2887,Meningococcal infection
+2888,Meningococcal meningitis
+2889,Meningococcal meningitis and septicaemia
+2890,Meningococcemia
+2891,Menopausal HRT
+2892,Menopausal atrophic vaginitis
+2893,Menopausal flushing
+2894,Menopausal hormone replacement therapy
+2895,Menopausal symptoms
+2896,Menorrhagia
+2897,Menstrual cramps
+2898,Menstrual disorders
+2900,Metabolic alkalosis
+2901,Metastatic Ovarian Tumors
+2902,Metastatic Testicular Tumors
+2903,Metastatic breast carcinoma
+2904,Metastatic melanoma
+2905,Metastatic prostate cancer
+2906,Methotrexate toxicity
+2907,Microcytic anaemia
+2908,Middle ear infections (otitis media)
+2909,Migraine
+2910,Migraine and bipolar disorder
+2911,Migraine prophylaxis
+2912,Mild cystitis and spasmodic dysmenorrhoea
+2913,Mild diarrhea
+2914,Mild to moderate pain
+2915,Mild to moderate pain and fever
+2916,Mineral supplement
+2917,Minor burns
+2918,Minor cuts
+2919,Minor skin infections
+2920,Miosis
+2921,Miscarriage
+2922,Missed abortion
+2923,Moderate to severe pain
+2924,Motion sickness
+2925,Mottled hyperpigmentation
+2926,Mouth sore
+2927,Mouth ulcers
+2928,Mucocutaneous herpes
+2929,Mucosal candidiasis
+2930,Multiple drug resistant pneumonia
+2931,Multiple myeloma
+2932,Multiple sclerosis
+2933,Active immunisation against mumps
+2934,Muscle aches
+2935,Muscle relaxant
+2936,Muscle relaxant in general anesthesia
+2937,Muscle spasm
+2938,Muscular hypertension
+2939,Musculoskeletal and joint disorders
+2940,Musculoskeletal joint pain
+2941,Musculoskeletal pain
+2942,Myasthenia gravis
+2943,Mycoplasma pneumoniae
+2944,Mycosis fungoides
+2945,Mydriasis
+2946,Mydriasis and cycloplegia for refraction
+2947,Myelodysplastic disease
+2949,Myeloproliferative disorders
+2950,Myocardial infarction
+2951,Post-op conditions after strabotomy
+2952,Myxoedema coma
+2953,NSAID-induced ulcers
+2954,Nail fungal infections
+2955,Nail infections
+2956,Nappy rash
+2957,Narcolepsy
+2958,Nasal congestion
+2959,Nasal polyposis
+2960,Nasal polyps
+2961,Nausea
+2962,Nausea and vomiting
+2963,Nausea and vomiting associated with chemotherapy or radiotherapy
+2964,Negative nitrogen balance
+2965,Neonatal Conjunctivitis
+2966,Neonatal sepsis
+2967,Neovascular age-related macular degeneration
+2968,Nephrosis
+2969,Nephrotic syndrome
+2970,Neural tube defect
+2971,Neuralgia
+2972,Neuritis of pregnancy
+2973,Neuroblastoma
+2974,Neurocysticercosis
+2975,Neurodermatitis
+2976,Neuroendocrine tumors
+2977,Neurological disorders
+2978,Neuropathic pain
+2979,Neuropathy
+2980,Neurosyphilis
+2981,Neutropenia
+2982,Nicotinic acid deficiency
+2983,Night blindness
+2984,Nocturia
+2985,Nocturnal enuresis
+2986,Nocturnal leg cramps
+2987,Non ulcer dyspepsia
+2988,Non-Hodgkin lymphoma
+2989,Non-gonococcal urethritis
+2990,Non-productive cough
+2991,Non-small cell lung cancer
+2992,Non-tubercular mycobacterial infections
+2993,Nongonococcal cervicitis
+2994,Nonketotic hyperosmolar coma
+2995,Nonspecific conjunctival irritation
+2996,Nosocomial pneumonia
+2997,Nutrition
+2998,Nutritional supplement
+2999,Nutritional therapy
+3000,Obliterative arteriosclerosis
+3001,Obliterative thromboangitis
+3002,Obsessive-compulsive disorder (OCD)
+3003,Obstetric analgesia
+3005,Occular pain and inflammation
+3006,Ocular and ear inflammation with bacterial infection
+3007,Ocular hypertension
+3008,Ocular inflammation
+3009,Ocular pain
+3010,Oedema
+3011,Oesophageal cancer
+3012,Oesophagitis
+3013,Oestrogen deficiency
+3014,Oliguric phase of renal failure
+3015,Onchocerciasis
+3016,Onychomycosis
+3017,Open heart surgery
+3018,Open angle glaucoma
+3019,Ophthalmic surgery
+3020,Opioid dependence
+3021,Opioid overdosage
+3022,Opioid induced depression
+3023,Optic neuritis
+3024,Oral candidiasis or thrush
+3025,Oral contraceptives
+3026,Oral hygiene
+3027,Organ transplantation
+3028,Organophosphorous poisoning
+3029,Oropharyngeal candidiasis/Thrush
+3030,Orthopedics Surgery
+3031,Osmotic laxative
+3032,Osmotic purgative
+3033,Osteoarthritis (degenerative arthritis)
+3035,Osteocalcaemia
+3036,Osteogenic sarcoma
+3037,Osteomalacia
+3038,Osteomyelitis
+3039,Osteopetrosis or stone bone
+3040,Osteoporosis
+3041,Otic infections
+3042,Otic inflammation
+3043,Otitis externa
+3044,Otitis media
+3045,Ovarian hyperstimulation syndrome
+3046,Ovarian cancer
+3047,Ovarian failure
+3049,Over-anticoagulation
+3050,Overactive bladder
+3051,Ovulation induction
+3052,Paget’s disease of bone
+3053,Pain
+3054,Pain and fever
+3055,Pain and inflammation
+3056,Pain and inflammation associated with musculoskeletal and joint disorders
+3057,Pain and itching caused by sunburn
+3058,Pain and joint stiffness
+3059,Pain associated with myocardial infarction
+3060,Pain or irritation of the mouth and throat
+3061,Pain or swelling of the cornea
+3062,Painful bladder syndrome
+3063,Painful muscle spasm
+3064,Pancreatic cancer
+3065,Pancreatic insufficiency
+3066,Pancreatitis
+3067,Panic attack
+3068,Panic disorder
+3069,Paracetamol poisoning
+3070,Paralytic ileus
+3071,Paralytic ileus and post-operative urinary retention
+3072,Parasomnia
+3073,Parathyroid carcinoma
+3074,Paratyphoid fever
+3075,Parenteral nutrition & hydration
+3076,Parenteral fat emulsions
+3077,Parenteral nutrition
+3078,Parkinson’s disease
+3079,Parkinsonism
+3080,Paroxysmal supraventricular tachycardia
+3081,Partial seizures
+3082,Patent ductus arteriosus
+3083,Pediatric eye examinations
+3084,Pediculosis capitis
+3085,Pediculosis pubis
+3086,Pelvic cellulitis
+3088,Peptic ulcer disease
+3089,Perennial or seasonal allergic rhinitis
+3091,Perianal pain and itching
+3092,Pericarditis
+3093,Periodontitis
+3094,Periods of rapid growth childhood
+3096,Peripheral arterial embolism
+3097,Peripheral nerve block
+3098,Peripheral neuralgias: Diabetic neuropathy
+3099,Peripheral neuropathy
+3100,Peripheral vascular disease
+3101,Peritoneal dialysis
+3102,Peritonitis
+3103,Pernicious anemia
+3104,Pertussis
+3105,Phaeochromocytoma
+3106,Pharyngitis
+3107,Pharyngitis and tonsillitis
+3109,Phobias
+3110,Photoaging
+3111,Piles
+3112,Pink eye
+3113,Pituitary adenomas
+3114,Pityriasis rubra pilaris
+3115,Pityriasis versicolor
+3116,Plague
+3117,Plaque
+3118,Plaque psoriasis
+3119,Pleural effusions
+3120,Pleural empyema
+3121,Pneumococcal disease
+3122,Pneumococcal meningitis
+3123,Pneumococcal pneumonia
+3124,Pneumococcus species gonorrhoea
+3125,Pneumocystis jiroveci pneumonia
+3126,Pneumonia
+3127,Poison ivy
+3128,Poison oak
+3129,Poison sumac
+3130,Poisonings
+3131,Active immunisation against Poliomyelitis
+3132,Polycystic ovarian syndrome
+3133,Polycythaemia vera
+3134,Polymorphic light eruption
+3135,Polymyositis
+3136,Porphyria
+3137,Porphyria cutanea tarda
+3138,Post inflammatory hyperpigmentation
+3139,Post myocardial infarction
+3140,Post-herpetic keratitis
+3141,Post-herpetic neuralgia
+3142,Post-menopausal osteoporosis
+3143,Post-operative nausea and vomiting
+3144,Post-operative pain
+3145,Post-operative wound dressing
+3146,Post-traumatic stress disorder
+3147,Postcoital contraception
+3148,Posterior segment surgery
+3149,Postexposure prophylaxis of tetanus
+3150,Postoperative bleeding
+3151,Postoperative eye inflammation
+3152,Postoperative infections
+3153,Postoperative ocular inflammation
+3154,Postpartum and post-abortion bleeding
+3155,Postpartum haemorrhage
+3156,Prader Willi syndrome
+3157,Pre-operative and post-operative skin cleansing
+3158,Pre-operative or post-operative sedation
+3159,Pre-eclampsia
+3160,Pre-operative scrubbing & washing
+3161,Pre-operative skin disinfection
+3162,Pregnancy
+3163,Pregnancy and lactation
+3165,Pregnancy-associated nausea and vomiting
+3166,Premalignant cervical lesions and cervical cancer
+3167,Premature ejaculation
+3168,Premature labour
+3169,Premenstrual dysmorphic disorder
+3170,Premenstrual syndrome
+3171,Preoperative sedation
+3172,Preparation for thyroidectomy
+3174,Pressure sores
+3175,Prevent gout
+3177,Prevent kidney stone
+3178,Prevent nitrogen loss
+3180,Prevention of gout and kidney stones
+3181,Prevention of measles
+3182,Prevention of rejection in organ and tissue transplantation
+3184,Prevention of typhoid
+3185,Primary amoebic meningoencephalitis
+3186,Primary biliary cirrhosis
+3187,Primary ovarian failure
+3188,Proctitis
+3189,Production of cycloplegia
+3190,Production of mydriasis
+3191,Productive cough
+3193,Prolactinomas
+3194,Prolonged vomiting
+3195,Prophylaxis of clotting in extracorporeal circulation in haemodialysis or haemofiltration
+3197,Prophylaxis of surgical infections
+3198,Prophylaxis of venous thromboembolism during surgery
+3199,Prostate carcinoma
+3200,Prostatic or bladder surgery
+3201,Prostatitis
+3202,Protect sensitive skin
+3203,Protecting against cancer
+3204,Protozoal infections
+3205,Prurigo nodularis
+3206,Pruritic skin conditions
+3207,Pruritus
+3208,Pruritus and eczema
+3209,Pseudohypoparathyroidism (PHP)
+3210,Psittacosis
+3211,Psoriasis
+3212,Psoriatic arthritis
+3213,Psoriatic plaques
+3214,Psychogenic amenorrhea
+3215,Psychoneurosis
+3216,Psychoses in parkinson’s disease
+3217,Psychosis
+3218,Psychotic disorders
+3219,Pulmonary arterial hypertension
+3220,Pulmonary embolism
+3221,Pulmonary eosinophilia
+3223,Pulmonary oedema
+3224,Pulmonary thromboembolism
+3226,Pyelonephritis
+3227,Pylorospasm
+3228,Pyoderma
+3229,Pyoderma gangrenosum
+3230,Pyogenic & seborrhoeic dermatitis
+3234,Radiographic contrast medium for diagnostic procedures
+3235,Raised intracranial pressure
+3236,Rapid eye movement
+3237,Rashes
+3238,Rat bite fever
+3239,Raynaud's disease
+3240,Recurrent UTI
+3241,Recurrent miscarriage
+3242,Recurrent renal stones
+3243,Recurrent unipolar depression
+3244,Red eye
+3245,Reduce the risk of getting HIV-1 infection
+3246,Reducing cholesterol levels
+3247,Skin damage from ultraviolet (UV) light
+3248,Reduction of raised intracranial pressure
+3249,Reflux oesophagitis
+3250,Refractive errors
+3251,Regional anesthesia
+3252,Relapsing fever and louse-borne typhus
+3254,Relieve pain
+3255,Renal and urinary tract infections
+3256,Renal angiomyolipoma
+3257,Renal cancers
+3258,Renal cell carcinoma
+3259,Renal colic
+3260,Renal disease
+3261,Renal disease and vitamin B12 deficiency
+3262,Renal function testing
+3263,Renal homotransplantation
+3264,Renal impairment
+3265,Renal osteodystrophy
+3266,Renal stone
+3267,Renal transplant
+3268,Renal tubular acidosis
+3269,Reproductive tract infection and skin infections
+3270,Respiratory tract infections
+3271,Restless leg syndrome
+3272,Resuscitation
+3273,Retinal hemorrhage
+3274,Retinal photography
+3275,Retinoblastoma
+3276,Reversal of neuromuscular blockade
+3277,Rhesus disease
+3278,Rheumatic disorders
+3279,Rheumatic fever
+3280,Rheumatic pain
+3281,Rheumatism strains
+3282,Rheumatoid arthritis
+3283,Rhinitis
+3284,Rhinorrhoea
+3285,Riboflavin deficiency
+3286,Rickets
+3288,Rigidity
+3289,Rocky mountain spotted fever
+3290,Rosacea
+3291,Rosacea melasma
+3292,Rotavirus diarrhea
+3293,Rough skin
+3294,Roughness and fine wrinkling of photodamaged skin
+3295,Rubella
+3296,Runny nose
+3298,Salmonellosis
+3299,Sarcoma
+3300,Scabies
+3302,Scaling skin conditions
+3303,Scalp and non-scalp psoriasis
+3304,Scalp disorders
+3305,Scalp psoriasis
+3306,Scaly or itchy scalps
+3307,Scaly skin disease
+3308,Scedosporiosis and fusariosis
+3309,Schistosomiasis
+3310,Schizophrenia
+3311,Scleritis
+3312,Scrapes
+3313,Scratches
+3314,Scrub typhus
+3315,Scurvy
+3316,Seborrheic dermatitis of the scalp
+3317,Seborrhoeic dermatitis
+3318,Second stage of labor
+3319,Secondary hemorrhage
+3320,Secondary hyperparathyroidism
+3321,Secondary skin infections
+3322,Secretory neoplasms
+3323,Sedation
+3324,Seizures associated with lennox-gastaut syndrome
+3325,Senile lentigines
+3326,Sepsis
+3327,Septic arthritis
+3328,Septic abortion
+3330,Serious staphylococcal or other gram-positive infections
+3331,Serum sickness
+3332,Severe congestive heart failure
+3333,Severe gram-negative infections
+3334,Severe allergic asthma
+3335,Severe anxiety disorders
+3336,Severe burns
+3337,Mild to moderate dementia in Alzheimer’s disease
+3338,Severe diarrhea
+3339,Severe erythema multiforme (Stevens-Johnson syndrome)
+3340,Severe hemorrhage
+3341,Severe hypertension
+3342,Severe idiopathic short stature
+3343,Severe inflammatory skin disorders
+3344,Severe metabolic acidosis
+3345,Severe or recurrent respiratory tract infections
+3347,Shigellosis
+3348,Shock
+3349,Short bowel syndrome
+3350,Short-term pain relief
+3351,Sialorrhea
+3352,Sickle-cell disease
+3353,Sinusitis
+3354,Sjogren’s syndrome
+3355,Skeletal muscle relaxation
+3356,Skin grafting
+3357,Skin and skin sructure infections
+3358,Skin and wound infections
+3360,Skin care
+3361,Skin fungal infections
+3362,Skin healthness
+3363,Skin infections
+3364,Skin irritations
+3366,Skin moisturization
+3367,Skin rash
+3368,Skin ulcers and wounds
+3369,Slit lamp examination
+3370,Small cell lung cancer
+3371,Smoking cessation
+3372,Smoking cessation aid
+3373,Sneezing
+3374,Social anxiety disorder
+3375,Social phobia
+3376,Soft tissue infections
+3377,Soft tissue inflammation
+3378,Soft tissue sarcoma
+3379,Solar urticaria
+3380,Sore lips
+3381,Sore throat
+3382,Spasm
+3383,Spastic or irritable colon
+3384,Spasticity
+3385,Spasticity and muscle spasms
+3387,Spermatogenesis induction
+3388,Spinal anesthesia
+3389,Spinal automatism and discopathy
+3391,Spondylitis
+3392,Spontaneous or elective abortion
+3394,Sprains
+3395,Squamous cell or testicular tumours
+3396,Stable plaque psoriasis
+3397,Staphylococcal infections
+3398,Staphylococcal infections resistant to benzylpenicillin
+3399,Staphylococcal skin infections
+3400,Status asthmaticus
+3401,Status epilepticus
+3402,Steroid-responsive inflammatory ocular conditions
+3403,Stevens-Johnson syndrome
+3404,Stiff neck
+3405,Stiffness
+3406,Stimulate ovulation
+3407,Stings
+3408,Stomach carcinoma
+3409,Stomach distension
+3410,Stomach upset
+3411,Stomatitis angularis
+3412,Strabismus
+3413,Streptococcal pharyngitis
+3414,Streptococcal pharyngitis or tonsillitis
+3415,Streptococcus septicaemia
+3416,Stress urinary incontinence
+3417,Stridor
+3418,Strongyloidiasis
+3419,Subacute bacterial endocarditis
+3420,Subarachnoid anesthesia
+3421,Subarachnoid haemorrhage
+3422,Sugar substitute
+3423,Sunblock
+3424,Sunburn
+3425,Superficial bacterial infections
+3426,Superficial bleeding
+3427,Superficial dermatophyte infections and pityriasis versicolor
+3428,Superficial ophthalmic infections
+3429,Superficial skin infections
+3430,Superficial wounds
+3431,Suprapubic pain
+3432,Supraventricular and ventricular arrhythmias
+3433,Supraventricular arrhythmias
+3434,Supraventricular tachycardia
+3435,Surface disinfection
+3436,Surface anaesthesia
+3437,Surgery (haemorrhagic shock)
+3438,Surgical prophylaxis
+3439,Surgical anaesthesia
+3440,Surgical incisions
+3441,Surgical infections
+3444,Susceptible infections
+3445,Sweat rash
+3446,Sweating feet
+3447,Swine flu
+3448,Sympathetic nerve block
+3449,Syphilis
+3450,Systemic fungal infections
+3451,Systemic hyperfibrinolysis
+3452,Systemic lupus erythematosus (SLE)
+3453,Systemic sclerosis
+3454,T-cell lymphoma
+3456,Transient ischemic attack
+3457,TSH suppression
+3458,Tachycardia
+3459,Teeth cleaner & brighter
+3460,Teeth whitening
+3461,Teething pain
+3462,Tendonitis
+3463,Tension
+3464,Termination of pregnancy
+3465,Testicular cancer
+3466,Testosterone replacement therapy
+3467,Tetanus
+3469,Thalassaemia
+3470,Thiamine and riboflavin deficiency
+3471,Third stage of labour
+3472,Threatened miscarriage
+3473,Throat infections
+3474,Thromboembolic disorders
+3475,Thromboembolism
+3476,Thrush
+3478,Thyroid storm
+3479,Thyrotoxicosis
+3480,Tic disorders
+3481,Tinea (pityriasis) versicolor
+3482,Tinea corporis (ringworm)
+3483,Tinea cruris (jock itch)
+3484,Tinea pedis (athlete’s foot)
+3485,Tinnitus
+3486,To reduce the need for allogenic blood tranfusion
+3487,Tonic-clonic status epilepticus
+3488,Tonsillitis
+3489,Tooth extraction
+3490,Toothache
+3491,Topical anesthesia
+3492,Total or partial gastrectomy
+3493,Tourette syndrome
+3494,Toxocariasis
+3495,Toxoplasmosis
+3496,Tracheolaryngitis
+3497,Trachoma
+3498,Tranquilizer overdoses
+3499,Transfusion reactions
+3501,Transurethral prostatic resection
+3502,Traumatic hyphema
+3503,Traveller’s diarrhea
+3505,Trichinellosis
+3506,Trichinosis
+3507,Trichomoniasis
+3508,Trichostrongyliasis
+3509,Trichotillomania
+3510,Trichuriasis
+3511,Trigeminal neuralgia
+3512,Trophoblastic neoplasms
+3513,Tuberculosis
+3514,Tuberculous meningitis
+3515,Tuberous sclerosis
+3516,Tularaemia
+3517,Tumor lysis syndrome
+3518,Type 1 DM
+3519,Type 2 DM
+3520,Typhoid fever
+3523,Ulcerative colitis
+3524,Ulcers
+3525,Uncomplicated UTI
+3526,Uncomplicated cystitis
+3527,Uncomplicated gonorrhoea
+3528,Uncomplicated pneumococcal pneumonia
+3529,Uncomplicated premature labour
+3530,Uncomplicated skin infections
+3531,Unipolar and bipolar depression
+3532,Nonproductive coughs
+3533,Unstable angina
+3534,Upper Gl bloating
+3535,Upper and lower respiratory tract infections
+3536,Upper gastrointestinal haemorrhage
+3537,Urethritis
+3538,Urge incontinence
+3539,Uric acid nephropathy
+3540,UTI caused by Staphylococcus Aureus
+3541,Urinary frequency and urgency
+3542,Urinary incontinence
+3543,Urinary tract infection
+3544,Urine alkalinisation
+3545,Urothelial bladder carcinoma
+3546,Urothelial toxicity
+3547,Urticaria
+3548,Uterine atony
+3549,Uterine bleeding
+3550,Uterine fibroids
+3551,Uterine hemorrhage
+3552,Uveal tract inflammation
+3553,Uveitis
+3554,Vaginal atrophy
+3555,Vaginal candidiasis or thrush
+3556,Vaginal dryness
+3557,Vaginal leucorrhoea
+3558,Vaginal or rectal irritation
+3559,Vaginal trichomoniasis
+3560,Vaginitis
+3561,Variceal haemorrhage
+3562,Varicella infection
+3563,Varicella zoster (chickenpox)
+3564,Vasculitis
+3565,Venous thromboembolism
+3566,Venous thrombosis
+3567,Ventricular arrhythmias
+3568,Ventricular fibrillation
+3570,Ventricular tachycardia
+3572,Verruca
+3573,Vertigo
+3574,Vertigo and vestibular disorders
+3576,Vestibular disorders
+3577,Vestibular neuritis
+3578,Vincent’s infection
+3579,Visceral muscle spasm
+3580,Visceral spasms
+3581,Vitamin A deficiency
+3582,"Iron, Vitamin B and Zinc deficiencies"
+3583,Vitamin B deficiencies
+3584,Vitamin B12 deficiency
+3585,Vitamin B6 deficiency
+3586,Vitamin D deficiency
+3588,Vitamin E deficiency and peripheral neuropathy
+3589,Vitamin K deficiency
+3590,Vitamin K deficiency bleeding
+3591,Vitamin deficiency
+3592,Vitamin C deficiency
+3593,Vitamin or mineral deficiency
+3594,Vitamin or mineral deficiency during pregnancy and lactation
+3595,Vitamin or mineral supplement
+3596,Vitiligo
+3597,Vomiting
+3598,Vulvovaginal candidiasis
+3599,Water disinfection
+3600,Water purification
+3602,Watery eye
+3603,Wet age-related macular degeneration
+3604,Wheezing
+3605,Whipple’s disease
+3606,Wiskott-Aldrich syndrome
+3607,Worm infections
+3608,Wound and burn dressing
+3609,Wound and ulcer cleansing
+3610,Wound cleansing
+3611,Wound debribement and suturing
+3613,Wound infection
+3614,Wound sepsis
+3615,Wounds
+3616,X-ray imaging
+3617,Xerophthalmia
+3619,Yellow fever infection
+3620,Zinc & folic acid deficiency
+3621,Zinc deficiency
+3622,Zollinger-Ellison syndrome
+3623,Neutropenia after cytotoxic chemotherapy
+3624,Ulcerative Proctitis
+3625,Tracheostomy care during anaesthesia.
+3627,"Poisoning due to foods, heavy meals & drugs"
+3628,Prevention of itching associated with allergic conjunctivitis
+3630,Major depressive disorder
+3631,Acute hypovolaemic shock
+3632,Neonatal hyperbilirubinaemia
+3633,Vestibular and visual disorders of ischaemic aetiology
+3634,Stroke
+3635,Migraine headache
+3636,Diverticulitis
+3637,Acute and chronic diseases of respiratory tracts
+3638,Inflammatory diseases of Rhinopharyngeal tract
+3639,Asthmatic bronchitis
+3640,Bronchial asthma
+3641,Chronic pneumonia.
+3642,Septicemia
+3643,Protein supply for peritoneal nutrition
+3644,Prophylaxis and therapy of protein deficiency
+3645,Obesity
+3646,Acute bronchospasm
+3647,Mild to moderate hypertension
+3648,chronic stable or vasospastic angina
+3649,Coronary artery disease
+3650,Stroke prevention
+3651,Essential hypertension
+3652,Angina pectoris
+3653,Refractory angina pectoris where nitrate therapy has failed
+3654,Pelvic Inflammatory Disease (PID)
+3655,Breast cancer
+3656,Nausea and vomiting after surgery
+3657,Acute manic episodes of bipolar disorder
+3658,Acute coronary syndrome
+3659,Primary hypercholesterolemia
+3660,Primary dysbetalipoproteinemia
+3661,Vasomotor rhinitis
+3662,Nonallergic rhinitis
+3664,Sore gums
+3665,Canker sores
+3666,Braces
+3667,Minor dental procedures
+3668,Dentures
+3670,Sepsis gonorrhea
+3671,"Growth and repair of body tissue, bone, skin, teeth & hair."
+3672,Progressive loss of hearing
+3673,Acute gouty arthritis
+3674,Chronic simple lichen
+3675,Intertrigo
+3676,Exfoliative dermatitis
+3680,Pruritus ani
+3681,Dermatitis Solaris
+3682,"Skin mycosis (athlete's foot, trichophytia)"
+3683,Tinea versicolor
+3684,Insect bite and skin disease by secondary bacterial infection.
+3685,Exudative ARMD
+3686,Mucolytic
+3687,Galactorrhea
+3688,Epidural intrathecal anesthesia
+3689,Whooping cough
+3690,Pre & post operative cough
+3691,Itchiness or irritation around the anus
+3692,Calcium suppliment
+3693,Nutritional supplement of osteoporosis
+3694,During infectious diseases and convalescence
+3695,Source of water
+3696,Electrolytes or calories or as an alkalinizing agent
+3697,Fluid and electrolytes replenisher in hypervolemia
+3698,Calcium & vitamin D supplement
+3699,Extraocular and intraocular irrigating solution during ocular surgical procedure
+3700,Burning feet syndrome
+3701,Graying hair
+3702,Peripheral neuritis
+3703,Muscular cramps.
+3704,Prophylaxis of uterine atony and excessive bleeding after caesarean section
+3706,End-of-dose motor fluctuations
+3707,Grazes
+3708,"Iron, Folic acid, Zinc, Vitamin B & Vitamin C deficiency during pregnancy and lactation"
+3709,Dryness and pain associated with reduced or abnormal tear production
+3710,Acute maxillary sinusitis
+3711,Acute bacterial exacerbations of chronic bronchitis
+3712,Gum swelling
+3714,Waldenstrom's macroglobulinaemia
+3715,Q fever
+3716,Acute purulent conjunctivitis
+3717,Preoperative hand disinfection
+3718,Strains
+3719,"Repairs, restores & protects dry skin & sensitive skin conditions"
+3722,Interstitial cystitis
+3723,Benign gastric and duodenal ulceration
+3724,Post operative inflammation in the eye and ear
+3725,Eating disorder
+3726,Substance abuse disorder
+3727,Amblyopia
+3728,Prevention of gallstones
+3729,Legionellosis
+3730,Dental infections
+3731,Toxic shock syndrome
+3732,Irritability
+3733,Restlessness
+3734,Warts
+3735,Scborrhea
+3736,Seborrhea
+3737,Lichen
+3738,Photodermatitis
+3739,Primary irritant and allergic dermatitis (napkin rash)
+3741,Nocturnal myoclonus
+3742,Post traumatic stress disorder (PTSD)
+3743,Burning mouth syndrome
+3744,Resistant depression
+3748,Cervical dystonia
+3749,Limb spasticity
+3750,Severe Primary Axillary Hyperhidrosis
+3751,Glabellar and lateral Canthal lines (cosmetic purpose)
+3753,"Different skin problems (e.g., psoriasis)"
+3754,"Vascular complications (e. g., atherosclerosis)"
+3755,"Kidney stones and inflammatory bowel disease (e.g., ulcerative colitis, leaky gut syndrome)"
+3758,High Cholesterol
+3759,HMG CoA reductase inhibitors
+3760,Drug induced Myopathy
+3761,Antioxidant
+3762,Adjuvant therapy in cardiovascular disease especially in angina and congestive heart failure
+3763,Immune system depression
+3764,Cognitive decline
+3765,Periodontal Disease
+3766,Female hypogonadism
+3767,Diabetic foot infections
+3768,Hemorrhage
+3769,Liver disease
+3770,Muscle pain caused by spinal cord injury
+3771,Rash and pruritus in a variety of condition
+3772,Appetite stimulation
+3774,Cushing's and Nelson's syndrome
+3775,Acromegaly and hyperprolactinemia
+3777,Antidepressant-induced inorgasmia
+3778,hyperpyrexia
+3779,Toxaemia
+3780,Infective otitis externa
+3781,Allergic otitis externa
+3782,Choroiditis
+3784,Protects eyes from cataract and age-related macular degeneration (AMD)
+3785,Improves recovery from central nervous system injuries
+3786,Protects from Parkinson's disease
+3789,Dementia in alzheimer's disease
+3792,"Improves Cardiovascular health (Atherosclerosis, reduce cholesterol)"
+3794,Rrinkles
+3795,pimples and other signs of aging
+3796,Strength and endurance & immune system
+3800,Reduce risk of infertility
+3801,Stabilize blood sugar
+3803,Seizures
+3804,Stress ulceration of upper Gl
+3806,Dysfunctional uterine bleeding (DUB)
+3807,Vaginal thrush
+3808,Non-dialysis dependent-chronic kidney disease (NDD-CKD) patients receiving an erythropoietin
+3809,Non-dialysis dependent-chronic kidney disease (NDD-CKD) patients not receiving an erythropoietin
+3810,Hemodialysis dependent-chronic kidney disease (HDD-CKD) patients receiving an erythropoietin
+3811,Peritoneal dialysis dependent-chronic kidney disease (PDD-CKD) patients receiving an erythropoietin
+3812,Adjunct to levodopa treatment in Parkinson's disease
+3813,Adult chronic immune (idiopathic) thrombocytopenic purpura (ITP)
+3814,Hepatitis C virus related thrombocytopenia
+3815,Dry skin associated with contact dermatitis
+3816,Senile pruritus
+3819,Anaemia related to non-myeloid malignant disease chemotherapy
+3820,Percutaneous coronary intervention (PCI)
+3821,Increase yield of autologous blood
+3825,Prophylaxis of osteoporosis in postmenopausal women
+3826,Moderate to severe vasomotor symptoms associated with menopause
+3829,Infertility due to cervical hostility
+3830,Prevention of recurrent UTI and vaginal Infections
+3831,Micturition complaints
+3832,Dental cavity
+3833,Dental plaque
+3834,Haemophilia A
+3836,Itching and pain
+3837,Cancer patients receiving myelosuppressive chemotherapy
+3839,Cancer patients receiving bone marrow transplant
+3841,Peripheral blood progenitor cell collection and therapy
+3843,Patients with Acute Myeloid Leukemia receiving induction or consolidation chemotherapy
+3844,Organic brain syndrome (OBS)
+3845,"Vitamin B,Vitamin-C and Folic acid deficiencies"
+3846,Non ST segment elevation Myocardial Infarction
+3847,"Conjunctivitis, blepharitis and blepharoconjunctivitis"
+3848,Posttraumatic or pre- and postoperative otitis externa
+3850,"Intravenous use in MRI to visualize lesions with abnormal vascularity in the brain, spine and associated tissues"
+3851,Cytomegaloviral infections
+3852,Prophylaxis of cytomegaloviral infections
+3853,Topical antiseptic
+3854,Active immunisation against hepatitis A
+3855,Active immunisation against hepatitis B
+3856,Male Hypogonadotropic Hypogonadism
+3857,Cryptorchidism
+3858,Prevention of infections after bone marrow transplantation
+3859,Increase platelet count in patients with idiopathic thrombocytopenic purpura
+3860,Kawasaki disease
+3861,Guillain-Barre syndrome
+3863,Primary antibodies deficiency
+3864,Hepatits A
+3865,Measles attack in immunocompromised patients
+3866,Primary rubella in pregnant women
+3867,Stroke in patients with hypertension and left ventricular hypertrophy.
+3868,Pre-operative antimuscarinic agent
+3869,Reverse residual neuromuscular blockade
+3872,Cuteneous candidiasis with superficial bacterial infection
+3873,Surgery
+3874,Trauma
+3875,Burn injury
+3876,Protein deficiency or Sarcopenia
+3877,Cancer
+3878,Hepatic insufficiency
+3879,Renal insufficiency
+3880,Malnutrition
+3883,Adenocarcinoma
+3884,Malignant neoplasm
+3885,Basal cell carcinoma
+3886,Oesophageal carcinoma
+3888,Supplement in adrenal insufficiency during minor surgery under general anaesthesia
+3889,Supplement in adrenal insufficiency during moderate or major surgery
+3891,Replacement therapy in adrenocortical insufficiency
+3892,Soreness and discomfort due to hemorrhoids
+3893,"Anal fissures, pruritus ani and similar conditions of the anal area"
+3895,Anal itching
+3900,Unstable tear film
+3901,Pre-Operative Supplements
+3902,Acute non articular rheumatism
+3903,Percutaneous transluminal coronary angioplasty (PTCA)
+3904,Premedication in surgery
+3905,Insomnia associated with anxiety
+3908,Acne rosacea
+3909,Superficial punctate keratitis
+3910,Herpes zoster keratitis
+3913,Palliative treatment of prostatic carcinoma
+3914,Palliative treatment of endometrial and renal carcinoma
+3915,Progestogen component in menopausal hormonal replacement therapy
+3916,Secondary amenorrhoea
+3917,Postoperative pain
+3918,Faecal impaction
+3919,Burkitt's lymphoma
+3920,Choriocarcinoma
+3922,Lymphosarcoma
+3923,Shoulder pain
+3924,Neck pain
+3925,Anti-inflammatory or immunosuppressive
+3926,Endocrine Disorders
+3927,Anti - inflammatory treatment
+3928,Hematological and Oncological Disorders
+3929,Treatment or shock states
+3930,Blastocystis hominis infection
+3931,Acute dental infections
+3932,Fungating tumours
+3933,Protection from harmful UV rays
+3934,Ideal for those with photodermatoses & reduced skin pigmentation
+3935,Termination of pregnancy upto 9th week (63 days) of gestation
+3936,Early menstrual regulation
+3938,Solid tumours
+3939,Meningococcal Pneumonia
+3940,Improving the nutritional status of women throughout the pregnancy
+3941,Improving the nutritional status of women prior to conception
+3942,Prophylaxis of cardiac graft rejection
+3943,Prophylaxis of acute renal graft rejection
+3946,Acute and chronic non-infectious conjunctivitis
+3947,Viral conjunctivitis
+3948,Fungal conjunctivitis
+3950,Chronic pain
+3951,Myositis
+3952,Acute pain
+3953,Extra-articular disorders
+3954,Primary dysmenorrhoea
+3955,Amoebic dysentery
+3956,Skin and soft tissue infections
+3957,Improve appetite and growth of children
+3958,Promotes muscle growth
+3959,Weight gain and calcium retention
+3960,Ensures good eye sight
+3961,Necessary for the normal process in protein
+3962,Fat carbohydrate metabolism
+3963,RBC formation and proper cell functioning
+3964,Increases the carnitine which is responsible of energy production
+3965,Neurogenic bladder disorders
+3966,Maintain anesthesia
+3967,Smooth muscle spasm of the gastrointestinal disorder
+3968,Facilitate endotracheal intubation
+3969,Muscle relaxant in general anaesthesia
+3970,Facilitate mechanical ventilation in intensive care
+3971,Ulcer resistant to H2 receptor antagonists
+3972,Gastrointestinal (Gl) bleeding from stress
+3973,Prophylaxis for acid aspiration syndrome during induction of anaesthesia
+3974,Head pediculosis
+3975,Respiratory Distress Syndrome (RDS) in premature infants.
+3976,Active immunisation for the prevention of pneumonia
+3977,Ingrown toenails
+3978,Therapeutic dilution of blood
+3979,Primary or secondary topical infections
+3980,Infected surgical incisions
+3981,Infected decubitus or stasis ulcers
+3982,Pyodermas
+3983,Secondarily infected dermatoses
+3984,Infected traumatic lesions
+3985,Microbial contamination in burns
+3986,Incisions and other topical lesions
+3987,For degerming skin in hyperalimentation and catheter care
+3988,Minor cuts and wounds
+3989,Prevent the development of infections and permit wound healing
+3990,Acute mucosal infections of the mouth and pharynx
+3992,Antiseptic skin cleanser
+3993,Thrombotic cardiovascular (CV) events
+3994,Stent thrombosis
+3996,Non-ST-elevation myocardial infarction (NSTEMI)
+3997,ST-elevation myocardial infarction (STEMI)
+3998,Cyclical mastalgia
+4000,Deep anesthesia as in cataract extraction
+4001,Removal of sutures
+4002,Removal of foreign bodies
+4003,Tonometry
+4004,Active immunisation against rabies
+4005,Acute diarrhoea
+4006,Chronic angina
+4007,Increase bone mass in men with osteoporosis
+4008,Cocorticoid induced osteoporosis
+4009,Chronic psychoses
+4010,Severe bronchospasm
+4011,Acute severe asthma
+4013,Hyperphosphataemia in patients with chronic renal failure
+4014,Hepatoprotective and antioxidant activity
+4015,Envenomation caused by snake bites
+4016,Varicose ulcers
+4017,Skin grafts
+4018,Hidradenitis
+4019,Sycosis barbae
+4020,Paronychia
+4021,Erythrasma
+4022,Surgical aid in the anterior segment
+4023,Acute Evolving Myocardial Infarction
+4024,Acute Massive Pulmonary Embolism
+4025,Arterial Thrombosis or Embolism
+4026,Arteriovenous Cannulae Occlusion
+4027,Acute painful shoulder
+4028,To develop immune system
+4029,"To prevent scurvey, beriberi, pellagra and others"
+4030,Prevent certain types of cancer by blocking the formation of cancer causing substances in the body
+4031,Prevent cardiovascular and immunological disorders
+4032,Prevent aging
+4033,Allergic contact dermatitis
+4034,Hand and foot eczema
+4035,Chronic cutaneous graft-vs-host disease
+4036,Cardiovascular risk reduction
+4037,Lumbago sciatica
+4038,Skin & nervous system
+4040,Passive immunisation against tetanus
+4041,Movement disorders
+4042,Moderate to severe tardive dyskinesia
+4043,Root canal operation
+4045,Thiamine deficiency
+4046,Treatment and prophylaxis of mild chronic thiamine deficiency
+4047,Wernicke-Korsakoff syndrome
+4048,"Acute coronary syndromes (unstable angina, non-ST elevation MI, ST elevation MI)"
+4049,Including patients managed medically
+4050,With percutaneous coronary intervention or coronary artery bypass graft
+4051,Passive immunity in the prevention & treatment of tetanus
+4053,Aid in ophthalmic surgery by staining the anterior capsule of the lens
+4054,Bronchodilator
+4055,Active immunization against typhoid fever
+4056,Active immunisation against varicella infection
+4057,Postexposure vaccination
+4058,Acute hypertension
+4059,Acute coronary insufficiency
+4060,Histiocytic lymphoma
+4061,Letterer-Siwe disease
+4062,Lymphocytic lymphoma
+4063,Wilm's tumour
+4064,Acute lymphoblastic leukaemia
+4065,Daily multivitamin maintenance
+4066,For growing children
+4067,Development and proper functioning of their vital organs
+4068,Prevent vitamin deficiency and restore lost vitality after illness
+4069,Increases immunity
+4070,"Maintain healthy skin, hair, nail, teeth, bone, eye and nervous system"
+4071,"Treat and prevent chronic diseases like heart diseases, rheumatoid arthritis, COPD and cancer"
+4072,Proper development of the baby in pregnant and nursing mothers
+4073,Glossitis
+4074,Stomatitis
+4075,Cheilosis
+4076,Beriberi and polyneuritis
+4077,Supplement for intravenous nutrition
+4078,Vitamins B and Zinc deficiencies
+4079,Vitamin B1 deficiency
+4080,Facial paralysis
+4081,Age related eye disease
+4082,Eye health
+4083,"Lactose intolerance such as bloating, flatulence, diarrhea"
+4084,Moderate to severe symptoms of uterine fibroids
+4085,Prevention and treatment of vitamin deficiency in children and infants.
+4087,Prevention & control of bleeding in Factor VIII deficiency
+4093,In vitro fertilization procedures
+4094,Developed to treat the muscle rigidity
+4095,Removal of earwax
+4096,Malnourished infants
+4097,"Anemia, vitamin & mineral deficiency"
+4098,General kidney & heart transplant
+4099,"Active immunisation against diphtheria, tetanus and pertussis"
+4100,Dental nerve block
+4101,Dental infiltration anesthesia
+4103,Candidaemia
+4106,Complicated skin and skin structure infections
+4107,Cough
+4110,Ocular infections
+4111,Ocular pain and inflammation
+4113,Epidermal growth factor receptor (EGFR)
+4115,Spring catarrh
+4116,Visceral leishmaniasis
+4117,Block the virus from multiplying
+4118,Direct acting antiviral agent (DAA) against the hepatitis C virus
+4119,Cutaneous or mucocutaneous mycotic infections
+4120,Seasonal allergic rhinitis
+4121,Acute or chronic narrow angle glaucoma
+4122,Suspected glaucoma
+4123,Stimulation of follicle growth
+4125,Helicobacter pylori eradication
+4126,Threatened abortion
+4127,Habitual abortion
+4128,Threatened premature delivery
+4129,Schizoaffective Disorder
+4130,Obstructive sleep apnea (OSA)
+4131,Shift work disorder (SWD)
+4132,Elevated intraocular pressure
+4135,Metastatic non-small cell lung cancer
+4136,Gastrointestinal Stromal Tumors
+4137,Hepatocellular Carcinoma
+4138,Mantle cell lymphoma
+4139,Chronic lymphocytic leukemia
+4140,Waldenström's macroglobulinemia
+4141,fenestration
+4142,mastoidectomy
+4143,tympanoplasty
+4144,Thyroid cancer
+4145,Reduction of unwanted facial hair in women
+4146,Adrenocortical insufficiency in Addison’s disease
+4147,Salt losing adrenogenital syndrome
+4148,Postural hypotension
+4149,Idiopathic Pulmonary Fibrosis
+4150,Reduce the risk of preterm birth in women
+4151,Anti-hypertensive
+4152,Lower the blood pressure
+4153,Angiography
+4154,Arteriography
+4155,Angiocardiography
+4156,Excretory urography
+4157,Peripheral venography
+4158,Maintenance of normal sinus rhythm
+4159,Conversion of atrial fibrillation/flutter
+4160,Amyotrophic lateral sclerosis (ALS)
+4161,Cytomegalovirus (CMV) retinitis
+4162,Acute Exposure to Blood Containing HBsAg
+4163,Perinatal Exposure of Infants Born to HBsAg-positive Mothers
+4164,Sexual Exposure to an HBsAg-positive Person
+4165,Household Exposure to Persons with Acute HBV Infection
+4167,Receiving a kidney transplant
+4168,Prophylaxis of organ rejection
+4169,Hyperkalemia
+4170,Chest congestion
+4171,Primary biliary cholangitis (PBC)
+4172,Cholestatic liver disease
+4173,Non-alcoholic fatty liver disease (NAFLD)
+4174,Non-alcoholic steatohepatitis (NASH)
+4175,Anitis
+4176,Perianitis
+4177,Cryptitis
+4178,Papillitis
+4179,Acute hemorrhoidal thrombosis
+4180,Myelofibrosis
+4181,Chronic idiopathic myelofibrosis
+4182,Post polycythaemia vera myelofibrosis
+4183,Post essential thrombocythaemia myelofibrosis
+4190,Reduce peristalsis
+4191,Hyperlipidemia
+4192,Prophylaxis of omphalitis
+4193,Active immunization against Hepatitis A virus
+4194,Supports normal prostate function
+4195,Healthy urinary flow
+4196,Encephalitis virus vaccine
+4197,Suspected or confirmed COVID-19
+4198,Deficient protein metabolism
+4199,Insect repellent
+4200,Dental hypersensitivity
+4201,Sodium Chloride deficiency
+4202,Sluggishness
+4203,Feebleness
+4204,Curvature
+4205,Shortness
+4206,Obliquity of male organ.
+4207,Memory deficiency
+4208,Impaired speech
+4209,Rough & defective voice
+4210,Delay imminent pre-term birth
+4211,Promote the quality and quantity of milk
+4212,Allogeneic or autologous haematopoietic progenitor cell transplantation (HPCT)
+4213,Intimate hygiene wash
+4214,Migraines

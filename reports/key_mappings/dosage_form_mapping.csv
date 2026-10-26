@@ -1,0 +1,114 @@
+dosage form id,dosage form name
+1,Tablet
+2,Capsule
+3,Syrup
+4,Suppository
+5,Oral Suspension
+6,Gel
+7,Ointment
+8,Cream
+9,Lotion
+10,Nasal Drop
+12,Injection
+14,Inhaler
+17,IV Infusion
+18,Oral Solution
+19,Ophthalmic Ointment
+20,Oral Powder
+21,Pediatric Drops
+22,Oral Paste
+24,Chewable Tablet
+27,Effervescent Granules
+28,Dispersible Tablet
+31,Effervescent Tablet
+33,Powder for Solution
+36,Rectal Ointment
+37,Tablet (Sustained Release)
+38,Capsule (Sustained Release)
+39,Topical Spray
+41,Tablet (Extended Release)
+42,Tablet (Modified Release)
+43,Tablet (Controlled Release)
+44,Powder for Injection
+46,Tablet (Enteric Coated)
+48,Solution for Inhalation
+53,Nasal Spray
+59,Intratracheal Suspension
+60,Capsule (Delayed Release)
+62,Transdermal Patch
+63,Long Acting Tablet
+64,Vaginal Cream
+65,Vaginal Pessary
+67,SC Injection
+68,IM/IV Injection
+69,IM Injection
+70,IV Injection
+72,Ear Drop
+75,Powder for Suspension
+76,Ophthalmic Gel
+78,Oral Gel
+79,Retard Tablet
+80,Capsule (Extended Release)
+81,Capsule (Timed Release)
+82,Capsule (Controlled Release)
+85,Solution
+86,Vaginal Tablet
+88,Medicated Bar
+89,Scalp Lotion
+90,Scalp Solution
+92,Liquid Cleanser Soap
+93,Topical Solution
+94,Hand Rub
+95,Mouthwash
+96,Surgical Scrub
+104,Intra-articular Injection
+105,IM/SC Injection
+107,Intraspinal Injection
+108,Irrigation Solution
+109,Capsule (Modified Release)
+110,Dialysis Solution
+112,Vaginal Gel
+113,Vaginal Suppository
+118,Ophthalmic Suspension
+119,Intravitreal Injection
+122,Dental Gel
+124,Muscle Rub
+125,Shampoo
+126,Topical Suspension
+127,Scalp Ointment
+131,Rectal Saline
+132,Tablet (Delayed Release)
+133,IV/SC Injection
+134,IV Injection or Infusion
+136,Inhalation Capsule
+138,Topical Gel
+139,Nebuliser Suspension
+140,Viscous Eye Drop
+141,Nebuliser Solution
+142,Oral Emulsion
+144,Oral Soluble Film
+146,Sprinkle Capsule
+147,IM/IA Injection
+148,Ophthalmic Solution
+149,Chewing Gum Tablet
+151,MUPS Tablet
+152,Sublingual Tablet
+154,Tablet (Immediate Release)
+157,Ophthalmic Emulsion
+159,Eye Capsule
+160,Tablet (Prolonged Release)
+162,Liquid
+164,Effervescent Powder
+165,Nasal Ointment
+166,Long Acting Injection
+168,Topical Powder
+169,Viscoelastic Solution
+170,Ocular Spray
+172,Respirator Solution
+174,Nail Lacquer
+175,Flash Tablet
+176,Microgranules
+178,Emulsion for infusion
+179,Bolus Tablet
+180,Intracameral Injection
+181,OROS Tablet

@@ -1,0 +1,1663 @@
+<!doctype html>
+<html lang="ar-EG" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="من بيانات خام إلى قاعدة بيانات وتحليلات متقدمة: أكثر من 21,714 دواء، كشف البدائل الأرخص، وفر يصل إلى 43%، ولوحة تحكم تفاعلية متكاملة." />
+  <meta name="theme-color" content="#522D60" />
+  <title>MedicineDB — منصة استخبارات وتحليل أسعار وبدائل الأدوية</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  
+  <!-- Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ─── ثوابت الهوية البصرية الملكية: Royal Velvet Theme ─── */
+    :root {
+      --bg:           #FBF9FC;
+      --surface:      #ffffff;
+      --fg:           #1F1124;
+      --muted:        #65526B;
+      --border:       #E8DBEA;
+      --border-light: #F2EAF3;
+      
+      /* باليت Royal Velvet الفاخرة */
+      --accent:       #522D60;   /* Royal Purple */
+      --accent-hover: #3E214A;
+      --accent-wine:  #80426E;   /* Plum Wine */
+      --accent-peach: #F2A67B;   /* Sunset Peach */
+      --accent-gold:  #FFD38B;   /* Warm Sand Gold */
+      
+      /* صبغات لونية متباينة وناعمة */
+      --accent-soft:  rgba(82, 45, 96, 0.08);
+      --wine-soft:    rgba(128, 66, 110, 0.12);
+      --peach-soft:   rgba(242, 166, 123, 0.18);
+      --gold-soft:    rgba(255, 211, 139, 0.28);
+      --fg-soft:      rgba(31, 17, 36, 0.04);
+      --ok:           #1C7B4C;
+      --ok-soft:      rgba(28, 123, 76, 0.12);
+      --danger:       #B83232;
+
+      --font-display: 'Alexandria', 'Cairo', system-ui, -apple-system, sans-serif;
+      --font-body:    'Alexandria', 'Cairo', system-ui, -apple-system, sans-serif;
+      --font-mono:    'JetBrains Mono', ui-monospace, Consolas, monospace;
+
+      --fs-h1: clamp(34px, 5.0vw, 56px);
+      --fs-h2: clamp(24px, 3.2vw, 36px);
+      --fs-h3: 20px;
+      --fs-lead: 17.5px;
+      --fs-body: 15px;
+      --fs-sm: 13.5px;
+      --fs-micro: 12px;
+
+      --gap-xs: 8px;
+      --gap-sm: 12px;
+      --gap-md: 20px;
+      --gap-lg: 32px;
+      --gap-xl: 56px;
+      --gap-2xl: 96px;
+      --container: 1160px;
+      --gutter: 28px;
+      --radius: 10px;
+      --radius-lg: 16px;
+    }
+
+    /* ─── ثوابت الوضع الليلي: Dark Velvet Theme ─── */
+    html[data-theme="dark"] {
+      --bg:           #110B17;
+      --surface:      #1B1223;
+      --fg:           #F4ECF7;
+      --muted:        #B5A1BE;
+      --border:       #382647;
+      --border-light: #2A1D36;
+      
+      --accent:       #FFD38B;   /* Warm Sand Gold for high readability in dark */
+      --accent-hover: #F2A67B;
+      --accent-wine:  #F2A67B;   /* Sunset Peach */
+      --accent-peach: #F2A67B;
+      --accent-gold:  #FFD38B;
+      
+      --accent-soft:  rgba(255, 211, 139, 0.12);
+      --wine-soft:    rgba(242, 166, 123, 0.16);
+      --peach-soft:   rgba(242, 166, 123, 0.22);
+      --gold-soft:    rgba(255, 211, 139, 0.24);
+      --fg-soft:      rgba(244, 236, 247, 0.06);
+      --ok:           #2ECB7B;
+      --ok-soft:      rgba(46, 203, 123, 0.16);
+      --danger:       #E85A5A;
+    }
+
+    html[data-theme="dark"] .topnav {
+      background: rgba(17, 11, 23, 0.94);
+      border-bottom-color: var(--border);
+    }
+    html[data-theme="dark"] .nav-panel {
+      background: var(--surface);
+      border-bottom-color: var(--border);
+    }
+    html[data-theme="dark"] .card {
+      background: var(--surface);
+      border-color: var(--border);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+    }
+    html[data-theme="dark"] .stat-card {
+      background: var(--surface);
+      border-color: var(--border);
+    }
+    html[data-theme="dark"] .table-wrap,
+    html[data-theme="dark"] .ds-table {
+      background: var(--surface);
+      border-color: var(--border);
+    }
+    html[data-theme="dark"] .ds-table th {
+      background: #170E1F;
+      color: #FFD38B;
+      border-bottom-color: var(--border);
+    }
+    html[data-theme="dark"] .ds-table td {
+      border-bottom-color: var(--border-light);
+    }
+    html[data-theme="dark"] .ds-table tbody tr:hover {
+      background: rgba(255, 211, 139, 0.07);
+    }
+    html[data-theme="dark"] .schema-wrap {
+      background: var(--surface);
+      border-color: var(--border);
+    }
+    html[data-theme="dark"] .erd-box {
+      fill: #24192F;
+      stroke: #453059;
+    }
+    html[data-theme="dark"] .erd-name {
+      fill: #FFD38B;
+    }
+    html[data-theme="dark"] .erd-count {
+      fill: #B5A1BE;
+    }
+    html[data-theme="dark"] .calc-box {
+      background: var(--surface);
+      border-color: var(--border);
+    }
+    html[data-theme="dark"] .calc-select,
+    html[data-theme="dark"] .calc-input {
+      background: #140D1B;
+      color: #F4ECF7;
+      border-color: #382647;
+    }
+    html[data-theme="dark"] .calc-select:focus,
+    html[data-theme="dark"] .calc-input:focus {
+      background: #1B1223;
+      border-color: #F2A67B;
+    }
+    html[data-theme="dark"] .calc-kpi-result {
+      background: linear-gradient(135deg, rgba(82, 45, 96, 0.3) 0%, rgba(255, 211, 139, 0.12) 100%);
+      border-color: rgba(242, 166, 123, 0.5);
+    }
+    html[data-theme="dark"] .btn-secondary {
+      background: #24192F;
+      color: #F4ECF7;
+      border-color: #453059;
+    }
+    html[data-theme="dark"] .btn-secondary:hover {
+      background: #31213F;
+      border-color: #FFD38B;
+      color: #FFD38B;
+    }
+    html[data-theme="dark"] .modal-box {
+      background: #1B1223;
+      border-color: #453059;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-body);
+      font-size: var(--fs-body);
+      line-height: 1.75;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+    img, svg { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; cursor: pointer; }
+    p { text-wrap: pretty; }
+    h1, h2, h3 { text-wrap: balance; }
+    .num { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+    bdi { unicode-bidi: isolate; }
+
+    /* ─── التخطيط العام ─── */
+    .container { max-width: var(--container); margin-inline: auto; padding-inline: var(--gutter); }
+    .section { padding-block: clamp(52px, 7vw, 88px); scroll-margin-top: 84px; }
+    .section + .section { border-top: 1px solid var(--border); }
+    .section.tight { padding-block: clamp(38px, 5vw, 60px); }
+    .section.loose { padding-block: clamp(68px, 8.5vw, 110px); }
+    .stack { display: flex; flex-direction: column; }
+    .stack > * + * { margin-top: var(--gap-md); }
+    .row-between { display: flex; align-items: center; justify-content: space-between; gap: var(--gap-md); }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--gap-lg); }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gap-lg); }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--gap-md); }
+    @media (max-width: 960px) { .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; } }
+    @media (min-width: 640px) and (max-width: 960px) { .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+
+    /* ─── عناصر الطباعة والنصوص ─── */
+    h1, .h1 { font-family: var(--font-display); font-size: var(--fs-h1); line-height: 1.25; font-weight: 800; margin: 0; color: var(--accent); }
+    h2, .h2 { font-family: var(--font-display); font-size: var(--fs-h2); line-height: 1.35; font-weight: 750; margin: 0; color: var(--accent); }
+    h3, .h3 { font-family: var(--font-display); font-size: var(--fs-h3); font-weight: 700; line-height: 1.5; margin: 0; color: var(--accent-wine); }
+    .lead { font-size: var(--fs-lead); line-height: 1.8; color: var(--muted); max-width: 64ch; margin: 0; }
+    .eyebrow {
+      font-family: var(--font-body); font-size: 13px; font-weight: 700;
+      letter-spacing: 0.04em; color: var(--accent-wine); margin: 0 0 var(--gap-sm);
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .eyebrow::before {
+      content: ''; display: inline-block; width: 8px; height: 8px;
+      border-radius: 50%; background: var(--accent-peach);
+    }
+    .meta { font-size: var(--fs-micro); color: var(--muted); }
+    .muted { color: var(--muted); }
+
+    /* ─── بطاقات وتأثيرات ─── */
+    .card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 26px;
+      box-shadow: 0 4px 18px rgba(82, 45, 96, 0.04);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(82, 45, 96, 0.07); }
+
+    /* ─── شريط الترويسة والتنقل ─── */
+    .topnav {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(251, 249, 252, 0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+    .topnav-inner { display: flex; align-items: center; justify-content: space-between; padding-block: 14px; gap: var(--gap-md); }
+    .logo {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: var(--font-display); font-size: 20px; font-weight: 850;
+      color: var(--accent);
+    }
+    .logo-badge {
+      font-size: 10.5px; font-weight: 700; background: var(--gold-soft);
+      color: #613B00; padding: 3px 8px; border-radius: 999px; border: 1px solid rgba(255, 211, 139, 0.6);
+    }
+    .main-nav { display: flex; gap: var(--gap-lg); align-items: center; }
+    .main-nav a { font-size: 14px; font-weight: 600; color: var(--muted); transition: color 0.15s ease; }
+    .main-nav a:hover { color: var(--accent); }
+    .topnav-actions { display: flex; align-items: center; gap: var(--gap-sm); }
+    
+    /* زر الترجمة اللغوية */
+    .lang-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--surface); color: var(--accent);
+      border: 1.5pt solid var(--border); padding: 7px 14px;
+      border-radius: 999px; font-size: 13px; font-weight: 700;
+      transition: all 0.2s ease; cursor: pointer;
+    }
+    .lang-btn:hover { border-color: var(--accent-peach); background: var(--peach-soft); color: var(--accent-hover); }
+
+    /* زر تبديل الوضع الليلي */
+    .theme-btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 38px; height: 38px;
+      background: var(--surface); color: var(--accent);
+      border: 1.5pt solid var(--border); border-radius: 50%;
+      font-size: 16px; cursor: pointer; transition: all 0.2s ease;
+    }
+    .theme-btn:hover {
+      border-color: var(--accent-peach);
+      background: var(--accent-soft);
+      transform: scale(1.08);
+    }
+
+    .menu-btn {
+      display: none; align-items: center; justify-content: center;
+      width: 42px; height: 42px; background: transparent; color: var(--accent);
+      border: 1px solid var(--border); border-radius: var(--radius);
+    }
+    .nav-panel {
+      display: none; position: absolute; inset-inline: 0; top: 100%;
+      background: var(--surface); border-bottom: 1px solid var(--border);
+      padding: var(--gap-md) var(--gutter) var(--gap-lg);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    }
+    .nav-panel a { display: block; padding: 12px 4px; font-size: 15px; font-weight: 600; border-bottom: 1px solid var(--border-light); }
+    .nav-panel .btn { margin-top: var(--gap-md); width: 100%; justify-content: center; }
+    .nav-panel.open { display: block; }
+    @media (max-width: 900px) {
+      .main-nav, .topnav-actions .btn-desktop { display: none; }
+      .menu-btn { display: inline-flex; }
+    }
+
+    /* ─── الأزرار ─── */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 11px 22px; border-radius: var(--radius);
+      border: 1.5px solid transparent; font-size: 14.5px; font-weight: 700;
+      transition: all 0.18s ease; text-decoration: none; cursor: pointer;
+    }
+    .btn:active { transform: translateY(1px); }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-wine) 100%);
+      color: #ffffff; border-color: var(--accent);
+      box-shadow: 0 4px 14px rgba(82, 45, 96, 0.25);
+    }
+    .btn-primary:hover {
+      background: linear-gradient(135deg, var(--accent-hover) 0%, #683057 100%);
+      box-shadow: 0 6px 18px rgba(82, 45, 96, 0.35);
+      color: #ffffff;
+    }
+    .btn-peach {
+      background: linear-gradient(135deg, #F2A67B 0%, #FFD38B 100%);
+      color: #3F1900; border-color: #F2A67B; font-weight: 800;
+    }
+    .btn-peach:hover { filter: brightness(1.05); color: #3F1900; }
+    .btn-secondary { background: var(--surface); color: var(--accent); border-color: var(--border); }
+    .btn-secondary:hover { border-color: var(--accent); background: var(--accent-soft); }
+    .btn-ghost { background: transparent; color: var(--accent); border-color: transparent; }
+    .btn-ghost:hover { color: var(--accent-wine); background: var(--accent-soft); }
+
+    /* أزرار لافتة البوابة */
+    .btn-banner-peach {
+      background: linear-gradient(135deg, #F2A67B 0%, #FFD38B 100%) !important;
+      color: #3F1900 !important; border: 1.5px solid #F2A67B !important; font-weight: 800;
+      box-shadow: 0 4px 14px rgba(242, 166, 123, 0.35);
+    }
+    .btn-banner-peach:hover { filter: brightness(1.06); transform: translateY(-2px); color: #3F1900 !important; }
+
+    .btn-banner-flask {
+      background: rgba(255, 255, 255, 0.14) !important;
+      color: #ffffff !important; border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
+      backdrop-filter: blur(8px);
+    }
+    .btn-banner-flask:hover {
+      background: rgba(255, 255, 255, 0.25) !important;
+      border-color: rgba(255, 255, 255, 0.7) !important;
+      color: #ffffff !important; transform: translateY(-2px);
+    }
+
+    .btn-banner-pdf {
+      background: linear-gradient(135deg, #80426E 0%, #A3588E 100%) !important;
+      color: #ffffff !important; border: 1.5px solid rgba(255, 211, 139, 0.5) !important;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    }
+    .btn-banner-pdf:hover {
+      filter: brightness(1.12); color: #ffffff !important;
+      transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+    }
+
+    .btn-banner-html {
+      background: rgba(255, 211, 139, 0.18) !important;
+      color: #FFD38B !important; border: 1.5px solid rgba(255, 211, 139, 0.65) !important;
+      backdrop-filter: blur(8px);
+    }
+    .btn-banner-html:hover {
+      background: rgba(255, 211, 139, 0.32) !important;
+      color: #ffffff !important; border-color: #FFD38B !important;
+      transform: translateY(-2px);
+    }
+
+    /* نافذة تنبيه تشغيل السيرفر */
+    .modal-backdrop {
+      display: none; position: fixed; inset: 0; z-index: 1000;
+      background: rgba(18, 12, 24, 0.75); backdrop-filter: blur(6px);
+      align-items: center; justify-content: center; padding: 20px;
+    }
+    .modal-backdrop.active { display: flex; }
+    .modal-box {
+      background: var(--surface); border: 2px solid var(--border);
+      border-radius: var(--radius-lg); padding: 30px; max-width: 480px; width: 100%;
+      box-shadow: 0 16px 48px rgba(45, 20, 56, 0.35); text-align: start;
+      animation: modalPop 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @keyframes modalPop {
+      from { transform: scale(0.94); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    .modal-code {
+      display: inline-block; font-family: var(--font-mono); font-weight: 700;
+      background: var(--accent-soft); color: var(--accent);
+      padding: 8px 16px; border-radius: 8px; border: 1.5px dashed var(--accent-wine);
+      margin: 10px 0; font-size: 14px; direction: ltr; unicode-bidi: isolate;
+    }
+
+    /* ─── قسم Hero والواجهة الأولى ─── */
+    .hero { padding-block: clamp(56px, 8vw, 98px) clamp(46px, 6vw, 76px); border-top: 0; }
+    .hero-split { display: grid; grid-template-columns: 1.18fr 0.82fr; gap: var(--gap-2xl); align-items: center; }
+    @media (max-width: 960px) { .hero-split { grid-template-columns: 1fr; gap: var(--gap-xl); } }
+    .hero h1 { margin-bottom: var(--gap-md); }
+    .hero h1 em { font-style: normal; color: var(--accent-wine); position: relative; }
+    .hero .lead { margin-bottom: var(--gap-lg); }
+    .hero-cta { display: inline-flex; gap: var(--gap-sm); flex-wrap: wrap; }
+
+    /* ─── الرسوم البيانية التفاعلية ─── */
+    .chart-card { padding: 26px 26px 22px; border-top: 4px solid var(--accent-peach); }
+    .chart-title { font-weight: 750; font-size: 15.5px; margin: 0 0 16px; color: var(--accent); }
+    .bars { display: flex; flex-direction: column; gap: 14px; }
+    .bar-row { display: grid; grid-template-columns: 104px 1fr 62px; align-items: center; gap: var(--gap-sm); }
+    .bar-label { font-size: var(--fs-sm); color: var(--muted); font-weight: 600; }
+    .bar-val { font-size: var(--fs-sm); font-weight: 750; text-align: end; color: var(--accent-wine); }
+    .bar-track { height: 13px; background: var(--border-light); border-radius: 999px; overflow: hidden; }
+    .bar-fill {
+      height: 100%; width: 0;
+      background: linear-gradient(90deg, var(--accent) 0%, var(--accent-peach) 100%);
+      border-radius: 999px; transition: width 1s cubic-bezier(0.2, 0, 0, 1);
+    }
+    .chart-note { font-size: var(--fs-micro); color: var(--muted); margin: 16px 0 0; line-height: 1.7; }
+
+    /* ─── بطاقات الأرقام والمؤشرات الرئيسية (Stats) ─── */
+    .stat-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 28px 24px;
+      position: relative; overflow: hidden;
+    }
+    .stat-card::before {
+      content: ''; position: absolute; top: 0; inset-inline-start: 0; width: 100%; height: 4px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-peach));
+    }
+    .stat-num {
+      font-family: var(--font-display); font-size: clamp(38px, 4.4vw, 52px);
+      font-weight: 850; line-height: 1.15; color: var(--accent);
+    }
+    .stat-unit { font-size: 0.52em; font-weight: 700; color: var(--accent-wine); margin-inline-start: 3px; }
+    .stat-label { color: var(--muted); font-size: 14.5px; margin: 10px 0 0; line-height: 1.7; font-weight: 500; }
+
+    /* ─── الجداول والبيانات ─── */
+    .table-wrap { overflow-x: auto; background: var(--surface); border-radius: var(--radius-lg); border: 1px solid var(--border); }
+    .ds-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    .ds-table th, .ds-table td { padding: 13px 16px; text-align: start; border-bottom: 1px solid var(--border-light); }
+    .ds-table th { background: var(--bg); color: var(--accent); font-weight: 750; font-size: 13px; }
+    .ds-table tbody tr:hover { background: var(--accent-soft); }
+    .ds-table .num-col { font-family: var(--font-mono); font-variant-numeric: tabular-nums; text-align: end; white-space: nowrap; font-weight: 600; }
+    .table-note { font-size: var(--fs-sm); color: var(--muted); margin-top: var(--gap-md); max-width: 72ch; line-height: 1.75; }
+
+    /* ─── خط المعالجة (Pipeline) ─── */
+    .log-row {
+      display: grid; grid-template-columns: 56px 1fr 104px; gap: var(--gap-lg);
+      padding: 20px 0; border-top: 1px solid var(--border); align-items: start;
+    }
+    .log-num { font-family: var(--font-mono); font-size: var(--fs-sm); color: var(--accent-peach); font-weight: 800; padding-top: 3px; }
+    .log-row h3 { font-size: 16.5px; font-weight: 750; color: var(--fg); }
+    .log-row p { margin: 6px 0 0; color: var(--muted); font-size: 14px; max-width: 74ch; }
+    .status {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-size: 12px; font-weight: 750; padding: 4px 10px; border-radius: 999px;
+      white-space: nowrap; justify-self: end;
+    }
+    .status.ok { color: var(--ok); background: var(--ok-soft); border: 1px solid rgba(28, 123, 76, 0.25); }
+    .status.ok::before { content: '✓'; font-weight: 900; }
+    @media (max-width: 720px) {
+      .log-row { grid-template-columns: 44px 1fr; }
+      .status { grid-column: 2; justify-self: start; margin-top: 8px; }
+    }
+
+    /* ─── قسم منصة لوحة التحكم Streamlit والتقرير النهائي ─── */
+    .portal-banner {
+      background: linear-gradient(135deg, #2D1438 0%, #522D60 60%, #80426E 100%);
+      border-radius: var(--radius-lg); padding: clamp(32px, 5vw, 48px);
+      color: #ffffff; position: relative; overflow: hidden;
+      box-shadow: 0 12px 36px rgba(45, 20, 56, 0.28);
+    }
+    .portal-banner::after {
+      content: ''; position: absolute; right: -80px; bottom: -80px; width: 320px; height: 320px;
+      background: radial-gradient(circle, rgba(242, 166, 123, 0.25) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .portal-modules-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 28px;
+    }
+    @media (max-width: 860px) { .portal-modules-grid { grid-template-columns: 1fr; } }
+    .portal-module-item {
+      background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: var(--radius); padding: 18px; backdrop-filter: blur(8px);
+    }
+    .portal-module-item h4 { margin: 0 0 6px; font-size: 15px; color: #FFD38B; font-weight: 750; }
+    .portal-module-item p { margin: 0; font-size: 13px; color: rgba(255, 255, 255, 0.85); line-height: 1.6; }
+
+    /* ─── حاسبة التوفير التفاعلية السريعة (Live Mini Calculator) ─── */
+    .calc-box {
+      background: var(--surface); border: 2px solid var(--border);
+      border-radius: var(--radius-lg); padding: 28px;
+      box-shadow: 0 8px 30px rgba(82, 45, 96, 0.06);
+    }
+    .calc-select, .calc-input {
+      width: 100%; padding: 11px 14px; border-radius: var(--radius);
+      border: 1.5px solid var(--border); font-family: var(--font-body);
+      font-size: 14.5px; background: var(--bg); color: var(--fg);
+      outline: none; transition: border-color 0.2s ease;
+    }
+    .calc-select:focus, .calc-input:focus { border-color: var(--accent); background: #ffffff; }
+    .calc-kpi-result {
+      background: linear-gradient(135deg, var(--accent-soft) 0%, var(--gold-soft) 100%);
+      border: 1.5px solid var(--accent-peach); border-radius: var(--radius);
+      padding: 20px; text-align: center;
+    }
+
+    /* ─── نتائج ومقارنات ─── */
+    .result-list { margin: 0; padding: 0; list-style: none; }
+    .result-list li {
+      padding: 16px 0; border-top: 1px solid var(--border-light);
+      font-size: 15px; line-height: 1.8;
+    }
+    .result-list li:first-child { border-top: 0; padding-top: 0; }
+    .result-list li strong { color: var(--accent); font-weight: 800; }
+
+    /* ─── مخطط قاعدة البيانات ERD ─── */
+    .schema-wrap {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: var(--gap-lg) var(--gap-md);
+      box-shadow: 0 4px 18px rgba(82, 45, 96, 0.04);
+    }
+    .erd { width: 100%; height: auto; }
+    .erd-box { fill: var(--surface); stroke: var(--border); stroke-width: 1.5; }
+    .erd-name { fill: var(--accent); font-family: var(--font-mono); font-size: 13.5px; font-weight: 700; }
+    .erd-count { fill: var(--muted); font-family: var(--font-body); font-size: 12px; }
+    .erd-line { stroke: var(--accent-peach); stroke-width: 1.6; fill: none; }
+    .erd-arrowhead { fill: var(--accent-peach); }
+    .code-chip {
+      font-family: var(--font-mono); font-size: 12px; color: var(--accent);
+      background: var(--accent-soft); border-radius: 6px; padding: 6px 12px;
+      direction: ltr; unicode-bidi: isolate; font-weight: 600; border: 1px solid var(--border-light);
+    }
+    .check-list { margin: 0; padding: 0; list-style: none; }
+    .check-list li { display: flex; gap: 10px; padding: 9px 0; font-size: 14.5px; align-items: baseline; }
+    .check-list.ok li::before { content: '✓'; color: var(--ok); font-weight: 800; font-family: var(--font-mono); }
+    .check-list.warn li::before { content: '!'; color: #D97706; font-weight: 800; font-family: var(--font-mono); }
+
+    /* ─── التذييل ─── */
+    .pagefoot { padding-block: var(--gap-xl); color: var(--muted); font-size: 13.5px; border-top: 1px solid var(--border); }
+    .pagefoot a:hover { color: var(--accent); }
+    .foot-links { display: flex; gap: var(--gap-lg); flex-wrap: wrap; }
+    
+    /* ─── وسوم التخصيص ─── */
+    .badge {
+      display: inline-flex; align-items: center; gap: 4px;
+      font-size: 11.5px; font-weight: 750; padding: 3px 8px; border-radius: 6px;
+    }
+    .badge-purple { background: var(--accent-soft); color: var(--accent); border: 1px solid rgba(82, 45, 96, 0.2); }
+    .badge-peach  { background: var(--peach-soft); color: #73300C; border: 1px solid rgba(242, 166, 123, 0.4); }
+    .badge-gold   { background: var(--gold-soft); color: #573300; border: 1px solid rgba(255, 211, 139, 0.5); }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main" style="position: absolute; top: -60px; z-index: 100; padding: 8px 16px; background: #fff;">تجاوز إلى المحتوى</a>
+
+  <!-- ─── الترويسة الرئيسية ─── -->
+  <header class="topnav">
+    <div class="container topnav-inner">
+      <span class="logo">
+        <svg viewBox="0 0 32 32" width="28" height="28" fill="none">
+          <rect width="32" height="32" rx="8" fill="#522D60"/>
+          <rect x="7" y="12" width="18" height="8" rx="4" transform="rotate(-45 16 16)" fill="#F2A67B" stroke="#FFD38B" stroke-width="1.2"/>
+          <line x1="16" y1="10" x2="16" y2="22" transform="rotate(-45 16 16)" stroke="#ffffff" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+        <span>MedicineDB</span>
+        <span class="logo-badge" data-i18n="tag_version">V2.4 Active</span>
+      </span>
+
+      <nav class="main-nav" aria-label="التنقل الرئيسي">
+        <a href="#data" data-i18n="nav_data">البيانات</a>
+        <a href="#pipeline" data-i18n="nav_pipeline">خط المعالجة</a>
+        <a href="#results" data-i18n="nav_results">النتائج</a>
+        <a href="#platform" data-i18n="nav_platform">المنصة التفاعلية</a>
+        <a href="#calculator" data-i18n="nav_calc">حاسبة التوفير</a>
+        <a href="#database" data-i18n="nav_database">قاعدة البيانات</a>
+        <a href="#transparency" data-i18n="nav_transparency">الشفافية</a>
+      </nav>
+
+      <div class="topnav-actions">
+        <!-- زر التبديل اللغوي -->
+        <button class="lang-btn" id="lang-toggle" onclick="toggleLanguage()" aria-label="Toggle Language">
+          <span id="lang-icon">🌐</span>
+          <span id="lang-label">English</span>
+        </button>
+
+        <!-- زر الوضع الليلي -->
+        <button class="theme-btn" id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Dark Mode" title="الوضع الليلي / Dark Mode">
+          <span id="theme-icon">🌙</span>
+        </button>
+
+        <a class="btn btn-primary btn-desktop" href="#platform" data-i18n="btn_explore">استكشف المنصة</a>
+        <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav-panel" aria-label="فتح القائمة">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- لوحة الهاتف المحمول -->
+    <div class="nav-panel" id="nav-panel">
+      <nav aria-label="قائمة الجوال">
+        <a href="#data" data-i18n="nav_data">البيانات</a>
+        <a href="#pipeline" data-i18n="nav_pipeline">خط المعالجة</a>
+        <a href="#results" data-i18n="nav_results">النتائج</a>
+        <a href="#platform" data-i18n="nav_platform">المنصة التفاعلية</a>
+        <a href="#calculator" data-i18n="nav_calc">حاسبة التوفير</a>
+        <a href="#database" data-i18n="nav_database">قاعدة البيانات</a>
+        <a href="#transparency" data-i18n="nav_transparency">الشفافية</a>
+      </nav>
+      <div style="display: flex; gap: 10px; margin-block: 14px 6px; align-items: center;">
+        <button class="lang-btn" onclick="toggleLanguage()" style="flex: 1; justify-content: center;">
+          <span class="lang-icon-mob">🌐</span>
+          <span class="lang-label-mob">English</span>
+        </button>
+        <button class="theme-btn theme-btn-mob" onclick="toggleTheme()" title="الوضع الليلي / Dark Mode">
+          <span class="theme-icon-mob">🌙</span>
+        </button>
+      </div>
+      <a class="btn btn-primary" href="#platform" data-i18n="btn_explore">استكشف المنصة</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ─── 1 · الواجهة الرئيسية (Hero) ─── -->
+    <section class="section hero">
+      <div class="container hero-split">
+        <div>
+          <p class="eyebrow" data-i18n="hero_eyebrow">مشروع استخبارات سوق الأدوية وتحليل البدائل</p>
+          <h1 data-i18n="hero_title">من بيانات خام… إلى سؤال واحد: <em>أي دواء أقل سعرًا؟</em></h1>
+          <p class="lead" data-i18n="hero_desc">
+            قاعدة بيانات موحّدة وتحليلات اقتصادية تقيس الفجوة السعرية بين أغلى وأرخص بديل علاجي مكافئ.
+            كل رقم محسوب مباشرة من البيانات الفعلية بدقة رياضية — لا تقديرات جزافية ولا بيانات تجريبية.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#platform" data-i18n="hero_cta1">استكشف لوحة التحكم</a>
+            <a class="btn btn-secondary" href="reports/Assorted_Medicine_Bangladesh_Final_Project_Report.pdf" target="_blank" onclick="openReport('Assorted_Medicine_Bangladesh_Final_Project_Report.pdf', event)" data-i18n="hero_cta2">تحميل تقرير PDF (8 صفحات)</a>
+          </div>
+        </div>
+
+        <!-- الرسم البياني التفاعلي في الواجهة -->
+        <div class="card chart-card">
+          <p class="chart-title" data-i18n="chart_title">الوفر الوسيط عند التحويل إلى البديل الأرخص<br /><span class="meta" data-i18n="chart_subtitle">حسب عدد البدائل المنافسة المتاحة</span></p>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label" data-i18n="bar_2">بديلان فقط</span>
+              <div class="bar-track"><div class="bar-fill" data-v="12.3%"></div></div>
+              <bdi class="bar-val num" dir="ltr">5.3%</bdi>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label" data-i18n="bar_3_5">3-5 بدائل</span>
+              <div class="bar-track"><div class="bar-fill" data-v="46.5%"></div></div>
+              <bdi class="bar-val num" dir="ltr">20.0%</bdi>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label" data-i18n="bar_6_10">6-10 بدائل</span>
+              <div class="bar-track"><div class="bar-fill" data-v="66.5%"></div></div>
+              <bdi class="bar-val num" dir="ltr">28.6%</bdi>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label" data-i18n="bar_11">11 فأكثر</span>
+              <div class="bar-track"><div class="bar-fill" data-v="100%"></div></div>
+              <bdi class="bar-val num" dir="ltr">43.0%</bdi>
+            </div>
+          </div>
+          <p class="chart-note" data-i18n="chart_note">
+            وسيط نسبة التوفير بين كل دواء وأرخص بديل مكافئ له تطابقاً تاماً (المادة + الشكل + التركيز) عبر 1,875 مجموعة علاجية.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── 2 · الأرقام الرئيسية (Key Metrics) ─── -->
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow" data-i18n="stats_eyebrow">المشروع في أرقام قياسية</p>
+        <div class="grid-3">
+          <div class="stat-card">
+            <div class="stat-num num" dir="ltr">21,714</div>
+            <p class="stat-label" data-i18n="stat1_desc">دواء ومستحضر تجاري مسجَّل بمواصفات دقيقة للمادة الفعالة والشكل والشركة.</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num num" dir="ltr">93.75%</div>
+            <p class="stat-label" data-i18n="stat2_desc">من المنتجات تم استخراج سعر وحدتها بنجاح عبر خوارزميات المعالجة النصية المتقدمة.</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num num" dir="ltr">28.6%<span class="stat-unit" data-i18n="stat_median">وسيط</span></div>
+            <p class="stat-label" data-i18n="stat3_desc">نسبة الوفر المحققة فوريًا عند التحوّل إلى البديل المكافئ الأرخص سعرًا في السوق.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── 3 · البيانات ومصدرها (Data Architecture) ─── -->
+    <section class="section" id="data">
+      <div class="container">
+        <p class="eyebrow" data-i18n="data_eyebrow">البيانات والهندسة المعمارية</p>
+        <h2 data-i18n="data_title">ستة ملفات خام… نموذج علائقي متكامل</h2>
+        <p class="lead" style="margin-top: 16px;" data-i18n="data_lead">
+          المصدر: مجموعة بيانات الأدوية الشاملة («Assorted Medicine Dataset») — 49 عمودًا موزّعة على 6 ملفات،
+          نُظّفت ووُحّدت وطُبّقت عليها قواعد التحقق الصارمة لتُبنى عليها قاعدة <bdi dir="ltr">MedicineDB</bdi>.
+        </p>
+
+        <div class="table-wrap" style="margin-top: 32px;">
+          <table class="ds-table">
+            <thead>
+              <tr>
+                <th data-i18n="th_file">الملف الأصلي</th>
+                <th class="num-col" data-i18n="th_rows">عدد الصفوف</th>
+                <th class="num-col" data-i18n="th_cols">الأعمدة</th>
+                <th data-i18n="th_role">الدور في النموذج العلائقي</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><bdi dir="ltr">medicine.csv</bdi></td>
+                <td class="num-col">21,714</td>
+                <td class="num-col">10</td>
+                <td data-i18n="row_med">جدول الحقائق الأساسي: كل منتج دوائي تجاري (Brand Name) مع عبوته وسعره</td>
+              </tr>
+              <tr>
+                <td><bdi dir="ltr">generic.csv</bdi></td>
+                <td class="num-col">1,711</td>
+                <td class="num-col">22</td>
+                <td data-i18n="row_gen">المواد الكيميائية الفعالة مع التوصيفات الدوائية ودواعي الاستعمال</td>
+              </tr>
+              <tr>
+                <td><bdi dir="ltr">manufacturer.csv</bdi></td>
+                <td class="num-col">240</td>
+                <td class="num-col">5</td>
+                <td data-i18n="row_mfr">الشركات الدوائية المصنّعة ومواقعها وحصصها السوقية</td>
+              </tr>
+              <tr>
+                <td><bdi dir="ltr">drug class.csv</bdi></td>
+                <td class="num-col">453</td>
+                <td class="num-col">4</td>
+                <td data-i18n="row_class">التصنيفات العلاجية الطبية (دُمجت المتشابهات إلى 421 تصنيفًا قياسيًا)</td>
+              </tr>
+              <tr>
+                <td><bdi dir="ltr">indication.csv</bdi></td>
+                <td class="num-col">2,043</td>
+                <td class="num-col">4</td>
+                <td data-i18n="row_ind">الاستخدامات السريرية ودواعي العلاج الطبية</td>
+              </tr>
+              <tr>
+                <td><bdi dir="ltr">dosage form.csv</bdi></td>
+                <td class="num-col">113</td>
+                <td class="num-col">4</td>
+                <td data-i18n="row_form">الأشكال الصيدلانية الدوائية (أقراص، كبسولات، شراب، حقن…)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note" data-i18n="data_note">
+          تمت معالجة البيانات دون أي افتراضات غير موثقة؛ حيث تم عزل وحفظ النسخ الأصلية، واستخراج أسعار 20,357 دواء بمطابقة رياضية محكمة.
+        </p>
+      </div>
+    </section>
+
+    <!-- ─── 4 · خط المعالجة المتكامل (End-to-End Pipeline) ─── -->
+    <section class="section tight" id="pipeline">
+      <div class="container">
+        <p class="eyebrow" data-i18n="pipe_eyebrow">دورة المعالجة الكاملة</p>
+        <h2 data-i18n="pipe_title">من الملف الخام إلى القرار السريري والاقتصادي — 10 خطوات مكتملة</h2>
+        
+        <div style="margin-top: 28px;">
+          <article class="log-row">
+            <span class="log-num num" dir="ltr">01</span>
+            <div><h3 data-i18n="p1_t">التوصيف والفحص الاستكشافي</h3><p data-i18n="p1_d">تحليل أولي شامل للملفات الستة: فحص الأنواع، القيم المفقودة، والتكرارات الهيكلية.</p></div>
+            <span class="status ok" data-i18n="st_done">مكتمل</span>
+          </article>
+          <article class="log-row">
+            <span class="log-num num" dir="ltr">02</span>
+            <div><h3 data-i18n="p2_t">تنظيف النصوص وتوحيد الجرعات</h3><p data-i18n="p2_d">إزالة وسوم HTML، تنظيف المسافات الشاذة، وتوحيد صياغة وحدات التركيز (mg, ml, mcg) بنمط قياسي موحد.</p></div>
+            <span class="status ok" data-i18n="st_done">مكتمل</span>
+          </article>
+          <article class="log-row">
+            <span class="log-num num" dir="ltr">03</span>
+            <div><h3 data-i18n="p3_t">محرك استخراج وحساب الأسعار</h3><p data-i18n="p3_d">بناء خوارزمية Regex ذكية لاستخراج سعر العبوة وسعر الوحدة الفردية بنسبة نجاح 93.75% واستبعاد الحالات غير المؤكدة علمياً.</p></div>
+            <span class="status ok" data-i18n="st_done">مكتمل</span>
+          </article>
+          <article class="log-row">
+            <span class="log-num num" dir="ltr">04</span>
+            <div><h3 data-i18n="p4_t">هندسة وحفظ الملفات (Data Engineering)</h3><p data-i18n="p4_d">تنظيم بنية المستودع بدقة: فصل البيانات الخام (Raw) عن المنظفة (Processed) ومخرجات التحليل (Reports).</p></div>
+            <span class="status ok" data-i18n="st_done">مكتمل</span>
+          </article>
+          <article class="log-row">
+            <span class="log-num num" dir="ltr">05</span>
+            <div><h3 data-i18n="p5_t">النمذجة والدمج العلائقي</h3><p data-i18n="p5_d">التحقق من سلامة المفاتيح: علاقات 1:N بتطابق 100%، وخلو تام من أي سجلات يتيمة (Zero Orphan Records).</p></div>
+            <span class="status ok" data-i18n="st_done">مكتمل</span>
+          </article>
+          <article class="log-row">
+            <span class="log-num num" dir="ltr">06</span>
+            <div><h3 data-i18n="p6_t">قاعدة البيانات العلائقية (SQL Engine)</h3><p data-i18n="p6_d">بناء قاعدة MedicineDB على SQLite و SQL Server مع بناء 3 مناظير تحليلية (Views) وفهارس تسريع الاستعلامات.</p></div>
+            <span class="status ok" data-i18n="st_done">مكتمل</span>
+          </article>
+          <article class="log-row">
+            <span class="log-num num" dir="ltr">07</span>
+            <div><h3 data-i18n="p7_t">التحميل الآمن والتحقق التبادلي</h3><p data-i18n="p7_d">تحميل الأسعار والكيانات داخل معاملات موحدة (Transactions) تضمن تكامل القيود وحماية فهارس البحث.</p></div>
+            <span class="status ok" data-i18n="st_done">مكتمل</span>
+          </article>
+          <article class="log-row">
+            <span class="log-num num" dir="ltr">08</span>
+            <div><h3 data-i18n="p8_t">تحليل اقتصاديات الدواء والبدائل</h3><p data-i18n="p8_d">مطابقة 18,476 دواء ضمن 1,875 مجموعة متكافئة وحساب مؤشر أسعار الشركات (MPI) وهوامش التوفير للمرضى المزمنين.</p></div>
+            <span class="status ok" data-i18n="st_done">مكتمل</span>
+          </article>
+          <article class="log-row">
+            <span class="log-num num" dir="ltr">09</span>
+            <div><h3 data-i18n="p9_t">لوحة التحكم التفاعلية الشاملة (Streamlit Portal)</h3><p data-i18n="p9_d">تطوير منصة تحليلية تفاعلية بـ 6 وحدات متكاملة وحاسبة توفير فورية وفلاتر للشركات والمجموعات العلاجية.</p></div>
+            <span class="status ok" data-i18n="st_done">مكتمل</span>
+          </article>
+          <article class="log-row">
+            <span class="log-num num" dir="ltr">10</span>
+            <div><h3 data-i18n="p10_t">التقرير التنفيذي النهائي عالي الدقة (Executive PDF)</h3><p data-i18n="p10_d">توليد تقرير استراتيجي من 8 صفحات ملونة (300 DPI) يتضمن التوصيات التنظيمية ودراسات الحالة السريرية والرسوم البيانية.</p></div>
+            <span class="status ok" data-i18n="st_done">مكتمل</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── 5 · النتائج الرئيسية (Key Findings) ─── -->
+    <section class="section loose" id="results">
+      <div class="container">
+        <p class="eyebrow" data-i18n="res_eyebrow">أبرز الاكتشافات الاقتصادية</p>
+        <h2 data-i18n="res_title">فجوة الأسعار وفرص التوفير الحقيقية للمرضى</h2>
+        
+        <div class="grid-2" style="margin-top: 32px; align-items: start;">
+          <ul class="result-list">
+            <li>
+              <strong data-i18n="res_pt1_b">79.8% من الأدوية في السوق ليست الخيار الأرخص</strong>
+              <span data-i18n="res_pt1_t">— وهذا يعني أن 8 من كل 10 مرضى يدفعون مبالغ إضافية يمكن توفيرها فورياً بمجرد اختيار البديل المكافئ.</span>
+            </li>
+            <li>
+              <strong data-i18n="res_pt2_b">28.6% وسيط التوفير، ويقفز إلى 43% و 70%</strong>
+              <span data-i18n="res_pt2_t">في الأصناف ذات المنافسة العالية مثل أدوية المعدة (Omeprazole) والمسكنات وأدوية الكوليسترول.</span>
+            </li>
+            <li>
+              <strong data-i18n="res_pt3_b">فجوة سعرية قياسية: وسيط السعر 15.05 مقابل متوسط 349.99 BDT</strong>
+              <span data-i18n="res_pt3_t">— ناتجة عن تباين كبير وأدوية أورام ومناعة مرتفعة الثمن تتجاوز 300 ألف للعبوة.</span>
+            </li>
+            <li>
+              <strong data-i18n="res_pt4_b">مؤشر الشركات (MPI) يكشف تفاوت السياسات السعرية</strong>
+              <span data-i18n="res_pt4_t">— شركات وطنية تقدم بدائل اقتصادية بمؤشر 0.76 (أرخص بـ 24%) مقابل شركات دولية بمؤشر 1.63 (أغلى بـ 63%).</span>
+            </li>
+          </ul>
+
+          <!-- رسم توزيع المنافسة -->
+          <div class="card chart-card">
+            <p class="chart-title" data-i18n="comp_title">توزيع المواد الفعالة حسب شدة المنافسة السوقية<br /><span class="meta" data-i18n="comp_sub">عدد البراندات المتوفرة لكل مادة كيميائية</span></p>
+            <div class="bars">
+              <div class="bar-row">
+                <span class="bar-label" data-i18n="comp_1">بديل منفرد</span>
+                <div class="bar-track"><div class="bar-fill" data-v="79.4%"></div></div>
+                <bdi class="bar-val num" dir="ltr">446</bdi>
+              </div>
+              <div class="bar-row">
+                <span class="bar-label">2 - 5</span>
+                <div class="bar-track"><div class="bar-fill" data-v="100%"></div></div>
+                <bdi class="bar-val num" dir="ltr">562</bdi>
+              </div>
+              <div class="bar-row">
+                <span class="bar-label">6 - 20</span>
+                <div class="bar-track"><div class="bar-fill" data-v="75.3%"></div></div>
+                <bdi class="bar-val num" dir="ltr">423</bdi>
+              </div>
+              <div class="bar-row">
+                <span class="bar-label">21 - 100</span>
+                <div class="bar-track"><div class="bar-fill" data-v="33.8%"></div></div>
+                <bdi class="bar-val num" dir="ltr">190</bdi>
+              </div>
+              <div class="bar-row">
+                <span class="bar-label" data-i18n="comp_100">100+ براند</span>
+                <div class="bar-track"><div class="bar-fill" data-v="7.1%"></div></div>
+                <bdi class="bar-val num" dir="ltr">40</bdi>
+              </div>
+            </div>
+            <p class="chart-note" data-i18n="comp_note">
+              40 مادة حيوية فقط تحظى بمنافسة شديدة تتجاوز 100 منتج، وتوفر أعلى فرص التوفير المالي للمستهلك.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── 6 · المنصة التفاعلية ومخرجات المشروع (Platform & Deliverables) ─── -->
+    <section class="section" id="platform">
+      <div class="container">
+        <div class="portal-banner">
+          <p class="eyebrow" style="color: #FFD38B;" data-i18n="port_eyebrow">منظومة التحليل والقرار في متناول يدك</p>
+          <h2 style="color: #ffffff;" data-i18n="port_title">لوحة التحكم التفاعلية Streamlit ومكتبة المخرجات</h2>
+          <p style="color: rgba(255,255,255,0.88); max-width: 68ch; font-size: 16px; margin-top: 12px;" data-i18n="port_desc">
+            تم بناء منصة كاملة متعددة الصفحات بتصميم Royal Velvet الفاخر، تتيح للباحثين والأطباء والمستهلكين فحص البيانات والتسعير بدقة متناهية.
+          </p>
+
+          <div class="portal-modules-grid">
+            <div class="portal-module-item">
+              <h4 data-i18n="m1_t">1. المؤشرات الكلية (Overview)</h4>
+              <p data-i18n="m1_d">بطاقات KPI حية وتوزيعات الأسعار وتحليلات المنافسة السوقية.</p>
+            </div>
+            <div class="portal-module-item">
+              <h4 data-i18n="m2_t">2. محرك البدائل المتطابقة</h4>
+              <p data-i18n="m2_d">محرك بحث فوري يستعرض كافة البدائل الأرخص مرتبة بفارق السعر.</p>
+            </div>
+            <div class="portal-module-item">
+              <h4 data-i18n="m3_t">3. حاسبة التوفير للوصفات</h4>
+              <p data-i18n="m3_d">حساب التوفير المالي الفوري بناءً على الجرعات والكميات الشهرية والسنوية.</p>
+            </div>
+            <div class="portal-module-item">
+              <h4 data-i18n="m4_t">4. تحليل الشركات (MPI)</h4>
+              <p data-i18n="m4_d">تصنيف 240 شركة وفق مؤشر الأسعار النسبي ومقارنة السياسات السعرية.</p>
+            </div>
+            <div class="portal-module-item">
+              <h4 data-i18n="m5_t">5. المجموعات العلاجية</h4>
+              <p data-i18n="m5_d">استكشاف 421 فئة دوائية وقياس مستويات تركز واحتكار السوق.</p>
+            </div>
+            <div class="portal-module-item">
+              <h4 data-i18n="m6_t">6. مستكشف البيانات الشامل</h4>
+              <p data-i18n="m6_d">فلاتر متقدمة على كامل السجلات مع إمكانية التصدير المباشر بصيغة CSV.</p>
+            </div>
+          </div>
+
+          <div style="margin-top: 32px; display: flex; gap: 14px; flex-wrap: wrap;">
+            <a class="btn btn-banner-peach" href="http://localhost:8501" target="_blank" onclick="launchApp('http://localhost:8501', 'Streamlit', 'run_streamlit.bat', event)" data-i18n="btn_launch_app">🚀 تشغيل منصة Streamlit (Port 8501)</a>
+            <a class="btn btn-banner-flask" href="http://localhost:5000" target="_blank" onclick="launchApp('http://localhost:5000', 'Flask', 'run_dashboard.bat', event)" data-i18n="btn_launch_flask">⚡ لوحة Flask (Port 5000)</a>
+            <a class="btn btn-banner-pdf" href="reports/Assorted_Medicine_Bangladesh_Final_Project_Report.pdf" target="_blank" onclick="openReport('Assorted_Medicine_Bangladesh_Final_Project_Report.pdf', event)" data-i18n="btn_view_pdf">📄 استعراض التقرير النهائي (PDF)</a>
+            <a class="btn btn-banner-html" href="reports/Assorted_Medicine_Bangladesh_Final_Report.html" target="_blank" onclick="openReport('Assorted_Medicine_Bangladesh_Final_Report.html', event)" data-i18n="btn_view_html">🌐 التقرير التفاعلي (HTML)</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── 7 · حاسبة التوفير السريعة في الصفحة (Live Interactive Demo) ─── -->
+    <section class="section" id="calculator">
+      <div class="container">
+        <p class="eyebrow" data-i18n="calc_eyebrow">تجربة عملية حية</p>
+        <h2 data-i18n="calc_title">حاسبة التوفير الذكية للأمراض المزمنة</h2>
+        <p class="lead" style="margin-top: 14px;" data-i18n="calc_lead">
+          جرّب عينات حقيقية موثقة من أدوية الأمراض المزمنة وشاهد كيف يحقق التبديل إلى البديل الأرخص وفراً سنوياً كبيراً:
+        </p>
+
+        <div class="grid-2 calc-box" style="margin-top: 28px; align-items: center;">
+          <div>
+            <label style="font-weight: 700; font-size: 14px; color: var(--accent); margin-bottom: 8px; display: block;" data-i18n="calc_lbl_drug">اختر الدواء والمادة الفعالة:</label>
+            <select class="calc-select" id="sample-drug-select" onchange="updateCalc()">
+              <option value="omeprazole">Omeprazole 20 mg (حموضة وقرحة المعدة - 107 بدائل)</option>
+              <option value="paracetamol">Paracetamol 500 mg (مسكن ومخفض حرارة - 103 بدائل)</option>
+              <option value="domperidone">Domperidone 10 mg (تنظيم حركة المعدة - 88 بديلاً)</option>
+              <option value="azithromycin">Azithromycin 500 mg (مضاد حيوي - 78 بديلاً)</option>
+              <option value="amlodipine">Amlodipine 5 mg (علاج ضغط الدم المزمن - 72 بديلاً)</option>
+              <option value="metformin">Metformin 500 mg (علاج السكري من النوع الثاني - 65 بديلاً)</option>
+              <option value="aceclofenac">Aceclofenac 100 mg (مسكن التهاب المفاصل - 82 بديلاً)</option>
+            </select>
+
+            <div style="margin-top: 18px;">
+              <label style="font-weight: 700; font-size: 14px; color: var(--accent); margin-bottom: 8px; display: block;" data-i18n="calc_lbl_qty">الكمية الشهرية المطلوبة (حبات / شهر):</label>
+              <input type="number" class="calc-input" id="sample-qty" value="30" min="1" max="300" oninput="updateCalc()" />
+            </div>
+
+            <div style="margin-top: 18px; font-size: 13.5px; color: var(--muted);" id="sample-meta-info">
+              نطاق السعر في السوق: <strong>3.00 BDT إلى 7.12 BDT</strong> للكبسولة الواحدة.
+            </div>
+          </div>
+
+          <div class="calc-kpi-result">
+            <span class="badge badge-purple" style="font-size: 13px;" data-i18n="calc_kpi_badge">تحليل التوفير المباشر</span>
+            <div style="margin-top: 14px; font-size: 14px; color: var(--muted);" data-i18n="calc_unit_saving">الوفر في الحبة الواحدة:</div>
+            <div class="num" style="font-size: 32px; font-weight: 850; color: var(--accent);" id="calc-per-unit">4.12 BDT</div>
+            
+            <div style="margin-top: 12px; font-size: 14px; color: var(--muted);" data-i18n="calc_annual_saving">إجمالي الوفر السنوي المتوقع:</div>
+            <div class="num" style="font-size: 38px; font-weight: 900; color: var(--ok);" id="calc-annual-total">1,483.20 BDT</div>
+            
+            <div style="margin-top: 6px; font-size: 15px; font-weight: 800; color: var(--accent-wine);" id="calc-pct">نسبة التوفير: 57.9%</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── 8 · قاعدة البيانات والمخطط العلائقي (Database Schema) ─── -->
+    <section class="section" id="database">
+      <div class="container">
+        <p class="eyebrow" data-i18n="db_eyebrow">الهندسة العلائقية للبيانات</p>
+        <h2 data-i18n="db_title"><bdi dir="ltr">MedicineDB</bdi> — ستة جداول مترابطة بعلاقات محكمة</h2>
+        <p class="lead" style="margin-top: 16px;" data-i18n="db_desc">
+          مخطط علائقي كامل بقيود سلامة وفهارس تغطية سريعة، يربط جدول المنتجات بالمواد الفعالة والشركات والأشكال والتصنيفات.
+        </p>
+
+        <div class="schema-wrap" style="margin-top: 32px;">
+          <svg class="erd" viewBox="0 0 880 420" role="img" aria-label="ERD Schema">
+            <defs>
+              <marker id="erd-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+                <path d="M0,0 L10,5 L0,10 z" class="erd-arrowhead"></path>
+              </marker>
+            </defs>
+            <g>
+              <rect class="erd-box" x="150" y="20" width="210" height="64" rx="10"></rect>
+              <text class="erd-name" x="255" y="48" text-anchor="middle">drug_classes</text>
+              <text class="erd-count" x="255" y="68" text-anchor="middle" data-i18n="erd_classes">421 · تصنيف علاجي</text>
+              
+              <rect class="erd-box" x="520" y="20" width="210" height="64" rx="10"></rect>
+              <text class="erd-name" x="625" y="48" text-anchor="middle">indications</text>
+              <text class="erd-count" x="625" y="68" text-anchor="middle" data-i18n="erd_indications">2,043 · استخدام طبي</text>
+              
+              <rect class="erd-box" x="30" y="170" width="200" height="64" rx="10"></rect>
+              <text class="erd-name" x="130" y="198" text-anchor="middle">manufacturers</text>
+              <text class="erd-count" x="130" y="218" text-anchor="middle" data-i18n="erd_manufacturers">240 · شركة مصنّعة</text>
+              
+              <rect class="erd-box" x="340" y="170" width="200" height="64" rx="10"></rect>
+              <text class="erd-name" x="440" y="198" text-anchor="middle">generics</text>
+              <text class="erd-count" x="440" y="218" text-anchor="middle" data-i18n="erd_generics">1,711 · مادة فعالة</text>
+              
+              <rect class="erd-box" x="650" y="170" width="200" height="64" rx="10"></rect>
+              <text class="erd-name" x="750" y="198" text-anchor="middle">dosage_forms</text>
+              <text class="erd-count" x="750" y="218" text-anchor="middle" data-i18n="erd_dosage_forms">113 · شكل صيدلاني</text>
+              
+              <rect class="erd-box" x="340" y="330" width="200" height="64" rx="10" style="stroke: var(--accent); stroke-width: 2.2;"></rect>
+              <text class="erd-name" x="440" y="358" text-anchor="middle" style="fill: var(--accent); font-weight: 800;">medicines (Facts)</text>
+              <text class="erd-count" x="440" y="378" text-anchor="middle" data-i18n="erd_medicines">21,714 · دواء مسجل</text>
+            </g>
+            <path class="erd-line" d="M255 84 V125 H410 V164" marker-end="url(#erd-arrow)"></path>
+            <path class="erd-line" d="M625 84 V125 H470 V164" marker-end="url(#erd-arrow)"></path>
+            <path class="erd-line" d="M130 234 V280 H395 V324" marker-end="url(#erd-arrow)"></path>
+            <path class="erd-line" d="M440 234 V324" marker-end="url(#erd-arrow)"></path>
+            <path class="erd-line" d="M750 234 V280 H485 V324" marker-end="url(#erd-arrow)"></path>
+          </svg>
+        </div>
+
+        <div class="grid-2" style="margin-top: var(--gap-xl);">
+          <div>
+            <p style="font-size: 14.5px; font-weight: 750; color: var(--accent); margin: 0 0 10px;" data-i18n="db_views_t">مناظير SQL الجاهزة للتحليل الفوري</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+              <span class="code-chip"><bdi dir="ltr">vw_medicine_details</bdi></span>
+              <span class="code-chip"><bdi dir="ltr">vw_generic_price_comparison</bdi></span>
+              <span class="code-chip"><bdi dir="ltr">vw_generic_brand_counts</bdi></span>
+            </div>
+          </div>
+          <div>
+            <p style="font-size: 14.5px; font-weight: 750; color: var(--accent); margin: 0 0 10px;" data-i18n="db_integrity_t">فحوصات السلامة الموثقة</p>
+            <ul class="check-list ok">
+              <li data-i18n="db_chk1">صفر سجلات يتيمة عبر كافة مفاتيح الربط الخارجية</li>
+              <li data-i18n="db_chk2">صفر أسعار سالبة وصفر أحجام عبوات مجهولة</li>
+              <li data-i18n="db_chk3">تطابق تام بين البيانات المنظفة والجداول بنسبة 100%</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── 9 · الشفافية والمسؤولية السريرية (Transparency & Disclosure) ─── -->
+    <section class="section tight" id="transparency">
+      <div class="container">
+        <p class="eyebrow" data-i18n="trans_eyebrow">النزاهة الأكاديمية والسريرية</p>
+        <h2 data-i18n="trans_title">معايير التحقق والحدود المعلنة بكل شفافية</h2>
+        
+        <div class="grid-2" style="margin-top: 28px;">
+          <div class="card" style="border-top: 4px solid var(--ok);">
+            <h3 style="color: var(--ok); margin-bottom: 12px;" data-i18n="trans_ok_t">ما تم التحقق منه رياضياً</h3>
+            <ul class="check-list ok">
+              <li data-i18n="trans_ok1">توثيق شامل وقابل لإعادة التشغيل لكل خطوة تنظيف وتحويل.</li>
+              <li data-i18n="trans_ok2">مطابقة ثلاثية صارمة للبدائل: (المادة الكيميائية + الشكل الصيدلاني + التركيز).</li>
+              <li data-i18n="trans_ok3">فحص الحدود السعرية الشاذة بمقاييس إحصائية واستبعاد غير المتطابق.</li>
+            </ul>
+          </div>
+          
+          <div class="card" style="border-top: 4px solid var(--accent-peach);">
+            <h3 style="color: var(--accent-wine); margin-bottom: 12px;" data-i18n="trans_warn_t">حدود طبية وتنظيمية نعلنها</h3>
+            <ul class="check-list warn">
+              <li data-i18n="trans_warn1">التكافؤ الكيميائي لا يلغي ضرورة استشارة الطبيب أو الصيدلي قبل تبديل الوصفة.</li>
+              <li data-i18n="trans_warn2">المنصة تعكس أسعار السوق المعلنة ولا ترصد المخزون الحي في الصيدليات.</li>
+              <li data-i18n="trans_warn3">6.25% من الأدوية ذات العبوات غير المحددة تم استبعادها عمداً لمنع التضليل.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── 10 · الختام والدعوة للإجراء (CTA Strip) ─── -->
+    <section class="section loose" style="text-align: center;">
+      <div class="container">
+        <h2 style="max-width: 26ch; margin-inline: auto;" data-i18n="cta_title">البيانات والتحليلات كاملة في متناول يدك</h2>
+        <p class="lead" style="margin: 16px auto 32px; max-width: 58ch;" data-i18n="cta_desc">
+          استكشف سوق الأدوية الآن، احسب وفر وصفتك الطبية، واطلع على التقرير الاستراتيجي الشامل.
+        </p>
+        <div style="display: inline-flex; gap: var(--gap-sm); flex-wrap: wrap; justify-content: center;">
+          <a class="btn btn-primary" href="#platform" data-i18n="cta_btn1">استكشف لوحة التحكم</a>
+          <a class="btn btn-peach" href="reports/Assorted_Medicine_Bangladesh_Final_Project_Report.pdf" target="_blank" onclick="openReport('Assorted_Medicine_Bangladesh_Final_Project_Report.pdf', event)" data-i18n="cta_btn2">تحميل التقرير النهائي (PDF)</a>
+          <a class="btn btn-secondary" href="#calculator" data-i18n="cta_btn3">تجربة حاسبة التوفير</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ─── التذييل النهائي ─── -->
+  <footer class="pagefoot">
+    <div class="container row-between">
+      <span data-i18n="foot_copy">© 2026 · مشروع تحليل واستخبارات أسعار وبدائل الأدوية (MedicineDB)</span>
+      <div class="foot-links">
+        <a href="#data" data-i18n="nav_data">البيانات</a>
+        <a href="#pipeline" data-i18n="nav_pipeline">خط المعالجة</a>
+        <a href="#results" data-i18n="nav_results">النتائج</a>
+        <a href="#platform" data-i18n="nav_platform">المنصة</a>
+        <a href="#database" data-i18n="nav_database">قاعدة البيانات</a>
+      </div>
+      <span class="meta caps" dir="ltr" data-i18n="foot_tag">ENTERPRISE DATA SCIENCE & HEALTH ECONOMICS</span>
+    </div>
+  </footer>
+
+  <!-- ─── برمجيات التفاعل والترجمة اللغوية الفورية ─── -->
+  <script>
+    (function () {
+      'use strict';
+
+      /* قاموس الترجمة الفورية الكامل (عربي / إنجليزي) */
+      const translations = {
+        ar: {
+          tag_version: "V2.4 نشط",
+          nav_data: "البيانات",
+          nav_pipeline: "خط المعالجة",
+          nav_results: "النتائج",
+          nav_platform: "المنصة التفاعلية",
+          nav_calc: "حاسبة التوفير",
+          nav_database: "قاعدة البيانات",
+          nav_transparency: "الشفافية",
+          btn_explore: "استكشف المنصة",
+          hero_eyebrow: "مشروع استخبارات سوق الأدوية وتحليل البدائل",
+          hero_title: "من بيانات خام… إلى سؤال واحد: أي دواء أقل سعرًا؟",
+          hero_desc: "قاعدة بيانات موحّدة وتحليلات اقتصادية تقيس الفجوة السعرية بين أغلى وأرخص بديل علاجي مكافئ. كل رقم محسوب مباشرة من البيانات الفعلية بدقة رياضية — لا تقديرات جزافية ولا بيانات تجريبية.",
+          hero_cta1: "استكشف لوحة التحكم",
+          hero_cta2: "تحميل تقرير PDF (8 صفحات)",
+          chart_title: "الوفر الوسيط عند التحويل إلى البديل الأرخص",
+          chart_subtitle: "حسب عدد البدائل المنافسة المتاحة",
+          bar_2: "بديلان فقط",
+          bar_3_5: "3-5 بدائل",
+          bar_6_10: "6-10 بدائل",
+          bar_11: "11 فأكثر",
+          chart_note: "وسيط نسبة التوفير بين كل دواء وأرخص بديل مكافئ له تطابقاً تاماً (المادة + الشكل + التركيز) عبر 1,875 مجموعة علاجية.",
+          stats_eyebrow: "المشروع في أرقام قياسية",
+          stat1_desc: "دواء ومستحضر تجاري مسجَّل بمواصفات دقيقة للمادة الفعالة والشكل والشركة.",
+          stat2_desc: "من المنتجات تم استخراج سعر وحدتها بنجاح عبر خوارزميات المعالجة النصية المتقدمة.",
+          stat_median: "وسيط",
+          stat3_desc: "نسبة الوفر المحققة فوريًا عند التحوّل إلى البديل المكافئ الأرخص سعرًا في السوق.",
+          data_eyebrow: "البيانات والهندسة المعمارية",
+          data_title: "ستة ملفات خام… نموذج علائقي متكامل",
+          data_lead: "المصدر: مجموعة بيانات الأدوية الشاملة («Assorted Medicine Dataset») — 49 عمودًا موزّعة على 6 ملفات، نُظّفت ووُحّدت وطُبّقت عليها قواعد التحقق الصارمة لتُبنى عليها قاعدة MedicineDB.",
+          th_file: "الملف الأصلي",
+          th_rows: "عدد الصفوف",
+          th_cols: "الأعمدة",
+          th_role: "الدور في النموذج العلائقي",
+          row_med: "جدول الحقائق الأساسي: كل منتج دوائي تجاري (Brand Name) مع عبوته وسعره",
+          row_gen: "المواد الكيميائية الفعالة مع التوصيفات الدوائية ودواعي الاستعمال",
+          row_mfr: "الشركات الدوائية المصنّعة ومواقعها وحصصها السوقية",
+          row_class: "التصنيفات العلاجية الطبية (دُمجت المتشابهات إلى 421 تصنيفًا قياسيًا)",
+          row_ind: "الاستخدامات السريرية ودواعي العلاج الطبية",
+          row_form: "الأشكال الصيدلانية الدوائية (أقراص، كبسولات، شراب، حقن…)",
+          data_note: "تمت معالجة البيانات دون أي افتراضات غير موثقة؛ حيث تم عزل وحفظ النسخ الأصلية، واستخراج أسعار 20,357 دواء بمطابقة رياضية محكمة.",
+          pipe_eyebrow: "دورة المعالجة الكاملة",
+          pipe_title: "من الملف الخام إلى القرار السريري والاقتصادي — 10 خطوات مكتملة",
+          st_done: "مكتمل",
+          p1_t: "التوصيف والفحص الاستكشافي",
+          p1_d: "تحليل أولي شامل للملفات الستة: فحص الأنواع، القيم المفقودة، والتكرارات الهيكلية.",
+          p2_t: "تنظيف النصوص وتوحيد الجرعات",
+          p2_d: "إزالة وسوم HTML، تنظيف المسافات الشاذة، وتوحيد صياغة وحدات التركيز (mg, ml, mcg) بنمط قياسي موحد.",
+          p3_t: "محرك استخراج وحساب الأسعار",
+          p3_d: "بناء خوارزمية Regex ذكية لاستخراج سعر العبوة وسعر الوحدة الفردية بنسبة نجاح 93.75% واستبعاد الحالات غير المؤكدة علمياً.",
+          p4_t: "هندسة وحفظ الملفات (Data Engineering)",
+          p4_d: "تنظيم بنية المستودع بدقة: فصل البيانات الخام (Raw) عن المنظفة (Processed) ومخرجات التحليل (Reports).",
+          p5_t: "النمذجة والدمج العلائقي",
+          p5_d: "التحقق من سلامة المفاتيح: علاقات 1:N بتطابق 100%، وخلو تام من أي سجلات يتيمة (Zero Orphan Records).",
+          p6_t: "قاعدة البيانات العلائقية (SQL Engine)",
+          p6_d: "بناء قاعدة MedicineDB على SQLite و SQL Server مع بناء 3 مناظير تحليلية (Views) وفهارس تسريع الاستعلامات.",
+          p7_t: "التحميل الآمن والتحقق التبادلي",
+          p7_d: "تحميل الأسعار والكيانات داخل معاملات موحدة (Transactions) تضمن تكامل القيود وحماية فهارس البحث.",
+          p8_t: "تحليل اقتصاديات الدواء والبدائل",
+          p8_d: "مطابقة 18,476 دواء ضمن 1,875 مجموعة متكافئة وحساب مؤشر أسعار الشركات (MPI) وهوامش التوفير للمرضى المزمنين.",
+          p9_t: "لوحة التحكم التفاعلية الشاملة (Streamlit Portal)",
+          p9_d: "تطوير منصة تحليلية تفاعلية بـ 6 وحدات متكاملة وحاسبة توفير فورية وفلاتر للشركات والمجموعات العلاجية.",
+          p10_t: "التقرير التنفيذي النهائي عالي الدقة (Executive PDF)",
+          p10_d: "توليد تقرير استراتيجي من 8 صفحات ملونة (300 DPI) يتضمن التوصيات التنظيمية ودراسات الحالة السريرية والرسوم البيانية.",
+          res_eyebrow: "أبرز الاكتشافات الاقتصادية",
+          res_title: "فجوة الأسعار وفرص التوفير الحقيقية للمرضى",
+          res_pt1_b: "79.8% من الأدوية في السوق ليست الخيار الأرخص",
+          res_pt1_t: "— وهذا يعني أن 8 من كل 10 مرضى يدفعون مبالغ إضافية يمكن توفيرها فورياً بمجرد اختيار البديل المكافئ.",
+          res_pt2_b: "28.6% وسيط التوفير، ويقفز إلى 43% و 70%",
+          res_pt2_t: "في الأصناف ذات المنافسة العالية مثل أدوية المعدة (Omeprazole) والمسكنات وأدوية الكوليسترول.",
+          res_pt3_b: "فجوة سعرية قياسية: وسيط السعر 15.05 مقابل متوسط 349.99 BDT",
+          res_pt3_t: "— ناتجة عن تباين كبير وأدوية أورام ومناعة مرتفعة الثمن تتجاوز 300 ألف للعبوة.",
+          res_pt4_b: "مؤشر الشركات (MPI) يكشف تفاوت السياسات السعرية",
+          res_pt4_t: "— شركات وطنية تقدم بدائل اقتصادية بمؤشر 0.76 (أرخص بـ 24%) مقابل شركات دولية بمؤشر 1.63 (أغلى بـ 63%).",
+          comp_title: "توزيع المواد الفعالة حسب شدة المنافسة السوقية",
+          comp_sub: "عدد البراندات المتوفرة لكل مادة كيميائية",
+          comp_1: "بديل منفرد",
+          comp_100: "100+ براند",
+          comp_note: "40 مادة حيوية فقط تحظى بمنافسة شديدة تتجاوز 100 منتج، وتوفر أعلى فرص التوفير المالي للمستهلك.",
+          port_eyebrow: "منظومة التحليل والقرار في متناول يدك",
+          port_title: "لوحة التحكم التفاعلية Streamlit ومكتبة المخرجات",
+          port_desc: "تم بناء منصة كاملة متعددة الصفحات بتصميم Royal Velvet الفاخر، تتيح للباحثين والأطباء والمستهلكين فحص البيانات والتسعير بدقة متناهية.",
+          m1_t: "1. المؤشرات الكلية (Overview)",
+          m1_d: "بطاقات KPI حية وتوزيعات الأسعار وتحليلات المنافسة السوقية.",
+          m2_t: "2. محرك البدائل المتطابقة",
+          m2_d: "محرك بحث فوري يستعرض كافة البدائل الأرخص مرتبة بفارق السعر.",
+          m3_t: "3. حاسبة التوفير للوصفات",
+          m3_d: "حساب التوفير المالي الفوري بناءً على الجرعات والكميات الشهرية والسنوية.",
+          m4_t: "4. تحليل الشركات (MPI)",
+          m4_d: "تصنيف 240 شركة وفق مؤشر الأسعار النسبي ومقارنة السياسات السعرية.",
+          m5_t: "5. المجموعات العلاجية",
+          m5_d: "استكشاف 421 فئة دوائية وقياس مستويات تركز واحتكار السوق.",
+          m6_t: "6. مستكشف البيانات الشامل",
+          m6_d: "فلاتر متقدمة على كامل السجلات مع إمكانية التصدير المباشر بصيغة CSV.",
+          btn_launch_app: "🚀 تشغيل منصة Streamlit (Port 8501)",
+          btn_launch_flask: "⚡ لوحة Flask (Port 5000)",
+          btn_view_pdf: "📄 استعراض التقرير النهائي (PDF)",
+          btn_view_html: "🌐 التقرير التفاعلي (HTML)",
+          calc_eyebrow: "تجربة عملية حية",
+          calc_title: "حاسبة التوفير الذكية للأمراض المزمنة",
+          calc_lead: "جرّب عينات حقيقية موثقة من أدوية الأمراض المزمنة وشاهد كيف يحقق التبديل إلى البديل الأرخص وفراً سنوياً كبيراً:",
+          calc_lbl_drug: "اختر الدواء والمادة الفعالة:",
+          calc_lbl_qty: "الكمية الشهرية المطلوبة (حبات / شهر):",
+          calc_kpi_badge: "تحليل التوفير المباشر",
+          calc_unit_saving: "الوفر في الحبة الواحدة:",
+          calc_annual_saving: "إجمالي الوفر السنوي المتوقع:",
+          db_eyebrow: "الهندسة العلائقية للبيانات",
+          db_title: "<bdi dir=\"ltr\">MedicineDB</bdi> — ستة جداول مترابطة بعلاقات محكمة",
+          db_desc: "مخطط علائقي كامل بقيود سلامة وفهارس تغطية سريعة، يربط جدول المنتجات بالمواد الفعالة والشركات والأشكال والتصنيفات.",
+          erd_classes: "421 · تصنيف علاجي",
+          erd_indications: "2,043 · استخدام طبي",
+          erd_manufacturers: "240 · شركة مصنّعة",
+          erd_generics: "1,711 · مادة فعالة",
+          erd_dosage_forms: "113 · شكل صيدلاني",
+          erd_medicines: "21,714 · دواء مسجل",
+          db_views_t: "مناظير SQL الجاهزة للتحليل الفوري",
+          db_integrity_t: "فحوصات السلامة الموثقة",
+          db_chk1: "صفر سجلات يتيمة عبر كافة مفاتيح الربط الخارجية",
+          db_chk2: "صفر أسعار سالبة وصفر أحجام عبوات مجهولة",
+          db_chk3: "تطابق تام بين البيانات المنظفة والجداول بنسبة 100%",
+          trans_eyebrow: "النزاهة الأكاديمية والسريرية",
+          trans_title: "معايير التحقق والحدود المعلنة بكل شفافية",
+          trans_ok_t: "ما تم التحقق منه رياضياً",
+          trans_ok1: "توثيق شامل وقابل لإعادة التشغيل لكل خطوة تنظيف وتحويل.",
+          trans_ok2: "مطابقة ثلاثية صارمة للبدائل: (المادة الكيميائية + الشكل الصيدلاني + التركيز).",
+          trans_ok3: "فحص الحدود السعرية الشاذة بمقاييس إحصائية واستبعاد غير المتطابق.",
+          trans_warn_t: "حدود طبية وتنظيمية نعلنها",
+          trans_warn1: "التكافؤ الكيميائي لا يلغي ضرورة استشارة الطبيب أو الصيدلي قبل تبديل الوصفة.",
+          trans_warn2: "المنصة تعكس أسعار السوق المعلنة ولا ترصد المخزون الحي في الصيدليات.",
+          trans_warn3: "6.25% من الأدوية ذات العبوات غير المحددة تم استبعادها عمداً لمنع التضليل.",
+          cta_title: "البيانات والتحليلات كاملة في متناول يدك",
+          cta_desc: "استكشف سوق الأدوية الآن، احسب وفر وصفتك الطبية، واطلع على التقرير الاستراتيجي الشامل.",
+          cta_btn1: "استكشف لوحة التحكم",
+          cta_btn2: "تحميل التقرير النهائي (PDF)",
+          cta_btn3: "تجربة حاسبة التوفير",
+          modal_lbl_cmd: "الملف المطلوب تشغيله لبدء السيرفر:",
+          modal_tip: "اضغط مرتين على الملف أعلاه داخل مجلد المشروع لبدء السيرفر، وسيعمل الرابط تلقائياً.",
+          modal_close: "إغلاق",
+          modal_open_anyway: "فتح الرابط على أي حال",
+          foot_copy: "© 2026 · مشروع تحليل واستخبارات أسعار وبدائل الأدوية (MedicineDB)",
+          foot_tag: "ENTERPRISE DATA SCIENCE & HEALTH ECONOMICS"
+        },
+        en: {
+          tag_version: "V2.4 Active",
+          nav_data: "Data",
+          nav_pipeline: "Pipeline",
+          nav_results: "Results",
+          nav_platform: "Interactive Platform",
+          nav_calc: "Savings Calculator",
+          nav_database: "Database",
+          nav_transparency: "Transparency",
+          btn_explore: "Explore Platform",
+          hero_eyebrow: "Medicine Market Intelligence & Alternative Analysis",
+          hero_title: "From raw data… to one question: Which medicine costs least?",
+          hero_desc: "A unified relational database and health economics analysis measuring the price gap between the most expensive and cheapest bio-equivalent brands. Every figure is directly computed from empirical data with mathematical rigor.",
+          hero_cta1: "Launch Interactive Dashboard",
+          hero_cta2: "Download Executive PDF (8 Pages)",
+          chart_title: "Median Savings Switching to Cheapest Brand",
+          chart_subtitle: "Segmented by available market competitors",
+          bar_2: "Only 2 brands",
+          bar_3_5: "3-5 brands",
+          bar_6_10: "6-10 brands",
+          bar_11: "11+ brands",
+          chart_note: "Median savings percentage between each medicine and its lowest-priced identical equivalent (generic + form + strength) across 1,875 clusters.",
+          stats_eyebrow: "Project at a Glance",
+          stat1_desc: "Registered pharmaceutical products with complete generic, dosage form, and manufacturer metadata.",
+          stat2_desc: "Of all products had precise unit prices parsed through customized regular expression engines.",
+          stat_median: "Median",
+          stat3_desc: "Instant median savings gained when switching from any brand to the lowest-priced identical alternative.",
+          data_eyebrow: "Data & Relational Architecture",
+          data_title: "Six raw CSV files… One unified relational model",
+          data_lead: "Source: Assorted Medicine Dataset — 49 columns across 6 files, cleaned, standardized, and validated to establish MedicineDB.",
+          th_file: "Original File",
+          th_rows: "Row Count",
+          th_cols: "Columns",
+          th_role: "Relational Role in Schema",
+          row_med: "Fact Table: Every branded pharmaceutical product with packaging and unit pricing",
+          row_gen: "Active generic compounds with therapeutic indications and pharmacology",
+          row_mfr: "Pharmaceutical manufacturing companies and market shares",
+          row_class: "Therapeutic drug classes (merged canonical duplicates into 421 standard classes)",
+          row_ind: "Clinical indications and approved medical uses",
+          row_form: "Dosage forms (tablets, capsules, syrups, injections, suspensions...)",
+          data_note: "All records processed transparently without synthetic inputs; unresolvable package formats were isolated to ensure research integrity.",
+          pipe_eyebrow: "Complete Engineering Lifecycle",
+          pipe_title: "From raw files to clinical and economic decisions — 10 completed phases",
+          st_done: "Completed",
+          p1_t: "Profiling & Exploratory Inspection",
+          p1_d: "Rigorous initial auditing of all 6 files: schema validation, missing value distributions, and structural duplicates.",
+          p2_t: "Text Sanitization & Strength Normalization",
+          p2_d: "HTML tag stripping, whitespace regularization, and canonical unit conversions (mg, ml, mcg).",
+          p3_t: "Price Extraction & Unit Normalization",
+          p3_d: "Built robust regex parser achieving 93.75% price extraction rate while isolating ambiguous multi-pack formulas.",
+          p4_t: "Repository Engineering & Clean Storage",
+          p4_d: "Organized pipeline structure: strictly partitioned raw data, processed sets, analysis notebooks, and deliverables.",
+          p5_t: "Relational Modeling & Key Integrity",
+          p5_d: "Verified 1:N relational links with 100% key matching and zero orphan records across all foreign keys.",
+          p6_t: "Relational Database Implementation (SQL)",
+          p6_d: "Deployed MedicineDB on SQLite and SQL Server with 3 analytical views and composite indexing.",
+          p7_t: "Atomic Transactional Loading",
+          p7_d: "Executed transactional ingestion protecting foreign-key constraints and schema integrity against failure.",
+          p8_t: "Health Economics & Alternative Matching",
+          p8_d: "Evaluated 18,476 comparable drugs across 1,875 clusters, calculating Manufacturer Price Indices (MPI) and savings.",
+          p9_t: "Streamlit Multi-Page Analytics Portal",
+          p9_d: "Engineered 6-module interactive analytics portal with live prescription calculator and macro KPI dashboards.",
+          p10_t: "Executive Final PDF Report (High-DPI)",
+          p10_d: "Compiled 8-page color report (300 DPI) featuring regulatory guidance, clinical case studies, and charts.",
+          res_eyebrow: "Key Economic Discoveries",
+          res_title: "Market price spreads and substantial patient savings opportunities",
+          res_pt1_b: "79.8% of market medicines are NOT the cheapest available option",
+          res_pt1_t: "— Meaning nearly 8 out of 10 purchases incur avoidable markups redeemable through equivalent substitution.",
+          res_pt2_b: "28.6% median savings, expanding to 43% and 70%",
+          res_pt2_t: "in crowded competitive clusters like PPIs (Omeprazole), analgesics, and statins.",
+          res_pt3_b: "Substantial price spread: Median 15.05 BDT vs Mean 349.99 BDT",
+          res_pt3_t: "— Driven by high-cost specialty oncology and immunology biologics exceeding 300,000 BDT per unit.",
+          res_pt4_b: "Manufacturer Price Index (MPI) exposes divergent pricing strategies",
+          res_pt4_t: "— Budget-friendly domestic firms benchmark at MPI 0.76 (24% below average) vs premium multinationals at 1.63 (63% above).",
+          comp_title: "Generic molecules by competitive intensity",
+          comp_sub: "Number of commercial brands available per active generic",
+          comp_1: "Monopoly (1 brand)",
+          comp_100: "100+ brands",
+          comp_note: "Only 40 essential molecules feature intense competition exceeding 100 brands, delivering peak savings potential.",
+          port_eyebrow: "Analytics & Decision Engine at Your Fingertips",
+          port_title: "Streamlit Interactive Dashboard & Project Assets",
+          port_desc: "A production-grade multi-page portal crafted with the Royal Velvet aesthetic, empowering researchers and patients to explore market dynamics.",
+          m1_t: "1. Macro Overview",
+          m1_d: "Dynamic executive KPIs, log-scale price curves, and market distributions.",
+          m2_t: "2. Alternatives Matcher",
+          m2_d: "Real-time search engine sorting cheaper equivalent brands by price spread.",
+          m3_t: "3. Savings Calculator",
+          m3_d: "Financial prescription calculator computing unit, monthly, and yearly savings.",
+          m4_t: "4. Manufacturer Analysis (MPI)",
+          m4_d: "Comparative rankings of 240 pharmaceutical producers across price indices.",
+          m5_t: "5. Therapeutic Groups",
+          m5_d: "Competitive concentration explorer evaluating 421 anatomical drug classes.",
+          m6_t: "6. Data Explorer",
+          m6_d: "Multi-filter raw and processed table inspector with instant CSV export.",
+          btn_launch_app: "🚀 Launch Streamlit Portal (Port 8501)",
+          btn_launch_flask: "⚡ Flask Dashboard (Port 5000)",
+          btn_view_pdf: "📄 View Executive PDF Report",
+          btn_view_html: "🌐 Interactive Report (HTML)",
+          calc_eyebrow: "Live Interactive Demonstration",
+          calc_title: "Smart Prescription Savings Calculator",
+          calc_lead: "Select verified empirical chronic therapies below to observe how generic substitution generates massive annual budget relief:",
+          calc_lbl_drug: "Select Medicine & Active Compound:",
+          calc_lbl_qty: "Monthly Dose Required (Units / Month):",
+          calc_kpi_badge: "Direct Financial Impact",
+          calc_unit_saving: "Savings Per Unit:",
+          calc_annual_saving: "Estimated Annual Savings:",
+          db_eyebrow: "Relational Data Modeling",
+          db_title: "<bdi dir=\"ltr\">MedicineDB</bdi> — Six Interconnected Tables with Strict Referential Integrity",
+          db_desc: "Enterprise 3NF schema featuring referential constraints and index coverage bridging medicines, generics, and producers.",
+          erd_classes: "421 · Drug Classes",
+          erd_indications: "2,043 · Clinical Indications",
+          erd_manufacturers: "240 · Manufacturers",
+          erd_generics: "1,711 · Active Generics",
+          erd_dosage_forms: "113 · Dosage Forms",
+          erd_medicines: "21,714 · Branded Medicines",
+          db_views_t: "Production SQL Analytical Views",
+          db_integrity_t: "Integrity Verification Metrics",
+          db_chk1: "Zero orphan records across all foreign-key relationships",
+          db_chk2: "Zero negative prices and zero undefined pack sizes",
+          db_chk3: "100% exact row reconciliation between processed tables and SQL",
+          trans_eyebrow: "Academic & Clinical Integrity",
+          trans_title: "Verification standards and transparent methodological boundaries",
+          trans_ok_t: "Empirically Verified",
+          trans_ok1: "Fully reproducible transformation steps preserved with immutable raw backups.",
+          trans_ok2: "Strict 3-tuple alternative matching: (Generic + Dosage Form + Strength).",
+          trans_ok3: "Statistical outlier screening filtering extreme data anomalies.",
+          trans_warn_t: "Regulatory & Clinical Disclosures",
+          trans_warn1: "Chemical equivalence does not substitute for licensed medical consultation.",
+          trans_warn2: "Pricing models capture catalog data and do not reflect real-time pharmacy stock.",
+          trans_warn3: "6.25% of unresolvable multi-strength packages were intentionally excluded to prevent bias.",
+          cta_title: "Comprehensive intelligence at your disposal",
+          cta_desc: "Investigate pharmaceutical market pricing, calculate personal prescription savings, and inspect the executive report.",
+          cta_btn1: "Explore Live Dashboard",
+          cta_btn2: "Download PDF Report",
+          cta_btn3: "Test Savings Calculator",
+          modal_lbl_cmd: "Required batch file to start the server:",
+          modal_tip: "Double-click the file above in your project folder to start the server, and the link will work automatically.",
+          modal_close: "Close",
+          modal_open_anyway: "Open Link Anyway",
+          foot_copy: "© 2026 · Medicine Price Analysis & Alternatives Intelligence (MedicineDB)",
+          foot_tag: "ENTERPRISE DATA SCIENCE & HEALTH ECONOMICS"
+        }
+      };
+
+      /* ─── إدارة الوضع الليلي (Dark Mode) ─── */
+      let currentTheme = localStorage.getItem('medicinedb_theme');
+      if (!currentTheme) {
+        currentTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+
+      window.toggleTheme = function () {
+        currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        localStorage.setItem('medicinedb_theme', currentTheme);
+        applyTheme(currentTheme);
+      };
+
+      function applyTheme(theme) {
+        const isDark = theme === 'dark';
+        if (isDark) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.removeAttribute('data-theme');
+        }
+
+        const icons = [document.getElementById('theme-icon'), document.querySelector('.theme-icon-mob')];
+        icons.forEach(ic => {
+          if (ic) ic.textContent = isDark ? '☀️' : '🌙';
+        });
+
+        const btns = [document.getElementById('theme-toggle'), document.querySelector('.theme-btn-mob')];
+        const isAr = currentLang === 'ar';
+        btns.forEach(btn => {
+          if (btn) {
+            btn.title = isDark 
+              ? (isAr ? 'الوضع النهاري' : 'Switch to Light Mode')
+              : (isAr ? 'الوضع الليلي' : 'Switch to Dark Mode');
+          }
+        });
+      }
+
+      /* قراءة اللغة المحفوظة */
+      let currentLang = localStorage.getItem('medicinedb_lang') || 'ar';
+
+      window.toggleLanguage = function () {
+        currentLang = currentLang === 'ar' ? 'en' : 'ar';
+        localStorage.setItem('medicinedb_lang', currentLang);
+        applyLanguage(currentLang);
+        applyTheme(currentTheme);
+      };
+
+      function applyLanguage(lang) {
+        const isAr = lang === 'ar';
+        document.documentElement.lang = isAr ? 'ar-EG' : 'en-US';
+        document.documentElement.dir = isAr ? 'rtl' : 'ltr';
+
+        const label = document.getElementById('lang-label');
+        const icon = document.getElementById('lang-icon');
+        if (label && icon) {
+          label.textContent = isAr ? 'English' : 'العربية';
+          icon.textContent = isAr ? '🌐' : '🇸🇦';
+        }
+
+        const dict = translations[lang];
+        if (!dict) return;
+
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          if (dict[key]) {
+            if (el.tagName && el.tagName.toLowerCase() === 'text') {
+              el.textContent = dict[key];
+            } else {
+              el.innerHTML = dict[key];
+            }
+          }
+        });
+
+        // تحديث خيارات قائمة الأدوية في الحاسبة
+        const sel = document.getElementById('sample-drug-select');
+        if (sel) {
+          const optionsData = {
+            omeprazole: isAr ? "Omeprazole 20 mg (حموضة وقرحة المعدة - 107 بدائل)" : "Omeprazole 20 mg (GERD / Acid Reflux - 107 Brands)",
+            paracetamol: isAr ? "Paracetamol 500 mg (مسكن ومخفض حرارة - 103 بدائل)" : "Paracetamol 500 mg (Analgesic / Antipyretic - 103 Brands)",
+            domperidone: isAr ? "Domperidone 10 mg (تنظيم حركة المعدة - 88 بديلاً)" : "Domperidone 10 mg (Motility Regulator - 88 Brands)",
+            azithromycin: isAr ? "Azithromycin 500 mg (مضاد حيوي - 78 بديلاً)" : "Azithromycin 500 mg (Broad Spectrum Antibiotic - 78 Brands)",
+            amlodipine: isAr ? "Amlodipine 5 mg (علاج ضغط الدم المزمن - 72 بديلاً)" : "Amlodipine 5 mg (Hypertension - 72 Brands)",
+            metformin: isAr ? "Metformin 500 mg (علاج السكري من النوع الثاني - 65 بديلاً)" : "Metformin 500 mg (Type 2 Diabetes - 65 Brands)",
+            aceclofenac: isAr ? "Aceclofenac 100 mg (مسكن التهاب المفاصل - 82 بديلاً)" : "Aceclofenac 100 mg (Osteoarthritis / Pain - 82 Brands)"
+          };
+          Array.from(sel.options).forEach(opt => {
+            if (optionsData[opt.value]) {
+              opt.textContent = optionsData[opt.value];
+            }
+          });
+        }
+
+        // تحديث عنوان الصفحة
+        document.title = isAr 
+          ? "MedicineDB — منصة استخبارات وتحليل أسعار وبدائل الأدوية"
+          : "MedicineDB — Medicine Price Analysis & Alternatives Intelligence";
+
+        // تحديث نص الآلة الحاسبة
+        updateCalc();
+      }
+
+      /* بيانات حاسبة التوفير المستخرجة بدقة من قاعدة البيانات وتقرير الـ PDF */
+      const drugData = {
+        omeprazole: { min: 3.00, max: 7.12, nameAr: "Omeprazole 20 mg", nameEn: "Omeprazole 20 mg Capsule" },
+        paracetamol: { min: 0.80, max: 2.50, nameAr: "Paracetamol 500 mg", nameEn: "Paracetamol 500 mg Tablet" },
+        domperidone: { min: 1.00, max: 4.00, nameAr: "Domperidone 10 mg", nameEn: "Domperidone 10 mg Tablet" },
+        azithromycin: { min: 2.52, max: 35.00, nameAr: "Azithromycin 500 mg", nameEn: "Azithromycin 500 mg Tablet" },
+        amlodipine: { min: 2.50, max: 5.00, nameAr: "Amlodipine 5 mg", nameEn: "Amlodipine 5 mg Tablet" },
+        metformin: { min: 2.00, max: 4.00, nameAr: "Metformin 500 mg", nameEn: "Metformin 500 mg Tablet" },
+        aceclofenac: { min: 2.50, max: 5.00, nameAr: "Aceclofenac 100 mg", nameEn: "Aceclofenac 100 mg Tablet" }
+      };
+
+      window.updateCalc = function () {
+        const sel = document.getElementById('sample-drug-select');
+        const qtyInput = document.getElementById('sample-qty');
+        const perUnitEl = document.getElementById('calc-per-unit');
+        const annualEl = document.getElementById('calc-annual-total');
+        const pctEl = document.getElementById('calc-pct');
+        const metaEl = document.getElementById('sample-meta-info');
+
+        if (!sel || !qtyInput) return;
+        const val = sel.value;
+        const qty = Math.max(1, parseInt(qtyInput.value) || 30);
+        const drug = drugData[val] || drugData.omeprazole;
+
+        const unitSaving = drug.max - drug.min;
+        const annualSaving = unitSaving * qty * 12;
+        const pctSaving = ((unitSaving / drug.max) * 100).toFixed(1);
+
+        if (perUnitEl) perUnitEl.textContent = `${unitSaving.toFixed(2)} BDT`;
+        if (annualEl) annualEl.textContent = `${annualSaving.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})} BDT`;
+        
+        const isAr = currentLang === 'ar';
+        if (pctEl) {
+          pctEl.textContent = isAr 
+            ? `نسبة التوفير: ${pctSaving}%`
+            : `Savings Rate: ${pctSaving}%`;
+        }
+
+        if (metaEl) {
+          metaEl.innerHTML = isAr
+            ? `نطاق السعر في السوق: <strong>${drug.min.toFixed(2)} BDT إلى ${drug.max.toFixed(2)} BDT</strong> للوحدة.`
+            : `Market Price Spread: <strong>${drug.min.toFixed(2)} BDT to ${drug.max.toFixed(2)} BDT</strong> per unit.`;
+        }
+      };
+
+      /* قائمة الجوال */
+      const btn = document.getElementById('menu-btn');
+      const panel = document.getElementById('nav-panel');
+      if (btn && panel) {
+        btn.addEventListener('click', function () {
+          const open = panel.classList.toggle('open');
+          btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+        panel.addEventListener('click', function (e) {
+          if (e.target.closest('a')) panel.classList.remove('open');
+        });
+      }
+
+      /* تحريك أشرطة الرسم البياني عند التحميل (كافة الرسوم البيانية) */
+      function animateBars() {
+        const bars = document.querySelectorAll('.bar-fill');
+        bars.forEach(function (b) {
+          const v = b.getAttribute('data-v');
+          if (v) b.style.width = v;
+        });
+      }
+
+      /* فتح التقارير بدقة من file:/// أو من سيرفر الويب */
+      window.openReport = function (filename, e) {
+        if (e) e.preventDefault();
+        let targetUrl = 'reports/' + filename;
+        if (window.location.protocol === 'http:' || window.location.protocol === 'https:') {
+          targetUrl = '/reports/' + filename;
+        }
+        window.open(targetUrl, '_blank');
+      };
+
+      /* فحص السيرفر وتوجيه المستخدم بذكاء */
+      window.launchApp = function (url, name, batFile, e) {
+        if (e) e.preventDefault();
+        const isAr = currentLang === 'ar';
+
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 900);
+
+        fetch(url, { mode: 'no-cors', signal: controller.signal })
+          .then(() => {
+            clearTimeout(timeoutId);
+            window.open(url, '_blank');
+          })
+          .catch(() => {
+            clearTimeout(timeoutId);
+            showServerModal(name, url, batFile, isAr);
+          });
+      };
+
+      function showServerModal(name, url, batFile, isAr) {
+        const modal = document.getElementById('service-modal');
+        const titleEl = document.getElementById('modal-title');
+        const descEl = document.getElementById('modal-desc');
+        const batEl = document.getElementById('modal-bat');
+        const forceBtn = document.getElementById('modal-force-link');
+
+        if (!modal) {
+          window.open(url, '_blank');
+          return;
+        }
+
+        if (titleEl) {
+          titleEl.textContent = isAr 
+            ? `⚠️ سيرفر ${name} غير قيد التشغيل حالياً`
+            : `⚠️ ${name} Server is Not Running`;
+        }
+        if (descEl) {
+          descEl.textContent = isAr
+            ? `يبدو أن سيرفر ${name} لم يتم تشغيله على جهازك بعد، لذلك لن يفتح الرابط حتى تبدأ السيرفر.`
+            : `The ${name} local server is not running on your machine. Please launch the batch script first.`;
+        }
+        if (batEl) {
+          batEl.textContent = batFile;
+        }
+        if (forceBtn) {
+          forceBtn.href = url;
+          forceBtn.textContent = isAr ? 'فتح الرابط على أي حال' : 'Open Link Anyway';
+        }
+
+        modal.classList.add('active');
+      }
+
+      window.closeModal = function () {
+        const modal = document.getElementById('service-modal');
+        if (modal) modal.classList.remove('active');
+      };
+
+      /* تطبيق الإعدادات عند البدء */
+      window.addEventListener('DOMContentLoaded', function () {
+        applyTheme(currentTheme);
+        applyLanguage(currentLang);
+        setTimeout(animateBars, 150);
+      });
+
+    })();
+  </script>
+
+  <!-- نافذة تنبيه وإرشاد تشغيل السيرفر -->
+  <div id="service-modal" class="modal-backdrop" onclick="if(event.target===this)closeModal()">
+    <div class="modal-box">
+      <div style="font-size: 32px; margin-bottom: 12px;">⚡</div>
+      <h3 id="modal-title" style="margin: 0 0 10px; color: var(--accent); font-size: 19px;">تنبيه تشغيل السيرفر</h3>
+      <p id="modal-desc" style="color: var(--muted); font-size: 14.5px; margin: 0; line-height: 1.7;">
+        السيرفر غير قيد التشغيل حالياً على جهازك.
+      </p>
+      <div style="margin-top: 14px;">
+        <span style="font-size: 13px; font-weight: 700; color: var(--fg);" data-i18n="modal_lbl_cmd">الملف المطلوب تشغيله لبدء السيرفر:</span><br>
+        <div class="modal-code" id="modal-bat">run_streamlit.bat</div>
+      </div>
+      <p style="font-size: 13px; color: var(--muted); margin: 8px 0 22px; line-height: 1.6;" data-i18n="modal_tip">
+        اضغط مرتين على الملف أعلاه داخل مجلد المشروع لبدء السيرفر، وسيعمل الرابط تلقائياً.
+      </p>
+      <div style="display: flex; gap: 10px; justify-content: flex-end; flex-wrap: wrap;">
+        <button class="btn btn-secondary" onclick="closeModal()" data-i18n="modal_close">إغلاق</button>
+        <a class="btn btn-primary" id="modal-force-link" href="#" target="_blank" onclick="closeModal()" data-i18n="modal_open_anyway">فتح الرابط على أي حال</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

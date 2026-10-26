@@ -1,0 +1,237 @@
+# 03 — Data Integration & Data Modeling
+
+## Objective
+
+This notebook performs **Data Integration** on the six cleaned datasets from the Assorted Medicine Dataset of Bangladesh.
+
+**Goals:**
+1. Inventory all cleaned datasets (rows, columns, keys)
+2. Identify and confirm Primary Keys
+3. Analyze Foreign Key relationships and value matching
+4. Determine cardinality of every relationship
+5. Validate referential integrity
+6. Investigate duplicate entities and delimiter-separated values
+7. Analyze price/package data modeling
+8. Create name-to-ID mapping tables
+9. Propose a normalized relational model (ERD + SQL schema)
+
+**Scope:** This notebook does NOT create SQL tables, perform EDA, or modify cleaned data.  
+**Output:** Reports, mappings, ERD, and schema proposal — all saved to `reports/`.
+
+## 3. Dataset Inventory
+
+Each dataset's role in the relational model:
+
+| Dataset | Role | Description |
+|---------|------|-------------|
+| **medicine** | Fact table | One row per branded medicine product |
+| **generic** | Reference | One row per generic compound / active ingredient |
+| **manufacturer** | Reference | One row per pharmaceutical manufacturer |
+| **dosage_form** | Reference | One row per dosage form (Tablet, Syrup, etc.) |
+| **drug_class** | Reference | One row per therapeutic drug class |
+| **indication** | Reference | One row per medical indication |
+
+## 4. Primary Key Analysis
+
+For each dataset, test the candidate ID column for:
+- **Uniqueness** — is every value distinct?
+- **Completeness** — are there any nulls?
+- **Consistency** — is the data type uniform (integer)?
+## 5. Foreign Key Analysis — Value Matching
+
+The cleaned datasets use **name-based references** (not IDs). For example, `medicine.generic` contains the generic name string, not the `generic_id` integer.
+
+For each proposed relationship, we test whether **every child value exists in the parent table**.
+
+## 6. Cardinality Analysis
+
+For each relationship, determine whether it is **1:1**, **1:N**, or **N:M**.
+
+Key question: Can one parent entity have multiple children?
+### Cardinality Summary
+
+| Relationship | Cardinality | Notes |
+|-------------|-------------|-------|
+| Manufacturer → Medicine | **1:N** | Each medicine has exactly 1 manufacturer |
+| Generic → Medicine | **1:N** | Each medicine has exactly 1 generic; one generic can have many brands |
+| Dosage Form → Medicine | **1:N** | Each medicine has exactly 1 dosage form |
+| Drug Class → Generic | **1:N** | Each generic has at most 1 drug class (61 have NULL) |
+| Indication → Generic | **1:N** | Each generic has at most 1 indication (84 have NULL) |
+
+**No N:M (many-to-many) relationships exist.** No junction tables are needed.
+
+## 7. Referential Integrity — Unused Parent Entities
+
+While no child records are orphaned, some parent entities have **no children** referencing them. These are valid catalog entries — they should be preserved in SQL.
+
+## 8. Duplicate Entity Investigation — Drug Class
+
+A critical data quality issue: the `drug_class` reference table contains **20 names** that appear with **multiple different IDs**. This creates ambiguity in the name-to-ID mapping.
+## 9. Delimiter Investigation
+
+Some drug class and indication values contain commas, ampersands, or slashes. We need to determine whether these are **delimiters** (separating multiple entities) or **part of the name itself**.
+
+## 10. Price & Package Modeling
+
+Determine how price/package information should be represented in the relational model.
+
+### Price Modeling Decision
+
+**Keep price as a medicine attribute.** Rationale:
+- Each `brand_id` appears exactly once — no separate price entity needed
+- `price`, `pack_price`, `pack_size`, and `currency` are simple scalar attributes
+- A separate Package table would add complexity with no analytical benefit
+- The multi-price limitation (550 rows with 3+ prices) is documented but does not justify a normalized package model at this stage
+## 11. Name-to-ID Mapping Strategy
+
+For the SQL phase, all name-based foreign keys must be converted to integer IDs.
+
+The mapping tables below translate entity names to their canonical IDs.
+
+## 12. Entity Relationship Diagram
+
+```mermaid
+erDiagram
+    MANUFACTURER ||--o{ MEDICINE : produces
+    GENERIC ||--o{ MEDICINE : "is branded as"
+    DOSAGE_FORM ||--o{ MEDICINE : "form of"
+    DRUG_CLASS ||--o{ GENERIC : classifies
+    INDICATION ||--o{ GENERIC : "indicated for"
+
+    MANUFACTURER {
+        int manufacturer_id PK
+        string manufacturer_name UK
+    }
+
+    GENERIC {
+        int generic_id PK
+        string generic_name UK
+        int drug_class_id FK
+        int indication_id FK
+    }
+
+    DOSAGE_FORM {
+        int dosage_form_id PK
+        string dosage_form_name UK
+    }
+
+    DRUG_CLASS {
+        int drug_class_id PK
+        string drug_class_name UK
+    }
+
+    INDICATION {
+        int indication_id PK
+        string indication_name UK
+    }
+
+    MEDICINE {
+        int brand_id PK
+        string brand_name
+        string type
+        int generic_id FK
+        int manufacturer_id FK
+        int dosage_form_id FK
+        string strength
+        float price
+        float pack_price
+        float pack_size
+        string currency
+    }
+```
+
+All relationships are **1:N** (one-to-many). No junction tables are required.
+
+See `reports/erd.md` for the standalone ERD document.
+
+## 13. Final Schema Proposal Summary
+
+| SQL Table | Source CSV | Rows | PK | Foreign Keys | Notes |
+|-----------|-----------|------|-----|-------------|-------|
+| `manufacturers` | manufacturer_clean.csv | 240 | `manufacturer_id` | — | Direct load |
+| `dosage_forms` | dosage_form_clean.csv | 113 | `dosage_form_id` | — | Direct load |
+| `drug_classes` | drug_class_clean.csv | 453 → ~421 | `drug_class_id` | — | Deduplicate names first |
+| `indications` | indication_clean.csv | 2,043 | `indication_id` | — | Direct load |
+| `generics` | generic_clean.csv | 1,711 | `generic_id` | `drug_class_id`, `indication_id` | Map name→ID; include _clean description cols |
+| `medicines` | medicine_clean.csv | 21,714 | `brand_id` | `generic_id`, `manufacturer_id`, `dosage_form_id` | Map names→IDs |
+
+### Constraint Recommendations
+
+| Constraint | Priority |
+|-----------|----------|
+| PRIMARY KEY on all `*_id` columns | **Required** |
+| FOREIGN KEY on `medicines.generic_id`, `manufacturer_id`, `dosage_form_id` | **Required** |
+| FOREIGN KEY on `generics.drug_class_id`, `indication_id` | **Required** (nullable) |
+| NOT NULL on entity name columns | **Required** |
+| UNIQUE on entity name columns | **Recommended** |
+| CHECK `price >= 0` | **Recommended** |
+| CHECK `type IN ('allopathic', 'herbal')` | **Optional** |
+
+See `reports/sql_schema_proposal.md` for the full proposal.
+
+
+## 14. Validation Checklist
+
+### Dataset Validation
+- [x] All 6 cleaned datasets loaded successfully
+- [x] Row counts recorded (21,714 + 1,711 + 240 + 113 + 453 + 2,043)
+- [x] Column counts recorded (17 + 37 + 5 + 4 + 4 + 4)
+
+### Key Validation
+- [x] All 6 primary keys confirmed (unique, non-null, int64)
+- [x] No duplicate primary keys
+- [x] No missing primary keys
+
+### Relationship Validation
+- [x] All 5 foreign key relationships tested
+- [x] Value matching completed — 100% match rate on all
+- [x] No orphan child records
+- [x] Unmatched parent entities documented (8 mfr, 1 dosage form, 50 generics, 63 drug classes, 1,371 indications)
+
+### Cardinality
+- [x] No 1:1 relationships — all are 1:N
+- [x] 5 relationships confirmed as 1:N
+- [x] No N:M relationships detected — no junction tables needed
+
+### Data Quality Issues
+- [x] Drug class duplicate names identified (20 names, 52 rows)
+- [x] Resolution strategy documented (use lowest ID as canonical)
+- [x] No delimiter-based multi-value fields found
+- [x] Multi-price limitation documented (550 rows with 3+ prices)
+
+### Modeling
+- [x] ERD created (`reports/erd.md`)
+- [x] SQL schema proposal created (`reports/sql_schema_proposal.md`)
+- [x] Name-to-ID mapping tables generated (`reports/key_mappings/`)
+- [x] Integration report created (`reports/integration_report.md`)
+- [x] Data relationships CSV created (`reports/data_relationships.csv`)
+- [x] Dataset inventory CSV created (`reports/integration_dataset_inventory.csv`)
+
+## 15. Conclusion
+
+The Data Integration phase is **complete**. All six cleaned datasets have been analyzed, and a validated relational model has been produced.
+
+### Key Findings
+1. **All primary keys are confirmed** — unique, non-null integers across all tables
+2. **All foreign key relationships show 100% match** — no orphan records
+3. **All relationships are 1:N** — no junction tables needed
+4. **One data quality issue identified**: 20 drug class names have duplicate IDs (to be resolved during SQL loading)
+5. **Price belongs to medicine** — no separate price entity needed
+
+### SQL Phase Readiness
+The project is now at the exact point where **SQL implementation can begin confidently**.
+
+Action items for the SQL phase:
+1. Deduplicate drug class IDs (keep lowest per name)
+2. Convert name-based FKs to ID-based FKs using mapping tables
+3. Allow NULL for `generics.drug_class_id` and `generics.indication_id`
+4. Decide whether to include all 30+ generic description columns or create a separate table
+
+### Deliverables Produced
+- `notebooks/03_data_integration.ipynb` — this notebook
+- `reports/integration_report.md` — comprehensive integration report
+- `reports/integration_dataset_inventory.csv` — dataset inventory
+- `reports/data_relationships.csv` — relationship validation results
+- `reports/sql_schema_proposal.md` — proposed SQL schema
+- `reports/erd.md` — Entity Relationship Diagram
+- `reports/key_mappings/` — 5 name-to-ID mapping CSVs

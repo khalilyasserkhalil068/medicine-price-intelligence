@@ -1,0 +1,19 @@
+dataset,column,original_value/example,transformation,reason,affected_rows
+generic,indication description,"<div class=""ac-body""><div class=""min-str-block""><d",Extracted text from HTML,Remove HTML artifacts while preserving medical text,1711
+generic,therapeutic class description,"<div class=""ac-body"">Disease-modifying antirheumat",Extracted text from HTML,Remove HTML artifacts while preserving medical text,1658
+generic,pharmacology description,"<div class=""ac-body"">Adalimumab is a recombinant h",Extracted text from HTML,Remove HTML artifacts while preserving medical text,1614
+generic,dosage description,"<div class=""ac-body""><strong>Rheumatoid Arthritis,",Extracted text from HTML,Remove HTML artifacts while preserving medical text,1695
+generic,administration description,"<div class=""ac-body"">Administered by subcutaneous ",Extracted text from HTML,Remove HTML artifacts while preserving medical text,295
+generic,interaction description,"<div class=""ac-body"">Abatacept: Increased risk of ",Extracted text from HTML,Remove HTML artifacts while preserving medical text,1301
+generic,contraindications description,"<div class=""ac-body"">Adalimumab should not be admi",Extracted text from HTML,Remove HTML artifacts while preserving medical text,1570
+generic,side effects description,"<div class=""ac-body"">The most common adverse react",Extracted text from HTML,Remove HTML artifacts while preserving medical text,1631
+generic,pregnancy and lactation description,"<div class=""ac-body"">Pregnancy Category B. Adequat",Extracted text from HTML,Remove HTML artifacts while preserving medical text,1545
+generic,precautions description,"<div class=""ac-body""><ul>
+<li><strong>Serious inf",Extracted text from HTML,Remove HTML artifacts while preserving medical text,1525
+generic,pediatric usage description,"<div class=""ac-body""><strong>Pediatric Use</strong",Extracted text from HTML,Remove HTML artifacts while preserving medical text,569
+generic,overdose effects description,"<div class=""ac-body"">The maximum tolerated dose of",Extracted text from HTML,Remove HTML artifacts while preserving medical text,775
+generic,duration of treatment description,"<div class=""ac-body"">It is recommended that Acyclo",Extracted text from HTML,Remove HTML artifacts while preserving medical text,5
+generic,reconstitution description,"<div class=""ac-body"">Each 250 mg vial of Acyclovir",Extracted text from HTML,Remove HTML artifacts while preserving medical text,84
+generic,storage conditions description,"<div class=""ac-body"">Do not use beyond the expirat",Extracted text from HTML,Remove HTML artifacts while preserving medical text,1546
+medicine,strength,  500 mg ,Stripped whitespace,Standardize spacing,20865
+medicine,package container,100 ml bottle: ৳ 40.12,"Extracted price, pack_price, pack_size, currency","Fixed regex parsing to capture actual ৳ symbol and handle multiple pack variants. Ambiguous rows left NULL. Price=93.75%, Pack=62.30%",21672

@@ -1,0 +1,241 @@
+manufacturer id,manufacturer name,slug,generics count,brand names count
+2,ACI Limited,aci-limited-2,352.0,687.0
+3,ACME Laboratories Ltd.,acme-laboratories-ltd-3,410.0,696.0
+103,Ad-din Pharmaceuticals Ltd.,ad-din-pharmaceuticals-ltd-103,70.0,104.0
+114,Aexim Pharmaceuticals Ltd.,aexim-pharmaceuticals-ltd-114,34.0,43.0
+292,Al-Madina Pharmaceuticals Ltd.,al-madina-pharmaceuticals-ltd-292,49.0,76.0
+4,Alco Pharma Ltd.,alco-pharma-ltd-4,106.0,179.0
+304,Alien Pharma,alien-pharma-304,3.0,3.0
+245,Alkad Laboratories,alkad-laboratories-245,13.0,14.0
+115,Allied Pharmaceuticals Ltd.,allied-pharmaceuticals-ltd-115,7.0,10.0
+5,Ambee Pharmaceuticals Ltd.,ambee-pharmaceuticals-ltd-5,68.0,113.0
+6,Amico Laboratories Ltd.,amico-laboratories-ltd-6,87.0,123.0
+7,Amulet Pharmaceuticals Ltd.,amulet-pharmaceuticals-ltd-7,35.0,51.0
+128,APC Pharma Ltd.,apc-pharma-ltd-128,27.0,41.0
+8,Apex Pharmaceuticals Ltd.,apex-pharmaceuticals-ltd-8,77.0,115.0
+9,Apollo Pharmaceutical Ltd.,apollo-pharmaceutical-ltd-9,37.0,48.0
+258,AqVida bangladesh,aqvida-bangladesh-258,5.0,7.0
+289,Arges Life Science Limited,arges-life-science-limited-289,18.0,24.0
+10,Aristopharma Ltd.,aristopharma-ltd-10,312.0,516.0
+81,Asiatic Laboratories Ltd.,asiatic-laboratories-ltd-81,93.0,149.0
+11,Astra Biopharmaceuticals Ltd.,astra-biopharmaceuticals-ltd-11,54.0,87.0
+246,Aztec Pharmaceuticals Ltd.,aztec-pharmaceuticals-ltd-246,14.0,16.0
+13,Beacon Pharmaceuticals Ltd.,beacon-pharmaceuticals-ltd-13,237.0,384.0
+110,Belsen Pharmaceuticals Ltd.,belsen-pharmaceuticals-ltd-110,17.0,21.0
+169,Bengal drugs Ltd.,bengal-drugs-ltd-169,16.0,22.0
+107,Benham Pharmaceuticals Ltd.,benham-pharmaceuticals-ltd-107,84.0,130.0
+14,Beximco Pharmaceuticals Ltd.,beximco-pharmaceuticals-ltd-14,386.0,703.0
+102,Biogen Pharmaceuticals Ltd.,biogen-pharmaceuticals-ltd-102,29.0,32.0
+15,Biopharma Laboratories Ltd.,biopharma-laboratories-ltd-15,178.0,311.0
+191,BOTS Pvt. Limited,bots-pvt-limited-191,12.0,14.0
+16,Bristol Pharmaceuticals Ltd.,bristol-pharmaceuticals-ltd-16,61.0,87.0
+336,Bronson  Laboratories (BD) Ltd.,bronson-laboratories-bd-ltd-336,5.0,5.0
+273,Centeon Pharma Ltd.,centeon-pharma-ltd-273,16.0,22.0
+171,Central Pharmaceuticals Ltd.,central-pharmaceuticals-ltd-171,45.0,55.0
+18,Chemist Laboratories  Ltd.,chemist-laboratories-ltd-18,83.0,109.0
+174,City Overseas Ltd.,city-overseas-ltd-174,20.0,22.0
+19,Concord Pharmaceuticals Ltd.,concord-pharmaceuticals-ltd-19,74.0,125.0
+153,Cosmic Pharma Ltd.,cosmic-pharma-ltd-153,57.0,76.0
+117,Cosmo Pharma Ltd.,cosmo-pharma-ltd-117,32.0,41.0
+276,Credence Pharmaceuticals Ltd.,credence-pharmaceuticals-ltd-276,15.0,20.0
+278,D16 Pharma & Biotec,d16-pharma-biotec-278,25.0,41.0
+330,DBL Pharmaceuticals Ltd.,dbl-pharmaceuticals-ltd-330,17.0,22.0
+101,Decent Pharma Laboratories Ltd.,decent-pharma-laboratories-ltd-101,25.0,32.0
+83,Delta Pharma Ltd.,delta-pharma-ltd-83,97.0,154.0
+22,Desh Pharmaceuticals Ltd.,desh-pharmaceuticals-ltd-22,61.0,94.0
+24,Doctor TIMS Pharmaceuticals Ltd.,doctor-tims-pharmaceuticals-ltd-24,54.0,66.0
+23,Doctor’s Chemical Works Ltd.,doctors-chemical-works-ltd-23,69.0,105.0
+25,Drug International Ltd.,drug-international-ltd-25,418.0,681.0
+119,Edruc Limited,edruc-limited-119,109.0,156.0
+305,Empiric Laboratories Ltd.,empiric-laboratories-ltd-305,1.0,1.0
+27,Eskayef Pharmaceuticals Ltd.,eskayef-pharmaceuticals-ltd-27,364.0,664.0
+157,Ethical Drug Ltd.,ethical-drug-ltd-157,60.0,104.0
+121,Euro Pharma Ltd.,euro-pharma-ltd-121,96.0,159.0
+127,Everest Pharmaceuticals Ltd.,everest-pharmaceuticals-ltd-127,64.0,89.0
+266,FnF Pharmaceuticals Ltd.,fnf-pharmaceuticals-ltd-266,7.0,7.0
+137,Gaco Pharmaceuticals Ltd.,gaco-pharmaceuticals-ltd-137,103.0,149.0
+29,General Pharmaceuticals Ltd.,general-pharmaceuticals-ltd-29,271.0,442.0
+30,Genvio Pharma Ltd.,genvio-pharma-ltd-30,25.0,41.0
+267,Get Well Limited,get-well-limited-267,5.0,13.0
+52,GlaxoSmithKline,glaxosmithkline-52,68.0,98.0
+31,Globe Pharmaceuticals Ltd.,globe-pharmaceuticals-ltd-31,167.0,281.0
+120,Globex Pharmaceuticals Ltd.,globex-pharmaceuticals-ltd-120,31.0,46.0
+32,Gonoshasthaya Pharma Ltd.,gonoshasthaya-pharma-ltd-32,89.0,148.0
+268,Goodman Pharmaceuticals Ltd.,goodman-pharmaceuticals-ltd-268,16.0,25.0
+212,Greenland Pharmaceuticals Ltd.,greenland-pharmaceuticals-ltd-212,2.0,2.0
+261,Guardian Healthcare Ltd.,guardian-healthcare-ltd-261,23.0,29.0
+100,Hallmark Pharmaceuticals Ltd.,hallmark-pharmaceuticals-ltd-100,43.0,63.0
+85,Healthcare Pharmaceuticals Ltd.,healthcare-pharmaceuticals-ltd-85,272.0,506.0
+33,Hudson Pharmaceuticals Ltd.,hudson-pharmaceuticals-ltd-33,67.0,97.0
+35,Ibn Sina Pharmaceuticals Ltd.,ibn-sina-pharmaceuticals-ltd-35,283.0,467.0
+106,Incepta Pharmaceuticals Ltd.,incepta-pharmaceuticals-ltd-106,689.0,1188.0
+99,Indo Bangla Pharmaceutical,indo-bangla-pharmaceutical-99,28.0,38.0
+108,Innovative Pharma (Albion),innovative-pharma-albion-108,50.0,85.0
+217,Institute of Public Health (IPH),institute-of-public-health-iph-217,6.0,8.0
+290,International Agencies (Bd.) Limited,international-agencies-bd-limited-290,6.0,9.0
+176,Janata Traders,janata-traders-176,23.0,33.0
+37,Jayson Pharmaceuticals Ltd.,jayson-pharmaceuticals-ltd-37,123.0,202.0
+39,Jenphar Bangladesh Ltd.,jenphar-bangladesh-ltd-39,84.0,139.0
+205,Kawsar Chemicals,kawsar-chemicals-205,1.0,2.0
+116,Kemiko Pharmaceuticals Ltd.,kemiko-pharmaceuticals-ltd-116,134.0,208.0
+136,Kumudini Pharma Ltd.,kumudini-pharma-ltd-136,84.0,126.0
+40,Labaid Pharma Ltd.,labaid-pharma-ltd-40,52.0,104.0
+275,Legends Pharma,legends-pharma-275,12.0,13.0
+129,Leon Pharmaceuticals Ltd.,leon-pharmaceuticals-ltd-129,62.0,98.0
+41,Libra Infusions Ltd.,libra-infusions-ltd-41,9.0,16.0
+269,Libra Pharmaceuticls Ltd.,libra-pharmaceuticls-ltd-269,3.0,5.0
+279,Marie Stopes Bangladesh,marie-stopes-bangladesh-279,1.0,1.0
+131,Marker Pharma Ltd.,marker-pharma-ltd-131,29.0,37.0
+109,Marksman Pharmaceuticals Ltd.,marksman-pharmaceuticals-ltd-109,19.0,25.0
+42,Medicon Pharmaceuticals Ltd.,medicon-pharmaceuticals-ltd-42,89.0,116.0
+43,Medimet Pharmaceuticals Ltd.,medimet-pharmaceuticals-ltd-43,76.0,135.0
+263,MedRx Life Science Ltd.,medrx-life-science-ltd-263,14.0,20.0
+44,Millat Pharmaceuticals Ltd.,millat-pharmaceuticals-ltd-44,46.0,72.0
+45,Modern Pharmaceuticals Ltd.,modern-pharmaceuticals-ltd-45,44.0,65.0
+206,Momotaz Pharmaceuticals Ltd.,momotaz-pharmaceuticals-ltd-206,4.0,4.0
+123,Monicopharma Ltd.,monicopharma-ltd-123,71.0,101.0
+170,MST Pharma,mst-pharma-170,29.0,35.0
+143,Mundipharma (BD) Pvt. Ltd.,mundipharma-bd-pvt-ltd-143,14.0,25.0
+46,Mystic Pharmaceuticals Ltd.,mystic-pharmaceuticals-ltd-46,27.0,37.0
+251,Naafco Pharma Ltd.,naafco-pharma-ltd-251,24.0,34.0
+47,Navana Pharmaceuticals Ltd.,navana-pharmaceuticals-ltd-47,188.0,322.0
+327,NEMUS Pharmaceutical Pvt. Ltd.,nemus-pharmaceutical-pvt-ltd-327,1.0,1.0
+53,Nipa Pharmaceuticals Ltd.,nipa-pharmaceuticals-ltd-53,74.0,94.0
+48,NIPRO JMI Pharma Ltd.,nipro-jmi-pharma-ltd-48,108.0,196.0
+51,Novartis (Bangladesh) Ltd.,novartis-bangladesh-ltd-51,44.0,81.0
+49,Novelta Bestway Pharma Ltd.,novelta-bestway-pharma-ltd-49,30.0,44.0
+133,Novo Healthcare and Pharma Ltd.,novo-healthcare-and-pharma-ltd-133,65.0,101.0
+186,Novo Nordisk Pharma (Pvt.) Ltd,novo-nordisk-pharma-pvt-ltd-186,11.0,24.0
+50,Novus Pharmaceuticals Ltd.,novus-pharmaceuticals-ltd-50,21.0,26.0
+122,Nuvista Pharma Ltd.,nuvista-pharma-ltd-122,72.0,108.0
+207,One Pharma Ltd.,one-pharma-ltd-207,51.0,86.0
+55,Opso Saline Ltd.,opso-saline-ltd-55,106.0,153.0
+56,Opsonin Pharma Ltd.,opsonin-pharma-ltd-56,467.0,910.0
+260,Orbit Pharmaceuticals Ltd.,orbit-pharmaceuticals-ltd-260,30.0,39.0
+124,Organic Health Care Ltd.,organic-health-care-ltd-124,53.0,81.0
+173,Orion Infusion Ltd.,orion-infusion-ltd-173,16.0,25.0
+58,Orion Pharma Ltd.,orion-pharma-ltd-58,135.0,236.0
+118,Oyster Pharmaceuticals Ltd.,oyster-pharmaceuticals-ltd-118,9.0,10.0
+145,Pacific Pharmaceuticals Ltd.,pacific-pharmaceuticals-ltd-145,170.0,280.0
+59,Peoples Pharma Ltd.,peoples-pharma-ltd-59,24.0,31.0
+175,Pfizer,pfizer-175,1.0,1.0
+195,Pharmacil Limited,pharmacil-limited-195,4.0,8.0
+60,Pharmadesh Laboratories Ltd.,pharmadesh-laboratories-ltd-60,93.0,140.0
+112,Pharmasia Limited,pharmasia-limited-112,103.0,179.0
+202,Pharmik Laboratories Ltd.,pharmik-laboratories-ltd-202,14.0,16.0
+262,Phoenix Chemical Laboratory,phoenix-chemical-laboratory-262,8.0,8.0
+87,Popular Pharmaceuticals Ltd.,popular-pharmaceuticals-ltd-87,287.0,445.0
+201,Premier Pharmaceuticals Ltd.,premier-pharmaceuticals-ltd-201,33.0,42.0
+88,Prime Pharmaceuticals Ltd.,prime-pharmaceuticals-ltd-88,14.0,15.0
+280,Purnava Limited,purnava-limited-280,6.0,6.0
+253,Quality Pharmaceuticals Ltd.,quality-pharmaceuticals-ltd-253,6.0,6.0
+331,Radiant Nutraceuticals Ltd.,radiant-nutraceuticals-ltd-331,20.0,26.0
+62,Radiant Pharmaceuticals Ltd.,radiant-pharmaceuticals-ltd-62,106.0,177.0
+147,Rangs Pharmaceuticals Ltd.,rangs-pharmaceuticals-ltd-147,75.0,138.0
+161,Reckitt & Benckiser Ltd.,reckitt-benckiser-ltd-161,4.0,6.0
+130,Reliance Pharmaceuticals Ltd.,reliance-pharmaceuticals-ltd-130,33.0,43.0
+63,Reman Drug Laboratories Ltd.,reman-drug-laboratories-ltd-63,68.0,88.0
+64,Renata Limited,renata-limited-64,273.0,501.0
+66,Rephco Pharmaceuticals Ltd.,rephco-pharmaceuticals-ltd-66,96.0,146.0
+338,River Pharma,river-pharma-338,2.0,2.0
+259,RN Pharmaceuticals,rn-pharmaceuticals-259,8.0,8.0
+67,Roche Bangladesh Ltd.,roche-bangladesh-ltd-67,17.0,26.0
+335,Royal Pharmaceutical Ltd.,royal-pharmaceutical-ltd-335,8.0,8.0
+135,S.N. Pharmaceutical Ltd.,sn-pharmaceutical-ltd-135,17.0,19.0
+68,Salton Pharmaceuticals Ltd.,salton-pharmaceuticals-ltd-68,23.0,30.0
+168,SANDOZ (A Novartis Division),sandoz-a-novartis-division-168,64.0,106.0
+69,Seema Pharmaceuticals Ltd.,seema-pharmaceuticals-ltd-69,52.0,75.0
+172,Servier Bangladesh Operation,servier-bangladesh-operation-172,8.0,12.0
+90,Sharif Pharmaceuticals Ltd.,sharif-pharmaceuticals-ltd-90,91.0,138.0
+159,Silco Pharmaceutical Ltd.,silco-pharmaceutical-ltd-159,62.0,92.0
+94,Silva Pharmaceuticals Ltd.,silva-pharmaceuticals-ltd-94,79.0,129.0
+70,Skylab Pharmaceuticals Ltd.,skylab-pharmaceuticals-ltd-70,13.0,19.0
+216,Social Marketing Company,social-marketing-company-216,27.0,34.0
+125,Somatec Pharmaceuticals Ltd.,somatec-pharmaceuticals-ltd-125,75.0,125.0
+72,Sonear Laboratories Ltd.,sonear-laboratories-ltd-72,21.0,29.0
+73,Square Pharmaceuticals Ltd.,square-pharmaceuticals-ltd-73,546.0,905.0
+139,Sun Pharmaceutical Ltd.,sun-pharmaceutical-ltd-139,63.0,132.0
+256,Sunman-Birdem Pharma Ltd.,sunman-birdem-pharma-ltd-256,41.0,65.0
+138,Supreme Pharmaceutical Ltd.,supreme-pharmaceutical-ltd-138,55.0,77.0
+89,Synovia pharma plc,synovia-pharma-plc-89,94.0,204.0
+134,Syntho Laboratories Ltd.,syntho-laboratories-ltd-134,14.0,17.0
+255,Team Pharmaceuticals Ltd.,team-pharmaceuticals-ltd-255,70.0,106.0
+95,Techno Drugs Ltd.,techno-drugs-ltd-95,116.0,187.0
+96,The White Horse Pharma,the-white-horse-pharma-96,87.0,122.0
+316,Total Natural Company,total-natural-company-316,1.0,1.0
+97,Ultra Pharma Ltd.,ultra-pharma-ltd-97,3.0,3.0
+77,UniMed UniHealth,unimed-unihealth-77,249.0,440.0
+204,Unique Pharmaceuticals Ltd.,unique-pharmaceuticals-ltd-204,1.0,1.0
+142,United Pharmaceuticals Ltd.,united-pharmaceuticals-ltd-142,39.0,48.0
+126,Veritas Pharmaceuticals Ltd.,veritas-pharmaceuticals-ltd-126,60.0,86.0
+158,Virgo Pharmaceuticals Ltd.,virgo-pharmaceuticals-ltd-158,47.0,68.0
+303,West-Coast pharmaceutical works ltd.,west-coast-pharmaceutical-works-ltd-303,1.0,1.0
+257,ZAS Corporation,zas-corporation-257,31.0,38.0
+98,Zenith Pharmaceuticals Ltd.,zenith-pharmaceuticals-ltd-98,98.0,146.0
+79,Ziska Pharmaceuticals Ltd.,ziska-pharmaceuticals-ltd-79,151.0,275.0
+34,Hamdard Bangladesh,hamdard-bangladesh-34,,
+301,Dabur India Limited,dabur-india-limited-301,,
+315,HLL Lifecare Limited,hll-lifecare-limited-315,,
+320,Gulf pharmaceutical industries,gulf-pharmaceutical-industries-320,,
+218,Alpha Therapeutic Corporation,alpha-therapeutic-corporation-218,,
+149,Grifols Biologicals LLC,grifols-biologicals-llc-149,,
+150,Octapharma Pharmazeutica,octapharma-pharmazeutica-150,,
+183,Eli Lilly and Company,eli-lilly-and-company-183,,
+162,Cipla Limited,cipla-limited-162,,
+198,"Allergan, Inc.",allergan-inc-198,,
+297,"Lyomark Pharma, Germany",lyomark-pharma-germany-297,,
+298,"Hamlen Pharmaceuticals, Germany",hamlen-pharmaceuticals-germany-298,,
+220,Fresenius Kabi,fresenius-kabi-220,,
+284,Organon,organon-284,,
+232,"Gedeon Richter, Hungary",gedeon-richter-hungary-232,,
+308,Boehringer Ingelheim,boehringer-ingelheim-308,,
+329,ADM Protexin Ltd,adm-protexin-ltd-329,,
+222,Nippon Kayaku Ltd.,nippon-kayaku-ltd-222,,
+339,Pharma Resources,pharma-resources-339,,
+194,Merck,merck-194,,
+182,Lundbeck Pharmaceuticals Ltd.,lundbeck-pharmaceuticals-ltd-182,,
+321,"Xellia Pharmaceuticals, Denmark",xellia-pharmaceuticals-denmark-321,,
+294,Serum Institute of India,serum-institute-of-india-294,,
+181,Bristol Myers Squibb,bristol-myers-squibb-181,,
+219,CSL Behring,csl-behring-219,,
+334,AqVida GmbH,aqvida-gmbh-334,,
+324,"Laboratoires Panpharma, France",laboratoires-panpharma-france-324,,
+325,"Rotexmedica GmbH, Germany",rotexmedica-gmbh-germany-325,,
+228,Chairon SPA,chairon-spa-228,,
+286,Valneva,valneva-286,,
+233,Abbott Laboratories,abbott-laboratories-233,,
+210,Stiefel Laboratories Ltd.,stiefel-laboratories-ltd-210,,
+238,Janssen-Cilag,janssen-cilag-238,,
+283,Baxter,baxter-283,,
+302,"C.B. Fleet Company, USA",cb-fleet-company-usa-302,,
+293,AstraZeneca pharmaceuticals,astrazeneca-pharmaceuticals-293,,
+141,Pharmachemie BV,pharmachemie-bv-141,,
+235,"Hexal AG, Germany",hexal-ag-germany-235,,
+214,Vifor International Ltd.,vifor-international-ltd-214,,
+296,Fabrique en France,fabrique-en-france-296,,
+309,Ferring Pharmaceuticals Ltd.,ferring-pharmaceuticals-ltd-309,,
+282,Genzyme Corporation,genzyme-corporation-282,,
+151,Leo Pharmaceuticals Ltd.,leo-pharmaceuticals-ltd-151,,
+285,MSD,msd-285,,
+209,Nicholas,nicholas-209,,
+311,Eisai Pharmaceutical company,eisai-pharmaceutical-company-311,,
+314,Piramal Enterprises Ltd.,piramal-enterprises-ltd-314,,
+300,"Kedrion Biopharma, Italy",kedrion-biopharma-italy-300,,
+312,Johnson & Johnson,johnson-johnson-312,,
+319,Efroze Chemical Industries Ltd,efroze-chemical-industries-ltd-319,,
+223,"Excella, Germany",excella-germany-223,,
+185,EGIS Pharmaceuticals Ltd.,egis-pharmaceuticals-ltd-185,,
+323,S.A. Alcon-Couvreur N.V.,sa-alcon-couvreur-nv-323,,
+333,MERZ Pharma GmbH & Co.,merz-pharma-gmbh-co-333,,
+164,Kyowa Hakko Kogyo,kyowa-hakko-kogyo-164,,
+140,Choongwae Pharma Corporation,choongwae-pharma-corporation-140,,
+291,"JEO MED, Turkey",jeo-med-turkey-291,,
+281,Biotest,biotest-281,,
+226,Gosun Pharma Corp.,gosun-pharma-corp-226,,
+328,Mylan Pharmaceutical industry company,mylan-pharmaceutical-industry-company-328,,
+299,"Piramal Critical Care, USA",piramal-critical-care-usa-299,,
+317,"Orion Corporation, Finland",orion-corporation-finland-317,,
+322,"Adienne Pharma, Switzerland",adienne-pharma-switzerland-322,,
+239,"Laboratorio Varifarma, Argentina",laboratorio-varifarma-argentina-239,,
+310,Chepla Pharm-Gmbh,chepla-pharm-gmbh-310,,
+326,ACM laboratoire dermatologique,acm-laboratoire-dermatologique-326,,

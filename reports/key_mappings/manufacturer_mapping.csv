@@ -1,0 +1,241 @@
+manufacturer id,manufacturer name
+2,ACI Limited
+3,ACME Laboratories Ltd.
+4,Alco Pharma Ltd.
+5,Ambee Pharmaceuticals Ltd.
+6,Amico Laboratories Ltd.
+7,Amulet Pharmaceuticals Ltd.
+8,Apex Pharmaceuticals Ltd.
+9,Apollo Pharmaceutical Ltd.
+10,Aristopharma Ltd.
+11,Astra Biopharmaceuticals Ltd.
+13,Beacon Pharmaceuticals Ltd.
+14,Beximco Pharmaceuticals Ltd.
+15,Biopharma Laboratories Ltd.
+16,Bristol Pharmaceuticals Ltd.
+18,Chemist Laboratories  Ltd.
+19,Concord Pharmaceuticals Ltd.
+22,Desh Pharmaceuticals Ltd.
+23,Doctor’s Chemical Works Ltd.
+24,Doctor TIMS Pharmaceuticals Ltd.
+25,Drug International Ltd.
+27,Eskayef Pharmaceuticals Ltd.
+29,General Pharmaceuticals Ltd.
+30,Genvio Pharma Ltd.
+31,Globe Pharmaceuticals Ltd.
+32,Gonoshasthaya Pharma Ltd.
+33,Hudson Pharmaceuticals Ltd.
+34,Hamdard Bangladesh
+35,Ibn Sina Pharmaceuticals Ltd.
+37,Jayson Pharmaceuticals Ltd.
+39,Jenphar Bangladesh Ltd.
+40,Labaid Pharma Ltd.
+41,Libra Infusions Ltd.
+42,Medicon Pharmaceuticals Ltd.
+43,Medimet Pharmaceuticals Ltd.
+44,Millat Pharmaceuticals Ltd.
+45,Modern Pharmaceuticals Ltd.
+46,Mystic Pharmaceuticals Ltd.
+47,Navana Pharmaceuticals Ltd.
+48,NIPRO JMI Pharma Ltd.
+49,Novelta Bestway Pharma Ltd.
+50,Novus Pharmaceuticals Ltd.
+51,Novartis (Bangladesh) Ltd.
+52,GlaxoSmithKline
+53,Nipa Pharmaceuticals Ltd.
+55,Opso Saline Ltd.
+56,Opsonin Pharma Ltd.
+58,Orion Pharma Ltd.
+59,Peoples Pharma Ltd.
+60,Pharmadesh Laboratories Ltd.
+62,Radiant Pharmaceuticals Ltd.
+63,Reman Drug Laboratories Ltd.
+64,Renata Limited
+66,Rephco Pharmaceuticals Ltd.
+67,Roche Bangladesh Ltd.
+68,Salton Pharmaceuticals Ltd.
+69,Seema Pharmaceuticals Ltd.
+70,Skylab Pharmaceuticals Ltd.
+72,Sonear Laboratories Ltd.
+73,Square Pharmaceuticals Ltd.
+77,UniMed UniHealth
+79,Ziska Pharmaceuticals Ltd.
+81,Asiatic Laboratories Ltd.
+83,Delta Pharma Ltd.
+85,Healthcare Pharmaceuticals Ltd.
+87,Popular Pharmaceuticals Ltd.
+88,Prime Pharmaceuticals Ltd.
+89,Synovia pharma plc
+90,Sharif Pharmaceuticals Ltd.
+94,Silva Pharmaceuticals Ltd.
+95,Techno Drugs Ltd.
+96,The White Horse Pharma
+97,Ultra Pharma Ltd.
+98,Zenith Pharmaceuticals Ltd.
+99,Indo Bangla Pharmaceutical
+100,Hallmark Pharmaceuticals Ltd.
+101,Decent Pharma Laboratories Ltd.
+102,Biogen Pharmaceuticals Ltd.
+103,Ad-din Pharmaceuticals Ltd.
+106,Incepta Pharmaceuticals Ltd.
+107,Benham Pharmaceuticals Ltd.
+108,Innovative Pharma (Albion)
+109,Marksman Pharmaceuticals Ltd.
+110,Belsen Pharmaceuticals Ltd.
+112,Pharmasia Limited
+114,Aexim Pharmaceuticals Ltd.
+115,Allied Pharmaceuticals Ltd.
+116,Kemiko Pharmaceuticals Ltd.
+117,Cosmo Pharma Ltd.
+118,Oyster Pharmaceuticals Ltd.
+119,Edruc Limited
+120,Globex Pharmaceuticals Ltd.
+121,Euro Pharma Ltd.
+122,Nuvista Pharma Ltd.
+123,Monicopharma Ltd.
+124,Organic Health Care Ltd.
+125,Somatec Pharmaceuticals Ltd.
+126,Veritas Pharmaceuticals Ltd.
+127,Everest Pharmaceuticals Ltd.
+128,APC Pharma Ltd.
+129,Leon Pharmaceuticals Ltd.
+130,Reliance Pharmaceuticals Ltd.
+131,Marker Pharma Ltd.
+133,Novo Healthcare and Pharma Ltd.
+134,Syntho Laboratories Ltd.
+135,S.N. Pharmaceutical Ltd.
+136,Kumudini Pharma Ltd.
+137,Gaco Pharmaceuticals Ltd.
+138,Supreme Pharmaceutical Ltd.
+139,Sun Pharmaceutical Ltd.
+140,Choongwae Pharma Corporation
+141,Pharmachemie BV
+142,United Pharmaceuticals Ltd.
+143,Mundipharma (BD) Pvt. Ltd.
+145,Pacific Pharmaceuticals Ltd.
+147,Rangs Pharmaceuticals Ltd.
+149,Grifols Biologicals LLC
+150,Octapharma Pharmazeutica
+151,Leo Pharmaceuticals Ltd.
+153,Cosmic Pharma Ltd.
+157,Ethical Drug Ltd.
+158,Virgo Pharmaceuticals Ltd.
+159,Silco Pharmaceutical Ltd.
+161,Reckitt & Benckiser Ltd.
+162,Cipla Limited
+164,Kyowa Hakko Kogyo
+168,SANDOZ (A Novartis Division)
+169,Bengal drugs Ltd.
+170,MST Pharma
+171,Central Pharmaceuticals Ltd.
+172,Servier Bangladesh Operation
+173,Orion Infusion Ltd.
+174,City Overseas Ltd.
+175,Pfizer
+176,Janata Traders
+181,Bristol Myers Squibb
+182,Lundbeck Pharmaceuticals Ltd.
+183,Eli Lilly and Company
+185,EGIS Pharmaceuticals Ltd.
+186,Novo Nordisk Pharma (Pvt.) Ltd
+191,BOTS Pvt. Limited
+194,Merck
+195,Pharmacil Limited
+198,"Allergan, Inc."
+201,Premier Pharmaceuticals Ltd.
+202,Pharmik Laboratories Ltd.
+204,Unique Pharmaceuticals Ltd.
+205,Kawsar Chemicals
+206,Momotaz Pharmaceuticals Ltd.
+207,One Pharma Ltd.
+209,Nicholas
+210,Stiefel Laboratories Ltd.
+212,Greenland Pharmaceuticals Ltd.
+214,Vifor International Ltd.
+216,Social Marketing Company
+217,Institute of Public Health (IPH)
+218,Alpha Therapeutic Corporation
+219,CSL Behring
+220,Fresenius Kabi
+222,Nippon Kayaku Ltd.
+223,"Excella, Germany"
+226,Gosun Pharma Corp.
+228,Chairon SPA
+232,"Gedeon Richter, Hungary"
+233,Abbott Laboratories
+235,"Hexal AG, Germany"
+238,Janssen-Cilag
+239,"Laboratorio Varifarma, Argentina"
+245,Alkad Laboratories
+246,Aztec Pharmaceuticals Ltd.
+251,Naafco Pharma Ltd.
+253,Quality Pharmaceuticals Ltd.
+255,Team Pharmaceuticals Ltd.
+256,Sunman-Birdem Pharma Ltd.
+257,ZAS Corporation
+258,AqVida bangladesh
+259,RN Pharmaceuticals
+260,Orbit Pharmaceuticals Ltd.
+261,Guardian Healthcare Ltd.
+262,Phoenix Chemical Laboratory
+263,MedRx Life Science Ltd.
+266,FnF Pharmaceuticals Ltd.
+267,Get Well Limited
+268,Goodman Pharmaceuticals Ltd.
+269,Libra Pharmaceuticls Ltd.
+273,Centeon Pharma Ltd.
+275,Legends Pharma
+276,Credence Pharmaceuticals Ltd.
+278,D16 Pharma & Biotec
+279,Marie Stopes Bangladesh
+280,Purnava Limited
+281,Biotest
+282,Genzyme Corporation
+283,Baxter
+284,Organon
+285,MSD
+286,Valneva
+289,Arges Life Science Limited
+290,International Agencies (Bd.) Limited
+291,"JEO MED, Turkey"
+292,Al-Madina Pharmaceuticals Ltd.
+293,AstraZeneca pharmaceuticals
+294,Serum Institute of India
+296,Fabrique en France
+297,"Lyomark Pharma, Germany"
+298,"Hamlen Pharmaceuticals, Germany"
+299,"Piramal Critical Care, USA"
+300,"Kedrion Biopharma, Italy"
+301,Dabur India Limited
+302,"C.B. Fleet Company, USA"
+303,West-Coast pharmaceutical works ltd.
+304,Alien Pharma
+305,Empiric Laboratories Ltd.
+308,Boehringer Ingelheim
+309,Ferring Pharmaceuticals Ltd.
+310,Chepla Pharm-Gmbh
+311,Eisai Pharmaceutical company
+312,Johnson & Johnson
+314,Piramal Enterprises Ltd.
+315,HLL Lifecare Limited
+316,Total Natural Company
+317,"Orion Corporation, Finland"
+319,Efroze Chemical Industries Ltd
+320,Gulf pharmaceutical industries
+321,"Xellia Pharmaceuticals, Denmark"
+322,"Adienne Pharma, Switzerland"
+323,S.A. Alcon-Couvreur N.V.
+324,"Laboratoires Panpharma, France"
+325,"Rotexmedica GmbH, Germany"
+326,ACM laboratoire dermatologique
+327,NEMUS Pharmaceutical Pvt. Ltd.
+328,Mylan Pharmaceutical industry company
+329,ADM Protexin Ltd
+330,DBL Pharmaceuticals Ltd.
+331,Radiant Nutraceuticals Ltd.
+333,MERZ Pharma GmbH & Co.
+334,AqVida GmbH
+335,Royal Pharmaceutical Ltd.
+336,Bronson  Laboratories (BD) Ltd.
+338,River Pharma
+339,Pharma Resources

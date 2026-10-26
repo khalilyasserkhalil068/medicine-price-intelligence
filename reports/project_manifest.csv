@@ -1,0 +1,49 @@
+file,type,purpose,input,output,execution_order,status
+data/raw/medicine.csv,Core Data,Raw source data,N/A,N/A,N/A,Complete
+data/raw/generic.csv,Core Data,Raw source data,N/A,N/A,N/A,Complete
+data/raw/manufacturer.csv,Core Data,Raw source data,N/A,N/A,N/A,Complete
+data/raw/dosage form.csv,Core Data,Raw source data,N/A,N/A,N/A,Complete
+data/raw/drug class.csv,Core Data,Raw source data,N/A,N/A,N/A,Complete
+data/raw/indication.csv,Core Data,Raw source data,N/A,N/A,N/A,Complete
+notebooks/01_data_profiling.ipynb,Data Science Notebook,Profiles raw data and exports metrics,data/raw/*.csv,reports/profiling_report.csv,1,Complete
+notebooks/02_data_cleaning.ipynb,Data Science Notebook,Core cleaning pipeline,data/raw/*.csv,data/cleaned/*.csv,2,Complete
+data/cleaned/medicine_clean.csv,Core Data,Cleaned dataset,notebooks/02_data_cleaning.ipynb,N/A,N/A,Complete
+data/cleaned/generic_clean.csv,Core Data,Cleaned dataset,notebooks/02_data_cleaning.ipynb,N/A,N/A,Complete
+data/cleaned/manufacturer_clean.csv,Core Data,Cleaned dataset,notebooks/02_data_cleaning.ipynb,N/A,N/A,Complete
+data/cleaned/dosage_form_clean.csv,Core Data,Cleaned dataset,notebooks/02_data_cleaning.ipynb,N/A,N/A,Complete
+data/cleaned/drug_class_clean.csv,Core Data,Cleaned dataset,notebooks/02_data_cleaning.ipynb,N/A,N/A,Complete
+data/cleaned/indication_clean.csv,Core Data,Cleaned dataset,notebooks/02_data_cleaning.ipynb,N/A,N/A,Complete
+reports/cleaning_report.md,Report,Qualitative cleaning summary,N/A,N/A,N/A,Complete
+reports/data_quality_report.csv,Report,Validation output,data/cleaned/*.csv,N/A,N/A,Complete
+reports/transformation_log.csv,Report,Log of applied transformations,notebooks/02_data_cleaning.ipynb,N/A,N/A,Complete
+reports/project_code_audit.md,Report,Audit of project code structure,N/A,N/A,N/A,Complete
+reports/project_manifest.csv,Report,Project file inventory,N/A,N/A,N/A,Complete
+requirements.txt,Configuration,Python dependencies,N/A,N/A,N/A,Complete
+README.md,Documentation,Project overview and execution guide,N/A,N/A,N/A,Complete
+.gitignore,Configuration,Git ignored files,N/A,N/A,N/A,Complete
+notebooks/03_data_integration.ipynb,Data Science Notebook,Analyzes relationships and proposes data model,data/cleaned/*.csv,reports/*,3,Complete
+reports/integration_report.md,Report,Integration phase overview,N/A,N/A,N/A,Complete
+reports/integration_dataset_inventory.csv,Report,Inventory of datasets and primary keys,N/A,N/A,N/A,Complete
+reports/data_relationships.csv,Report,Foreign key validation,N/A,N/A,N/A,Complete
+reports/sql_schema_proposal.md,Report,SQL schema recommendations,N/A,N/A,N/A,Complete
+reports/erd.md,Report,Entity Relationship Diagram,N/A,N/A,N/A,Complete
+reports/key_mappings/generic_mapping.csv,Mapping,Name to ID mapping,N/A,N/A,N/A,Complete
+reports/key_mappings/manufacturer_mapping.csv,Mapping,Name to ID mapping,N/A,N/A,N/A,Complete
+reports/key_mappings/dosage_form_mapping.csv,Mapping,Name to ID mapping,N/A,N/A,N/A,Complete
+reports/key_mappings/drug_class_mapping.csv,Mapping,Name to ID mapping,N/A,N/A,N/A,Complete
+reports/key_mappings/indication_mapping.csv,Mapping,Name to ID mapping,N/A,N/A,N/A,Complete
+reports/project_cleanup_report.md,Report,Project organization and cleanup details,N/A,N/A,N/A,Complete
+reports/sql_database_report.md,Report,SQL Database details and row counts,N/A,N/A,N/A,Complete
+notebooks/04_sql_database.ipynb,Notebook,SQL Implementation documentation,N/A,N/A,N/A,Complete
+sql/01_create_database.sql,SQL,Create DB,N/A,N/A,N/A,Complete
+sql/02_create_tables.sql,SQL,Create tables,N/A,N/A,N/A,Complete
+sql/03_create_constraints.sql,SQL,Constraints and indexes,N/A,N/A,N/A,Complete
+sql/04_load_data.sql,SQL,Data load script,N/A,N/A,N/A,Complete
+sql/05_validation.sql,SQL,Row counts and validation,N/A,N/A,N/A,Complete
+sql/06_analysis_queries.sql,SQL,EDA prep views and queries,N/A,N/A,N/A,Complete
+scripts/generate_insert_sql.py,Python,Generate data load script,N/A,sql/04_load_data.sql,N/A,Complete
+reports/analysis/alternatives_per_medicine.csv,Analysis Output,Medicine-level alternatives and savings metrics,notebooks/07_alternatives_price_analysis.ipynb,N/A,N/A,Complete
+reports/analysis/alternatives_per_group.csv,Analysis Output,Group-level alternative statistics and price spreads,notebooks/07_alternatives_price_analysis.ipynb,N/A,N/A,Complete
+reports/analysis/manufacturer_price_index.csv,Analysis Output,Manufacturer price positioning index,notebooks/07_alternatives_price_analysis.ipynb,N/A,N/A,Complete
+data/medicine.db,Database,Portable SQLite database for analysis notebooks,notebooks/02_data_cleaning.ipynb,N/A,N/A,Complete
+

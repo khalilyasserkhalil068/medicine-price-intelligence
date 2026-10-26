@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medicine Price &amp; Alternatives Dashboard</title>
+<meta name="description" content="Interactive analytics dashboard for the Assorted Medicine Dataset of Bangladesh: price coverage, brand alternatives and patient savings.">
+
+<style>
+/* ============================================================================
+   THEME TOKENS
+   Every colour used below comes from these variables, so re-branding the whole
+   dashboard means editing this one block only.
+   ========================================================================= */
+:root{
+  --brand-900:#2D1435;
+  --brand-800:#3D1C49;
+  --brand-700:#522D60;
+  --brand-600:#80426E;
+  --brand-500:#A3588E;
+  --accent-400:#F2A67B;
+  --accent-300:#FFD38B;
+  --accent-soft:#FDECE4;
+
+  --ok:#0E9F6E;
+  --ok-soft:#E6F6EF;
+  --warn:#C27803;
+  --warn-soft:#FDF6E3;
+  --bad:#D64545;
+  --bad-soft:#FDECEC;
+
+  --bg:#F5F3F7;
+  --surface:#FFFFFF;
+  --surface-2:#FAF8FB;
+  --line:#E7E1EC;
+  --line-strong:#D6CBDF;
+  --text:#1F1230;
+  --text-2:#4A3B57;
+  --muted:#7A6A88;
+
+  --shadow-sm:0 1px 2px rgba(45,20,53,.06);
+  --shadow:0 4px 16px -4px rgba(45,20,53,.10);
+  --shadow-lg:0 14px 40px -12px rgba(45,20,53,.22);
+
+  --radius:14px;
+  --radius-sm:10px;
+  --maxw:1360px;
+  --chart-h:320px;
+}
+
+html[data-theme="dark"]{
+  --bg:#120C18;
+  --surface:#1E1528;
+  --surface-2:#261A33;
+  --line:#332545;
+  --line-strong:#453257;
+  --text:#F3ECF8;
+  --text-2:#D6C8E0;
+  --muted:#A996B8;
+
+  --ok-soft:#12301F;
+  --warn-soft:#33280D;
+  --bad-soft:#3A1A1D;
+  --accent-soft:#3A2418;
+
+  --shadow-sm:0 1px 2px rgba(0,0,0,.4);
+  --shadow:0 4px 16px -4px rgba(0,0,0,.5);
+  --shadow-lg:0 14px 40px -12px rgba(0,0,0,.65);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:"Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",Arial,"Apple Color Emoji","Segoe UI Emoji",sans-serif;
+  font-size:15px;
+  line-height:1.6;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+h1,h2,h3,h4{margin:0;line-height:1.3;font-weight:700;color:var(--text)}
+p{margin:0}
+a{color:var(--brand-600)}
+button{font:inherit;cursor:pointer}
+table{border-collapse:collapse;width:100%}
+
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 22px}
+
+/* ============================ HEADER ==================================== */
+.site-header{
+  background:linear-gradient(120deg,var(--brand-900) 0%,var(--brand-700) 48%,var(--brand-600) 100%);
+  color:#fff;
+  position:relative;
+  overflow:hidden;
+}
+.site-header::after{
+  content:"";position:absolute;right:-70px;top:-90px;width:300px;height:300px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,211,139,.22) 0%,transparent 68%);
+  pointer-events:none;
+}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
+  padding:20px 0;flex-wrap:wrap;position:relative;z-index:1;
+}
+.brand{display:flex;align-items:center;gap:14px;min-width:0}
+.brand-mark{
+  width:48px;height:48px;flex:0 0 48px;border-radius:13px;
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,211,139,.38);
+  display:flex;align-items:center;justify-content:center;
+}
+.brand-mark svg{width:26px;height:26px}
+.brand-text h1{color:#fff;font-size:1.32rem;letter-spacing:.2px}
+.brand-text p{color:rgba(255,255,255,.78);font-size:.82rem;margin-top:2px}
+.header-right{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.chip{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:6px 12px;border-radius:999px;
+  font-size:.76rem;font-weight:600;line-height:1.5;white-space:nowrap;
+  background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.20);color:#fff;
+}
+.chip b{font-weight:800}
+.icon-btn{
+  width:38px;height:38px;border-radius:10px;
+  background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);
+  color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.05rem;
+}
+.icon-btn:hover{background:rgba(255,255,255,.2)}
+
+/* ============================ LAYOUT ==================================== */
+main{flex:1 0 auto;padding:26px 0 40px}
+.section{margin-bottom:26px}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:14px;flex-wrap:wrap}
+.section-head h2{font-size:1.12rem}
+.section-head p{color:var(--muted);font-size:.84rem}
+.grid{display:grid;gap:16px}
+.kpi-grid{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.cols-2{grid-template-columns:repeat(auto-fit,minmax(420px,1fr))}
+.cols-3{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+
+.card{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow-sm);padding:18px;
+}
+.card.pad-lg{padding:22px}
+.card-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+.card-title h3{font-size:.98rem}
+.card-title .hint{font-size:.76rem;color:var(--muted)}
+
+/* ============================ KPI CARDS ================================= */
+.kpi{position:relative;overflow:hidden}
+.kpi::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--brand-600)}
+.kpi.k2::before{background:var(--accent-400)}
+.kpi.k3::before{background:var(--ok)}
+.kpi.k4::before{background:var(--brand-500)}
+.kpi.k5::before{background:var(--accent-300)}
+.kpi .label{
+  font-size:.74rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:6px;
+}
+.kpi .value{font-size:1.72rem;font-weight:800;line-height:1.25;color:var(--brand-700)}
+html[data-theme="dark"] .kpi .value{color:var(--accent-300)}
+.kpi .sub{font-size:.78rem;color:var(--muted);margin-top:4px}
+
+/* ============================ TABS ====================================== */
+.tabs{display:flex;gap:6px;flex-wrap:wrap;border-bottom:2px solid var(--line);margin-bottom:22px}
+.tab{
+  background:none;border:none;padding:11px 16px;border-radius:var(--radius-sm) var(--radius-sm) 0 0;
+  font-size:.9rem;font-weight:600;color:var(--muted);border-bottom:3px solid transparent;margin-bottom:-2px;
+}
+.tab:hover{color:var(--brand-600);background:var(--surface-2)}
+.tab.active{color:var(--brand-700);border-bottom-color:var(--accent-400)}
+html[data-theme="dark"] .tab.active{color:var(--accent-300)}
+.panel{display:none}
+.panel.active{display:block}
+
+/* ============================ FORM ====================================== */
+label.fld{display:block;font-size:.78rem;font-weight:700;color:var(--text-2);margin-bottom:6px}
+input[type="text"],input[type="number"],select{
+  width:100%;padding:11px 13px;border-radius:var(--radius-sm);
+  border:1px solid var(--line-strong);background:var(--surface);color:var(--text);
+  font-size:.92rem;line-height:1.5;
+}
+input:focus,select:focus{outline:none;border-color:var(--accent-400);box-shadow:0 0 0 3px rgba(242,166,123,.22)}
+.search-shell{position:relative}
+#search-dropdown{
+  position:absolute;z-index:40;left:0;right:0;top:calc(100% + 6px);
+  background:var(--surface);border:1px solid var(--line-strong);border-radius:var(--radius-sm);
+  box-shadow:var(--shadow-lg);max-height:352px;overflow-y:auto;display:none;
+}
+#search-dropdown.open{display:block}
+.sd-item{padding:10px 13px;border-bottom:1px solid var(--line);cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.sd-item:last-child{border-bottom:none}
+.sd-item:hover,.sd-item.hl{background:var(--surface-2)}
+.sd-main{min-width:0}
+.sd-name{font-weight:700;font-size:.88rem;color:var(--text)}
+.sd-meta{font-size:.75rem;color:var(--muted);margin-top:1px}
+.sd-price{font-variant-numeric:tabular-nums;font-weight:700;font-size:.85rem;color:var(--brand-600);white-space:nowrap}
+html[data-theme="dark"] .sd-price{color:var(--accent-300)}
+.sd-empty{padding:14px;color:var(--muted);font-size:.85rem}
+
+.quick{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.quick button{
+  border:1px solid var(--line-strong);background:var(--surface);color:var(--text-2);
+  padding:5px 12px;border-radius:999px;font-size:.78rem;font-weight:600;
+}
+.quick button:hover{border-color:var(--accent-400);color:var(--brand-600)}
+
+.btn{
+  display:inline-flex;align-items:center;gap:8px;justify-content:center;
+  padding:11px 20px;border-radius:var(--radius-sm);border:none;
+  background:linear-gradient(135deg,var(--accent-400),#E28C60);color:#fff;
+  font-weight:700;font-size:.9rem;box-shadow:0 4px 14px rgba(242,166,123,.35);
+}
+.btn:hover{filter:brightness(.95)}
+.btn.ghost{background:var(--surface);color:var(--brand-600);border:1px solid var(--line-strong);box-shadow:none}
+.btn.ghost:hover{border-color:var(--accent-400)}
+.btn.sm{padding:7px 13px;font-size:.8rem;border-radius:8px;box-shadow:none}
+.btn:disabled{opacity:.55;cursor:not-allowed}
+
+.seg{display:inline-flex;border:1px solid var(--line-strong);border-radius:999px;overflow:hidden;background:var(--surface)}
+.seg button{background:none;border:none;padding:8px 16px;font-size:.85rem;font-weight:700;color:var(--muted)}
+.seg button.active{background:var(--brand-600);color:#fff}
+
+/* ============================ TABLES =================================== */
+.table-scroll{overflow:auto;border:1px solid var(--line);border-radius:var(--radius-sm);background:var(--surface)}
+table thead th{
+  position:sticky;top:0;z-index:2;background:var(--surface-2);
+  text-align:left;font-size:.75rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
+  color:var(--muted);padding:11px 13px;border-bottom:1px solid var(--line-strong);white-space:nowrap;
+}
+table tbody td{padding:11px 13px;border-bottom:1px solid var(--line);font-size:.86rem;vertical-align:middle}
+table tbody tr:last-child td{border-bottom:none}
+table tbody tr:hover{background:var(--surface-2)}
+.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.bd{font-weight:700}
+.sub-line{font-size:.74rem;color:var(--muted)}
+
+.pill{
+  display:inline-flex;align-items:center;gap:5px;padding:3px 9px;border-radius:999px;
+  font-size:.72rem;font-weight:700;line-height:1.5;white-space:nowrap;
+}
+.pill.ok{background:var(--ok-soft);color:var(--ok)}
+.pill.warn{background:var(--warn-soft);color:var(--warn)}
+.pill.bad{background:var(--bad-soft);color:var(--bad)}
+.pill.neutral{background:var(--surface-2);color:var(--muted);border:1px solid var(--line)}
+.pill.brand{background:var(--accent-soft);color:#8A4A22}
+.pill.you{background:var(--brand-700);color:#fff}
+
+.bar{height:7px;border-radius:999px;background:var(--line);overflow:hidden;min-width:64px}
+.bar > span{display:block;height:100%;background:linear-gradient(90deg,var(--ok),#3BC08A)}
+.bar.rose > span{background:linear-gradient(90deg,var(--bad),#EF7B7B)}
+
+/* ============================ MISC ===================================== */
+.meta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+.meta-grid .m .k{font-size:.72rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.meta-grid .m .v{font-size:.95rem;font-weight:600;margin-top:3px;overflow-wrap:anywhere}
+.placeholder{
+  border:1px dashed var(--line-strong);border-radius:var(--radius-sm);padding:34px 20px;
+  text-align:center;color:var(--muted);font-size:.88rem;background:var(--surface-2);
+}
+.chart-box{position:relative;height:var(--chart-h)}
+.chart-box.tall{height:400px}
+.alert{padding:12px 15px;border-radius:var(--radius-sm);font-size:.86rem;font-weight:600;margin-bottom:14px}
+.alert.info{background:var(--accent-soft);color:#8A4A22}
+.alert.bad{background:var(--bad-soft);color:var(--bad)}
+.alert.ok{background:var(--ok-soft);color:var(--ok)}
+.spinner{display:inline-block;width:15px;height:15px;border:2px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hidden{display:none !important}
+.result-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px}
+.result-strip .r{border:1px solid var(--line);border-radius:var(--radius-sm);padding:14px;background:var(--surface-2)}
+.result-strip .r .k{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.result-strip .r .v{font-size:1.28rem;font-weight:800;margin-top:4px;color:var(--brand-700)}
+html[data-theme="dark"] .result-strip .r .v{color:var(--accent-300)}
+.result-strip .r.good .v{color:var(--ok)}
+
+footer.site-footer{
+  background:var(--surface);border-top:1px solid var(--line);padding:20px 0;margin-top:auto;
+  color:var(--muted);font-size:.8rem;
+}
+.footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:flex-start}
+.footer-inner .note{max-width:820px}
+
+@media (max-width:640px){
+  .wrap{padding:0 14px}
+  .brand-text h1{font-size:1.1rem}
+  .kpi .value{font-size:1.45rem}
+  :root{--chart-h:260px}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#FFD38B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2.5" y="8" width="19" height="8" rx="4"></rect>
+          <line x1="12" y1="8" x2="12" y2="16"></line>
+        </svg>
+      </div>
+      <div class="brand-text">
+        <h1>Medicine Price &amp; Alternatives Dashboard</h1>
+        <p>Assorted Medicine Dataset of Bangladesh &middot; data science project</p>
+      </div>
+    </div>
+    <div class="header-right">
+      <a class="chip" href="/portal" style="background: rgba(242,166,123,.28); border-color: rgba(255,211,139,.55); color: #fff; text-decoration: none; font-weight: 700;">🌐 Executive Portal</a>
+      <a class="chip" href="/reports/Assorted_Medicine_Bangladesh_Final_Project_Report.pdf" target="_blank" style="background: rgba(255,255,255,.14); color: #fff; text-decoration: none;">📄 PDF Report</a>
+      <a class="chip" href="http://localhost:8501" target="_blank" style="background: rgba(255,255,255,.14); color: #fff; text-decoration: none;">🚀 Streamlit App</a>
+      <span class="chip" id="chip-dataset">Loading dataset&hellip;</span>
+      <span class="chip" id="chip-source" title="Local SQLite database, read-only">SQLite &middot; <b>medicine.db</b></span>
+      <button class="icon-btn" id="theme-toggle" type="button" title="Switch light / dark theme" aria-label="Switch theme">&#9789;</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <h2>Key performance indicators</h2>
+          <p>Computed live from the local SQLite database and the cached analytical tables.</p>
+        </div>
+      </div>
+      <div class="grid kpi-grid" id="kpi-grid">
+        <div class="card kpi k1"><div class="label">Total medicines</div><div class="value" id="kpi-medicines">&mdash;</div><div class="sub" id="kpi-medicines-sub">&nbsp;</div></div>
+        <div class="card kpi k2"><div class="label">Price coverage</div><div class="value" id="kpi-coverage">&mdash;</div><div class="sub" id="kpi-coverage-sub">&nbsp;</div></div>
+        <div class="card kpi k3"><div class="label">Median saving</div><div class="value" id="kpi-median-saving">&mdash;</div><div class="sub" id="kpi-median-saving-sub">&nbsp;</div></div>
+        <div class="card kpi k4"><div class="label">Alternative groups</div><div class="value" id="kpi-groups">&mdash;</div><div class="sub" id="kpi-groups-sub">&nbsp;</div></div>
+        <div class="card kpi k5"><div class="label">Manufacturers</div><div class="value" id="kpi-manufacturers">&mdash;</div><div class="sub" id="kpi-manufacturers-sub">&nbsp;</div></div>
+      </div>
+    </section>
+
+    <nav class="tabs" role="tablist">
+      <button class="tab active" data-tab="search" role="tab">Search &amp; alternatives</button>
+      <button class="tab" data-tab="calc" role="tab">Savings calculator</button>
+      <button class="tab" data-tab="manufacturers" role="tab">Manufacturer benchmark</button>
+      <button class="tab" data-tab="market" role="tab">Therapeutic market</button>
+    </nav>
+
+    <!-- ================= TAB 1: SEARCH ================= -->
+    <section class="panel active" id="panel-search">
+      <div class="card pad-lg section">
+        <label class="fld" for="search-input">Search by brand or generic name</label>
+        <div class="search-shell">
+          <input type="text" id="search-input" autocomplete="off" placeholder="e.g. Napa, Aceclofenac, Omeprazole, Ciprofloxacin">
+          <div id="search-dropdown" role="listbox"></div>
+        </div>
+        <div class="quick">
+          <span style="font-size:.78rem;color:var(--muted);align-self:center">Common searches:</span>
+          <button type="button" data-quick="Napa">Napa</button>
+          <button type="button" data-quick="Seclo">Seclo</button>
+          <button type="button" data-quick="Aceclofenac">Aceclofenac</button>
+          <button type="button" data-quick="Azithromycin">Azithromycin</button>
+        </div>
+      </div>
+
+      <div id="medicine-panel" class="hidden">
+        <div class="card pad-lg section">
+          <div class="card-title">
+            <h3 id="med-name">&mdash;</h3>
+            <span class="pill neutral" id="med-badge">No group data</span>
+          </div>
+          <div class="meta-grid">
+            <div class="m"><div class="k">Generic</div><div class="v" id="med-generic">&mdash;</div></div>
+            <div class="m"><div class="k">Dosage form</div><div class="v" id="med-form">&mdash;</div></div>
+            <div class="m"><div class="k">Strength</div><div class="v" id="med-strength">&mdash;</div></div>
+            <div class="m"><div class="k">Manufacturer</div><div class="v" id="med-manufacturer">&mdash;</div></div>
+            <div class="m"><div class="k">Unit price</div><div class="v" id="med-price">&mdash;</div></div>
+            <div class="m"><div class="k">Group price range</div><div class="v" id="med-range">&mdash;</div></div>
+            <div class="m"><div class="k">Drug class</div><div class="v" id="med-class">&mdash;</div></div>
+            <div class="m"><div class="k">Package</div><div class="v" id="med-package">&mdash;</div></div>
+          </div>
+        </div>
+
+        <div class="card pad-lg section">
+          <div class="card-title">
+            <div>
+              <h3>Equivalent alternatives</h3>
+              <p class="hint">Matched strictly on identical generic + dosage form + normalized strength.</p>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+              <span class="pill neutral" id="alternatives-count">0 brands</span>
+              <button class="btn sm" id="btn-to-calc" type="button">Use in calculator</button>
+            </div>
+          </div>
+          <div id="alternatives-alert"></div>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>Brand</th>
+                  <th>Manufacturer</th>
+                  <th class="num">Unit price (BDT)</th>
+                  <th class="num">Price gap (BDT)</th>
+                  <th class="num">Saving vs selected</th>
+                  <th style="min-width:110px">Saving bar</th>
+                  <th>Package</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="alternatives-body">
+                <tr><td colspan="8" class="sub-line" style="padding:22px;text-align:center">Search for a medicine to list its alternatives.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TAB 2: CALCULATOR ================= -->
+    <section class="panel" id="panel-calc">
+      <div class="grid cols-2">
+        <div class="card pad-lg">
+          <div class="card-title"><h3>Prescription input</h3></div>
+          <div style="margin-bottom:14px">
+            <label class="fld" for="calc-medicine">Selected medicine</label>
+            <input type="text" id="calc-medicine" readonly value="No medicine selected yet">
+            <p class="hint" style="font-size:.76rem;color:var(--muted);margin-top:6px">
+              Pick a medicine from the <b>Search &amp; alternatives</b> tab, or type in the search box below.
+            </p>
+          </div>
+          <div style="margin-bottom:14px">
+            <label class="fld" for="calc-search">Quick search</label>
+            <div class="search-shell">
+              <input type="text" id="calc-search" autocomplete="off" placeholder="Type a brand name and press Enter">
+              <div id="calc-dropdown" role="listbox"></div>
+            </div>
+          </div>
+          <div style="margin-bottom:14px">
+            <label class="fld" for="calc-units">Units needed for the whole course</label>
+            <input type="number" id="calc-units" min="1" step="1" value="30">
+            <div class="quick">
+              <button type="button" data-units="15">15 units</button>
+              <button type="button" data-units="30">30 units</button>
+              <button type="button" data-units="60">60 units</button>
+              <button type="button" data-units="90">90 units</button>
+            </div>
+          </div>
+          <button class="btn" id="btn-calculate" type="button" disabled>Calculate savings</button>
+        </div>
+
+        <div class="card pad-lg">
+          <div class="card-title"><h3>Result</h3><span class="hint" id="calc-units-echo"></span></div>
+          <div id="calc-alert"></div>
+          <div id="calc-result" class="hidden">
+            <div class="result-strip" style="margin-bottom:16px">
+              <div class="r"><div class="k">Selected brand total</div><div class="v" id="res-current-total">&mdash;</div><div class="sub-line" id="res-current-name">&nbsp;</div></div>
+              <div class="r"><div class="k">Cheapest alternative total</div><div class="v" id="res-cheap-total">&mdash;</div><div class="sub-line" id="res-cheap-name">&nbsp;</div></div>
+              <div class="r good"><div class="k">Net saving</div><div class="v" id="res-saving">&mdash;</div><div class="sub-line" id="res-saving-pct">&nbsp;</div></div>
+            </div>
+            <div class="table-scroll">
+              <table>
+                <thead><tr><th>Option</th><th>Brand</th><th>Manufacturer</th><th class="num">Unit price</th><th class="num">Course total</th></tr></thead>
+                <tbody id="calc-table-body"></tbody>
+              </table>
+            </div>
+          </div>
+          <div id="calc-placeholder" class="placeholder">Select a medicine and press <b>Calculate savings</b>.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TAB 3: MANUFACTURERS ================= -->
+    <section class="panel" id="panel-manufacturers">
+      <div class="card pad-lg section">
+        <div class="card-title">
+          <div>
+            <h3>Manufacturer price index</h3>
+            <p class="hint">The 7 cheapest and 7 most expensive companies with 20+ comparable medicines. 1.00 = market median (dashed line).</p>
+          </div>
+        </div>
+        <div class="chart-box tall"><canvas id="chart-manufacturers"></canvas></div>
+      </div>
+      <div class="card pad-lg">
+        <div class="card-title">
+          <div><h3>Benchmark table</h3><p class="hint" id="mfr-count"></p></div>
+          <input type="text" id="mfr-filter" placeholder="Filter by company name" style="max-width:280px">
+        </div>
+        <div class="table-scroll" style="max-height:520px">
+          <table>
+            <thead><tr><th>Manufacturer</th><th class="num">Comparable medicines</th><th class="num">Price index</th><th class="num">Cheapest share</th><th>Position</th></tr></thead>
+            <tbody id="mfr-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TAB 4: MARKET ================= -->
+    <section class="panel" id="panel-market">
+      <div class="card pad-lg section">
+        <div class="card-title">
+          <div><h3>Drug classes by number of brands</h3><p class="hint">Average unit price shown in the tooltip.</p></div>
+        </div>
+        <div class="chart-box tall"><canvas id="chart-classes"></canvas></div>
+      </div>
+      <div class="card pad-lg">
+        <div class="card-title">
+          <div><h3>Most crowded equivalent groups</h3><p class="hint">Groups with the highest price spread between the cheapest and the most expensive brand.</p></div>
+        </div>
+        <div class="table-scroll" style="max-height:520px">
+          <table>
+            <thead><tr><th>Generic</th><th>Dosage form</th><th>Strength</th><th class="num">Brands</th><th class="num">Min price</th><th class="num">Median</th><th class="num">Max price</th><th class="num">Spread</th><th class="num">Max saving</th></tr></thead>
+            <tbody id="groups-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="note">
+      <p><b>Source:</b> Assorted Medicine Dataset of Bangladesh &middot; 21,714 registered brands, 1,711 generics, 240 manufacturers.</p>
+      <p><b>Method note:</b> two brands are treated as equivalents only when they share the same generic, dosage form and normalized strength. This is label equivalence, not a clinical bioequivalence or pharmacist recommendation. Prices are in BDT and come from the source dataset only &mdash; no stock or availability data is included.</p>
+    </div>
+    <div style="text-align:right">
+      <p>Medicine Price &amp; Alternatives Dashboard</p>
+      <p style="opacity:.8">Flask &middot; SQLite &middot; Chart.js</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/static/vendor/chart.umd.min.js"></script>
+<script>
+if (typeof Chart === "undefined") {
+  document.write('<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"><\/script>');
+}
+</script>
+<script src="/static/dashboard.js"></script>
+</body>
+</html>

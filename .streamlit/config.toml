@@ -1,0 +1,23 @@
+# Streamlit configuration — Medicine Price & Alternatives Intelligence
+#
+# IMPORTANT — why there is no [theme] block here:
+# -------------------------------------------------
+# When a custom theme is declared in config.toml, Streamlit locks the theme
+# picker in the app menu (it shows "Custom Theme" greyed out), so the user
+# CANNOT switch the app to Dark mode. That was the reason Dark mode appeared
+# broken.
+#
+# The brand styling now lives in utils/ui.py instead. It reads the theme
+# Streamlit is actually rendering (st.context.theme) and emits matching CSS,
+# so the app is fully branded in BOTH modes and the built-in picker in the
+# top-right "⋮" menu works:
+#       ⋮  →  Settings  →  Theme  →  Light / Dark / System
+
+[browser]
+gatherUsageStats = false
+
+[server]
+port = 8501
+# false = Streamlit opens the dashboard in your default browser automatically.
+# Set to true if you ever run this on a remote server without a desktop.
+headless = false

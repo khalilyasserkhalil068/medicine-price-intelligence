@@ -1,0 +1,40 @@
+# Python and environments
+__pycache__/
+*.py[cod]
+.venv*/
+venv/
+env/
+.ipynb_checkpoints/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Credentials and local settings
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+**/secrets.toml
+*.pem
+*.key
+
+# Editors and operating systems
+.vs/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Temporary builds and exports
+.chart-data-*/
+.presentation-build/
+*.log
+*.tmp
+*.bak
+*.db-journal
+*.db-wal
+*.db-shm
+/deliverables/*.zip
+/deliverables/*.pptx
